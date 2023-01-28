@@ -21,7 +21,9 @@
 # <b>インストール用USBメモリ</b>
 
 1. https://www.centos.org/download/ を開く
-1. 「CentOS Stream]
+1. 「CentOS Stream]-[8]-[x86_64] を選択
+1. http://……/x86_64/ のいずれかを選択
+1. CentOS-Stream-8-x86_64-latest-dvd1.iso を選択
 
 実行環境：Windows 10  
 作成者：夢寐郎  
