@@ -2,10 +2,10 @@
 
 ### **Index**
 
-| [XXX](#XXXX) | [XXX](#XXXX) |
+| [選択肢](#202301281000) | [XXX](#XXXX) |
 
-<a id="XXXX"></a>
-# <b>XXX</b>
+<a id="202301281000"></a>
+# <b>選択肢</b>
 
 * [OS](https://ja.hostadvice.com/marketshare/os/jp/) : [CentOS](https://www.centos.org/)  
 * [Web Server](https://manuon.com/webserver-share-ranking/#index_id4) : [Apache](https://httpd.apache.org/)  
