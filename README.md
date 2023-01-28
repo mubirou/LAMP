@@ -25,6 +25,7 @@
 1. http://……/x86_64/ とあるサーバのいずれかを選択
 1. CentOS-Stream-8-x86_64-latest-dvd1.iso を選択
 
+参考：[CentOS 8をインストールする手順](https://nwengblog.com/centos8install/#toc1)  
 実行環境：Windows 10  
 作成者：夢寐郎  
 作成日：2023年X月XX日  
