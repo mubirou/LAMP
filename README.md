@@ -27,10 +27,11 @@
     1. CentOS-Stream-8-x86_64-latest-dvd1.iso を選択しダウンロード（約11GB）
 
 1. Rufusのダウンロード
-    * Rufs（ルーファス）について  
+    * Rufus（ルーファス）について  
         * The Reliable USB Formatting Utility, with Sourceの略
         * USBメモリを起動可能ドライブにするフリーソフトウェア
         * Windows対応
+    1. https://rufus.ie/ja/ を開く
 
 * ブータブルUSB / ブートUSB
 * ISOイメージ
