@@ -26,7 +26,12 @@
     1. http://……/x86_64/ とあるサーバのいずれかを選択
     1. CentOS-Stream-8-x86_64-latest-dvd1.iso を選択しダウンロード（約11GB）
 
-* **Rufus** or UNetbootin
+1. Rufusのダウンロード
+    * Rufs（ルーファス）について  
+        * The Reliable USB Formatting Utility, with Sourceの略
+        * USBメモリを起動可能ドライブにするフリーソフトウェア
+        * Windows対応
+
 * ブータブルUSB / ブートUSB
 * ISOイメージ
 
