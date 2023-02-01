@@ -26,6 +26,11 @@
     1. http://……/x86_64/ とあるサーバのいずれかを選択
     1. CentOS-Stream-8-x86_64-latest-dvd1.iso を選択しダウンロード（約11GB）
 
+1. [Ubuntu Software] で [ブータブルUSBの作成] アプリをインストール
+
+1. [ブータブルUSBの作成] を起動し設定＆確認
+    * 書き込み元のディスクイメージ（.iso）：
+
 1. Rufusのダウンロード
     * Rufus（ルーファス）について  
         * The Reliable USB Formatting Utility, with Sourceの略
