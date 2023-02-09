@@ -23,13 +23,25 @@
 1. CentOSのISOファイルをダンロード
     1. https://www.centos.org/download/ を開く
     1. 「CentOS Stream]-[8]-[x86_64] を選択
-    1. http://……/x86_64/ とあるサーバのいずれかを選択
-    1. CentOS-Stream-8-x86_64-latest-dvd1.iso を選択しダウンロード（約11GB）
+    1. http://ftp.riken.jp/Linux/centos/8-stream/isos/x86_64/ 等から選択
+    1. CentOS-Stream-8-x86_64-20230125-dvd1.iso を選択しダウンロード（約11GB）
 
 1. [Ubuntu Software] で [ブータブルUSBの作成] アプリをインストール
 
 1. [ブータブルUSBの作成] を起動し設定＆確認
     * 書き込み元のディスクイメージ（.iso）：
+
+1. Universal USB Installerのダウンロード
+    1. https://bit.ly/3HoSQQz を開く
+    1. [Download UUI]（Universal-USB-Installer-2.0.1.41.exe）を選択
+
+1. ブータブルUSBの作成
+    1. Universal USB Installe を起動し各種設定
+        1. Step 1：CentOS Installer
+        1. Step 2：上記でダウンロードしたISOファイルを指定
+        1. Step 3：USBメモリ（16GB以上）を選択
+    1. [Create]ボタンを押す
+
 
 1. Rufusのダウンロード
     * Rufus（ルーファス）について  
