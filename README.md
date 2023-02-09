@@ -47,7 +47,16 @@
         * 1パス
     1. [スタート]（⦿ISOイメージモードで書き込む）を選択
 
+参考：[CentOS 8をインストールする手順](https://nwengblog.com/centos8install/#toc1)  
+実行環境：Windows 10  
+作成者：夢寐郎  
+作成日：2023年X月XX日  
+[[TOP]](#TOP)  
 
+© 2023 夢寐郎
+
+
+📝
 1. [Ubuntu Software] で [ブータブルUSBの作成] アプリをインストール
 
 1. [ブータブルUSBの作成] を起動し設定＆確認
@@ -63,12 +72,3 @@
         1. Step 2：上記でダウンロードしたISOファイルを指定
         1. Step 3：USBメモリ（16GB以上）を選択
     1. [Create]ボタンを押す
-
-
-参考：[CentOS 8をインストールする手順](https://nwengblog.com/centos8install/#toc1)  
-実行環境：Windows 10  
-作成者：夢寐郎  
-作成日：2023年X月XX日  
-[[TOP]](#TOP)  
-
-© 2023 夢寐郎
