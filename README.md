@@ -67,7 +67,10 @@
     * メモリ：16GB
     * HDD：3TB
 
-* 中古ノートパソコン
+* NEC VersaPro VK27MD-G（2013年5月発売）
+    * CPU：Intel Core i5-3360M（2012年7月発売）
+    * メモリ：8GB
+    * HDD：128GB
 
 実行環境：CentOS Stream 8  
 作成者：夢寐郎  
