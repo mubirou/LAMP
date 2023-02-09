@@ -38,51 +38,21 @@
         * ブートの種類：ダウンロード済の上記のISOファイル
         * パーティション構成：MBR（初期値）
         * ターゲットシステム：BIOSまたはUEFI（初期値）
-        * ボリュームラベル：CentOS-Stream-8-x86_64（任意）
+        * ボリュームラベル：CentOS-Stream-8-x86_64-dvd（初期値）
         * ファイルシステム：FAT32（規定）
         * クラスターサイズ：16キロバイト（規定）
-        * クイックフォーマット：なし
+        * クイックフォーマット：✓
         * 機能拡張されたラベルとアイコンファイルを作成：なし
         * 不良ブロックを検出：なし
         * 1パス
-    1. [スタート]（⦿ISOイメージモードで書き込む）を選択
+    1. [スタート] を選択
+    1. [ISOイメージモードで書き込む(推奨)] を選択
+    1. 約15分程度で完成
 
 参考：[CentOS 8をインストールする手順](https://nwengblog.com/centos8install/#toc1)  
-実行環境：Windows 10  
+実行環境：Windows 10、Rufus 3.21、CentOS Stream 8  
 作成者：夢寐郎  
 作成日：2023年X月XX日  
 [[TOP]](#TOP)  
 
 © 2023 夢寐郎
-
-
-📝
-1. [Ubuntu Software] で [ブータブルUSBの作成] アプリをインストール
-
-1. [ブータブルUSBの作成] を起動し設定＆確認
-    * 書き込み元のディスクイメージ（.iso）：
-
-1. Universal USB Installerのダウンロード
-    1. https://bit.ly/3HoSQQz を開く
-    1. [Download UUI]（Universal-USB-Installer-2.0.1.41.exe）を選択
-
-1. ブータブルUSBの作成
-    1. Universal USB Installe を起動し各種設定
-        1. Step 1：CentOS Installer
-        1. Step 2：上記でダウンロードしたISOファイルを指定
-        1. Step 3：USBメモリ（16GB以上）を選択
-    1. [Create]ボタンを押す
-
-**
-
-1. DeepBurnuer Free（Windows 10/11）のダウンロード
-    1. https://www.deepburner.com/ を開く
-    1. [Download] を選択
-    1. [DeepBurner Free 1.9]-[Download] を選択
-    1. ダウンロードした [DeepBurner1.exe] をダブルクリックしてインストール
-
-1. ブートUSBの作成
-    1. DeepBurnerを起動
-    1. [Burn ISO image] を選択し [Next] を選択
-    1. 以下の通り各種設定し [Burn ISO] を選択
-        * Image file：上記でダウンロードした [CentOS-Stream-8....iso] ファイル
