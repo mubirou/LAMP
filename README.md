@@ -33,7 +33,9 @@
         * Windows対応
     1. https://rufus.ie/ja/ を開く
     1. [ダウンロード]-[Rufus 3.21] を選択
-    1. ダウンロードした [rufus-3.2.1.exe] を起動し各種設定  
+
+1. ブートUSBの作成
+    1. 上記でダウンロードした [rufus-3.2.1.exe] を起動し各種設定  
         * デバイス：USBメモリ（16GB以上）
         * ブートの種類：ダウンロード済の上記のISOファイル
         * パーティション構成：MBR（初期値）
@@ -52,7 +54,7 @@
 参考：[CentOS 8をインストールする手順](https://nwengblog.com/centos8install/#toc1)  
 実行環境：Windows 10、Rufus 3.21、CentOS Stream 8  
 作成者：夢寐郎  
-作成日：2023年X月XX日  
+作成日：2023年2月9日  
 [[TOP]](#TOP)  
 
 © 2023 夢寐郎
