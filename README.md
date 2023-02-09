@@ -49,7 +49,7 @@
         * 1パス
     1. [スタート] を選択
     1. [ISOイメージモードで書き込む(推奨)] を選択
-    1. 約15分程度で完成
+    1. [CENTOS-STRE] という名前のブートUSBが完成（約15分程度）
 
 参考：[CentOS 8をインストールする手順](https://nwengblog.com/centos8install/#toc1)  
 実行環境：Windows 10、Rufus 3.21、CentOS Stream 8  
