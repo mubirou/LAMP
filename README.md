@@ -24,7 +24,7 @@
     1. https://www.centos.org/download/ を開く
     1. 「CentOS Stream]-[8]-[x86_64] を選択
     1. http://ftp.riken.jp/Linux/centos/8-stream/isos/x86_64/ 等から選択
-    1. CentOS-Stream-8-x86_64-20230125-dvd1.iso を選択しダウンロード（約11GB）
+    1. [CentOS-Stream-8-x86_64-20230125-dvd1.iso] を選択しダウンロード（約11GB）
 
 1. Rufusのダウンロード
     * Rufus（ルーファス）について  
@@ -72,3 +72,17 @@
         1. Step 2：上記でダウンロードしたISOファイルを指定
         1. Step 3：USBメモリ（16GB以上）を選択
     1. [Create]ボタンを押す
+
+**
+
+1. DeepBurnuer Free（Windows 10/11）のダウンロード
+    1. https://www.deepburner.com/ を開く
+    1. [Download] を選択
+    1. [DeepBurner Free 1.9]-[Download] を選択
+    1. ダウンロードした [DeepBurner1.exe] をダブルクリックしてインストール
+
+1. ブートUSBの作成
+    1. DeepBurnerを起動
+    1. [Burn ISO image] を選択し [Next] を選択
+    1. 以下の通り各種設定し [Burn ISO] を選択
+        * Image file：上記でダウンロードした [CentOS-Stream-8....iso] ファイル
