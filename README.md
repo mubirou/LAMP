@@ -2,10 +2,10 @@
 
 ### **Index**
 
-| [選択肢](#202301281000) | [インストール用USBメモリ](#202301281748) | [CentOSのインストール](#202302092321) |
+| [LAMPの選択](#202301281000) | [ブートUSBの作成](#202301281748) | [CentOSのインストール](#202302092321) |
 
 <a id="202301281000"></a>
-# <b>選択肢</b>
+# <b>LAMPの選択</b>
 
 * [OS](https://ja.hostadvice.com/marketshare/os/jp/) : [**CentOS Stream**](https://www.centos.org/)  
 * [Web Server](https://manuon.com/webserver-share-ranking/#index_id4) : [**Apache**](https://httpd.apache.org/)  
