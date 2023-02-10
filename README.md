@@ -2,10 +2,10 @@
 
 ### **Index**
 
-| [LAMPの選択](#202301281000) | [ブートUSBの作成](#202301281748) | [CentOSのインストール](#202302092321) |
+| [LAMP選択](#202301281000) | [ブートUSB作成](#202301281748) | [ブートUSB起動](#202302092321) |
 
 <a id="202301281000"></a>
-# <b>LAMPの選択</b>
+# <b>LAMP選択</b>
 
 * [OS](https://ja.hostadvice.com/marketshare/os/jp/) : [**CentOS Stream**](https://www.centos.org/)  
 * [Web Server](https://manuon.com/webserver-share-ranking/#index_id4) : [**Apache**](https://httpd.apache.org/)  
@@ -18,7 +18,7 @@
 
 
 <a id="202301281748"></a>
-# <b>ブートUSBの作成</b>
+# <b>ブートUSB作成</b>
 
 CentOS Streamをインストールするための「ブートUSB」を作成します  
 
@@ -61,7 +61,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 
 <a id="202302092321"></a>
-# <b>CentOSのインストール</b>
+# <b>ブートUSB起動</b>
 
 * 検証パソコン
     * 自作PC（TSUKUMO eX.にて購入）
@@ -78,16 +78,21 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 1. ブート順序の変更
     1. [上記のUSB](#202301281748)をパソコンに挿入し起動
     1. [BIOS（UEFI）](https://www.pc-master.jp/jisaku/bios-uefi.html)を起動  
-        （上記の二機種とも「F2」キーで起動）
-    1. 上記のUSBを優先的に起動  
-        * [ASUS UEFI BIOS Utility - Ez Mode] の場合
-            1. [Boot Menu(F8)] を選択
-            1. 上記のUSBを選択
-        * NEC中古
+    1. USBを優先的に起動  
+        * [ASUS UEFI BIOS Utility - Ez Mode] の場合  
+            (1)「F2」キーで起動
+            (1) [Boot Menu(F8)] を選択
+            (2) 上記のUSBを選択
+        * [NEC（InsydeH20 Setup Utility] の場合
+            (1)「F2」キーで起動
+            (2) [Boot]-[USB Memory]（上記のUSB）を選択
+            (3) [F6]キーで優先順位を最上位に移動
+            (4) [F10]キー（Save and Exit）を選択
+    1. CentOSのインストール画面が表示されたら成功！
 
 実行環境：CentOS Stream 8  
 作成者：夢寐郎  
-作成日：2023年XX月XX日  
+作成日：2023年2月10日  
 [[TOP]](#TOP)  
 
 
