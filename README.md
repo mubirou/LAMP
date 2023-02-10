@@ -99,6 +99,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302101739"></a>
 # <b>CentOSインストール</b>
 
+1. [ブートUSB起動](#202302092321)する
 1. インストール方法：Install CentOS Stream 8-stream
 1. インストール時に使用する言語：日本語 Japanese
 1. インストール概要で各種設定  
