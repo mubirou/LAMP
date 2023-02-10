@@ -74,7 +74,9 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     * メモリ：8GB
     * HDD：128GB
 
-1. 
+1. ブート順序の変更
+    1. [上記のUSB](#202301281748)をパソコンに挿入し起動
+    1. [BIOS（UEFI）](https://www.pc-master.jp/jisaku/bios-uefi.html)を起動
 
 実行環境：CentOS Stream 8  
 作成者：夢寐郎  
