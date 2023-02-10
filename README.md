@@ -77,7 +77,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 1. [上記のUSB](#202301281748)をパソコンに挿入し起動
 1. [BIOS（UEFI）](https://www.pc-master.jp/jisaku/bios-uefi.html)を起動  
-1. USBを優先的に起動  
+1. USBメモリを優先的に起動させる  
     * [ASUS UEFI BIOS Utility - Ez Mode] の場合  
         (1)「F2」キーで起動
         (1) [Boot Menu(F8)] を選択
