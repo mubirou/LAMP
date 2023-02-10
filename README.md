@@ -63,20 +63,27 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302092321"></a>
 # <b>CentOSのインストール</b>
 
-* 自作PC
-    * マザーボード：ASUS H97M-PLUS（MicroATX／2014年5月発売）
-    * CPU：Intel Core i3-4160（2コア･3.6GHz／2014年7月発売）
-    * メモリ：16GB
-    * HDD：3TB
+* 検証パソコン
+    * 自作PC（TSUKUMO eX.にて購入）
+        * マザーボード：ASUS H97M-PLUS（MicroATX／2014年5月発売）
+        * CPU：Intel Core i3-4160（2コア･3.6GHz／2014年7月発売）
+        * メモリ：16GB
+        * HDD：3TB
 
-* NEC VersaPro VK27MD-G（2013年5月発売）
-    * CPU：Intel Core i5-3360M（2012年7月発売）
-    * メモリ：8GB
-    * HDD：128GB
+    * NEC VersaPro VK27MD-G（2013年5月発売）
+        * CPU：Intel Core i5-3360M（2012年7月発売）
+        * メモリ：8GB
+        * HDD：128GB
 
 1. ブート順序の変更
     1. [上記のUSB](#202301281748)をパソコンに挿入し起動
-    1. [BIOS（UEFI）](https://www.pc-master.jp/jisaku/bios-uefi.html)を起動
+    1. [BIOS（UEFI）](https://www.pc-master.jp/jisaku/bios-uefi.html)を起動  
+        （上記の二機種とも「F2」キーで起動）
+    1. 上記のUSBを優先的に起動  
+        * [ASUS UEFI BIOS Utility - Ez Mode] の場合
+            1. [Boot Menu(F8)] を選択
+            1. 上記のUSBを選択
+        * NEC中古
 
 実行環境：CentOS Stream 8  
 作成者：夢寐郎  
