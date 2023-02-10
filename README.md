@@ -18,7 +18,9 @@
 
 
 <a id="202301281748"></a>
-# <b>インストール用USBメモリ</b>
+# <b>ブートUSBの作成</b>
+
+CentOS Streamをインストールするための「ブートUSB」を作成します  
 
 1. CentOSのISOファイルをダンロード
     1. https://www.centos.org/download/ を開く
@@ -71,6 +73,8 @@
     * CPU：Intel Core i5-3360M（2012年7月発売）
     * メモリ：8GB
     * HDD：128GB
+
+1. 
 
 実行環境：CentOS Stream 8  
 作成者：夢寐郎  
