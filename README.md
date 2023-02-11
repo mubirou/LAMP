@@ -190,23 +190,16 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302111947"></a>
 # <b>SSH</b>
 
-1. インストール済の全パッケージをアップデートする  
-    ```
-    # dnf -y update
-    ```
-1. SSHのバージョンを調べる
+* SSHのバージョンを調べる
     ```
     # dnf list installed | grep openssh
-    openssh.x86_64         8.0p1-17.e18 @anaconda
-    openssh-clients.x86_64 8.0p1-17.e18 @anaconda
-    openssh-server.x86_64  8.0p1-17.e18 @anaconda
+    openssh.x86_64          8.0p1-17.e18  @anaconda
+    openssh-clients.x86_64  8.0p1-17.e18  @anaconda
+    openssh-server.x86_64   8.0p1-17.e18  @anaconda
     ```
-1. 設定ファイルの確認＆変更、再起動
+* 設定ファイルの確認＆変更、再起動
     ```
     # vi /etc/ssh/sshd_config
-    ```
-    ```
-    #
     ```
 
 実行環境：CentOS Stream 8  
