@@ -204,7 +204,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 * Windowsからの操作
     1. https://www.putty.org/ の [Download PuTTy] を選択
     1. [putty-64bit-0.78-installer.msi] をダウンロード＆インストール
-    1. PuTTyを起動し各種設定＆接続  
+    1. PuTTy（パティ）を起動し各種設定＆接続  
         1. 日本語フォントの選択  
             [Window]-[Appearance]-[Font settigs]-[Change]：@ＭＳゴシック（10-point）等
         1. 接続先の指定  
@@ -224,7 +224,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
             ```
 
 参考：『INTRODUCTION NOTES』110頁（2007.7.30）  
-実行環境：CentOS Stream 8、PuTTy（パティ）0.78  
+実行環境：CentOS Stream 8、PuTTy 0.78  
 作成者：夢寐郎  
 作成日：2023年2月11日  
 [[TOP]](#TOP)  
