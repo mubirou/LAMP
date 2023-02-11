@@ -205,6 +205,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. https://www.putty.org/ の [Download PuTTy] を選択
     1. [putty-64bit-0.78-installer.msi] をダウンロード＆インストール
     1. PuTTy（パティ）を起動し各種設定＆接続  
+        1. フォントの変更  
+            [Window]-[Appearance]-[Font settigs]-[Change]：[Ricty Diminished Discord](https://github.com/edihbrandon/RictyDiminished)等
         1. 接続先の指定  
             [Session]-[Host Name(or IP address)]：192.168.X.XX（LinuxパソコンのIPアドレス）
         1. 上記の設定の保存  
