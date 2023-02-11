@@ -190,7 +190,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302111947"></a>
 # <b>SSH</b>
 
-* SSHのバージョンを調べる
+* [SSH](https://www.kagoya.jp/howto/it-glossary/server/ssh/)（Secure Shell）のバージョンを調べる
     ```
     # dnf list installed | grep openssh
     openssh.x86_64          8.0p1-17.e18  @anaconda
