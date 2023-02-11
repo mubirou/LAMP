@@ -237,9 +237,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 1. [Apache](https://ja.wikipedia.org/wiki/Apache_HTTP_Server)（Apache HTTP Server）のバージョンを調べる
     ```
     # dnf install httpd
-    openssh.x86_64          8.0p1-17.e18  @anaconda
-    openssh-clients.x86_64  8.0p1-17.e18  @anaconda
-    openssh-server.x86_64   8.0p1-17.e18  @anaconda
+     httpd  x86_64 2.4.37-54.module_el8.8.0+1256+e1598b50...
     ```
 
 参考：『INTRODUCTION NOTES』110頁（2007.7.30）  
