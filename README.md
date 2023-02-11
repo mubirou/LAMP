@@ -2,7 +2,7 @@
 
 ### **Index**
 
-| [LAMP選択](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [ルーター](#202302102308) | [各種サーバ](#202302102000) | [SSH](#202302111947) |
+| [LAMP選択](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [ルーター](#202302102308) | [各種サーバ](#202302102000) | [SSH](#202302111947) | [Apache](#202302120812) |
 ***
 
 <a id="202301281000"></a>
@@ -205,8 +205,6 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. https://www.putty.org/ の [Download PuTTy] を選択
     1. [putty-64bit-0.78-installer.msi] をダウンロード＆インストール
     1. PuTTy（パティ）を起動し各種設定＆接続  
-        1. 日本語フォントの選択  
-            [Window]-[Appearance]-[Font settigs]-[Change]：@ＭＳゴシック（10-point）等
         1. 接続先の指定  
             [Session]-[Host Name(or IP address)]：192.168.X.XX（LinuxパソコンのIPアドレス）
         1. 上記の設定の保存  
@@ -227,6 +225,24 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 実行環境：CentOS Stream 8、PuTTy 0.78  
 作成者：夢寐郎  
 作成日：2023年2月11日  
+[[TOP]](#TOP)  
+
+
+<a id="202302120812"></a>
+# <b>Apache</b>
+
+1. [Apache](https://ja.wikipedia.org/wiki/Apache_HTTP_Server)（Apache HTTP Server）のバージョンを調べる
+    ```
+    # dnf install httpd
+    openssh.x86_64          8.0p1-17.e18  @anaconda
+    openssh-clients.x86_64  8.0p1-17.e18  @anaconda
+    openssh-server.x86_64   8.0p1-17.e18  @anaconda
+    ```
+
+参考：『INTRODUCTION NOTES』110頁（2007.7.30）  
+実行環境：CentOS Stream 8  
+作成者：夢寐郎  
+作成日：2023年2月XX日  
 [[TOP]](#TOP)  
 
 
