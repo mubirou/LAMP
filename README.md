@@ -201,8 +201,28 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     ```
     # vi /etc/ssh/sshd_config
     ```
+* Windowsからの操作
+    1. https://www.putty.org/ の [Download PuTTy] を選択
+    1. [putty-64bit-0.78-installer.msi] をダウンロード＆インストール
+    1. PuTTyを起動し各種設定＆接続  
+        1. 日本語フォントの選択  
+            [Window]-[Appearance]-[Font settigs]-[Change]：@ＭＳゴシック（10-point）等
+        1. 接続先の指定  
+            [Session]-[Host Name(or IP address)]：192.168.X.XX（LinuxパソコンのIPアドレス）
+        1. 上記の設定の保存  
+            [Session]-[Saved Sessions]：CentOS@192.168.X.XX 等に命名して [Save]
+    1. Linuxに接続  
+        1. [Session] で上記の [CentOS@192.168.X.XX] を選択し [Load]-[Open]  
+            * [PuTTy Security Alert] が表示されたら [Accept] し再度接続
+        1. [login as:] と表示されたらログイン
+            ```
+            login as: root
+            root@192.168.X.XX's password:
+            Last login: Sat Feb 11 13:08:13 2023
+            [root@centos ~]#
+            ```
 
-実行環境：CentOS Stream 8  
+実行環境：CentOS Stream 8、PuTTy 0.78  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
