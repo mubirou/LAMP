@@ -139,24 +139,28 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 * SoftBank E-WMTA2.3（光BBユニット）
     * 2020年から"2.4"を提供中（☎0800-111-2009）
-    * 無線LAN規格：IEEE 802.11b／g／n／a／ac
-    * 周波数帯：2.4GHz／2.4GHz帯
+    * 無線LAN規格：IEEE 802.11a/b/g/n/ac
+    * 周波数帯：2.4GHz/2.4GHz帯
     * 設定画面：172.16.255.254（192.168.3.1）
         * ユーザー名：user
         * パスワード：****
 
+* ASUS RT-AC68U
+    * 2013年11月発売
+    * 無線LAN規格：IEEE802.11a/b/g/n/ac
+    * 周波数帯：2.4GHz/2.4GHz帯
+
 * IODATA WN-AC583TR（ポケットルーター）
     * 2014年7月発売（2018年6月生産終了）
-    * 無線LAN規格：IEEE802.11b／g／a／ac
-    * 周波数帯：2.4GHz／2.4GHz帯（同時接続可）
+    * 無線LAN規格：IEEE802.11a/b/g/ac
+    * 周波数帯：2.4GHz/2.4GHz帯（同時接続可）
     * ファームウェア：v1.07（2019年2月公開）
     * 無線接続4台まで推奨
     * [マニュアル](https://www.iodata.jp/lib/manual/pdf2/wn-ac583tr.pdf)
     * 192.168.99.1  
         * ユーザー名：なし
         * パスワード：****  
-
-実行環境：Windows 10、IODATA WN-AC583TR（v1.07）、SoftBank E-WMTA2.3（1.0.2）  
+ 
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
