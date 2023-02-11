@@ -180,6 +180,12 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # dnf -y update
         ```
+        ```
+        # dnf list installed | grep openssh
+        openssh.x86_64         8.0p1-17.e18 @anaconda
+        openssh-clients.x86_64 8.0p1-17.e18 @anaconda
+        openssh-server.x86_64  8.0p1-17.e18 @anaconda
+        ```
     1. XXX
 
 1. [Apache]
