@@ -234,14 +234,27 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302120812"></a>
 # <b>Apache</b>
 
-1. [Apache](https://ja.wikipedia.org/wiki/Apache_HTTP_Server)（Apache HTTP Server）のバージョンを調べる
+1. [Apache](https://ja.wikipedia.org/wiki/Apache_HTTP_Server)（Apache HTTP Server）のインストール
     ```
-    # dnf install httpd
+    # dnf -y install httpd
      httpd  x86_64 2.4.37-54.module_el8.8.0+1256+e1598b50...
+    ```
+1. バージョンを調べる  
+    ```
+    # dnf list installed | grep httpd
+    ……
+    httpd.x86_64             2.4.37-54.module_el8.8.0+1256...
+    httpd-filesystem.noarch  2.4.37-54.module_el8.8.0+1256...
+    httpd-tools.x86_64       2.4.37-54.module_el8.8.0+1256...
+    ```
+    ```
+    # httpd -v
+    Server version: Apache/2.4.37 (centos)
+    Server built:   Jan 31 2023 21:56:20
     ```
 
 参考：『INTRODUCTION NOTES』110頁（2007.7.30）  
-実行環境：CentOS Stream 8  
+実行環境：CentOS Stream 8、Apache 2.4.37  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
