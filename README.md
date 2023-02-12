@@ -224,7 +224,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
             ```
 
 参考：『INTRODUCTION NOTES』110頁（2007.7.30）  
-実行環境：CentOS Stream 8、PuTTy 0.78  
+実行環境：CentOS Stream 8、OpenSSH 8.0、PuTTy 0.78  
 作成者：夢寐郎  
 作成日：2023年2月11日  
 更新日：2023年2月12日 フォントの更新  
