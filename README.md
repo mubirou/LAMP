@@ -247,6 +247,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 1. [Apache](https://ja.wikipedia.org/wiki/Apache_HTTP_Server)（Apache HTTP Server）のインストール
     ```
+    # dnf -y update ←インストール済の全パッケージをアップデート
     # dnf -y install httpd
      httpd  x86_64 2.4.37-54.module_el8.8.0+1256+e1598b50...
     ```
