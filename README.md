@@ -249,7 +249,6 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     ```
     # dnf -y update ←インストール済パッケージをアップデート
     # dnf -y install httpd
-    httpd  x86_64 2.4.37-54.module_el8.8.0+1256+e1598b50...
     ```
 1. バージョンを調べる  
     ```
@@ -324,9 +323,13 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # dnf -y install vsftpd
     
     ```
-1. 
+1. バージョンを調べる  
+    ```
+    # dnf list installed | grep vsftpd
+    vsftpd.x86_64  3.0.3-35.el8  @appstream
+    ```
 
-実行環境：CentOS Stream 8  
+実行環境：CentOS Stream 8、vsftpd 3.0.3  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
