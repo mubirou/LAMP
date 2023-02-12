@@ -328,6 +328,10 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # dnf list installed | grep vsftpd
     vsftpd.x86_64  3.0.3-35.el8  @appstream
     ```
+    ```
+    # vsftpd -v
+    vsftpd: version 3.0.3
+    ```
 
 実行環境：CentOS Stream 8、vsftpd 3.0.3  
 作成者：夢寐郎  
