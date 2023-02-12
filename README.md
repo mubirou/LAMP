@@ -348,7 +348,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     drwxr-xr-x.  4 root root   33  2月 12 09:01 www
     ```
 
-1. （[vi（vim）](#202302130554)を使いrootユーザーから接続できるようにする  
+1. [vi（vim）](#202302130554)を使いrootユーザーから接続できるようにする  
     ```
     # vi /etc/vsftpd/user_list
     ……
