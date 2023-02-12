@@ -333,6 +333,14 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     vsftpd: version 3.0.3
     ```
 
+1. 各種操作  
+    ```
+    # systemctl start vsftpd ←起動
+    # systemctl stop vsftpd ←停止
+    # systemctl enable vsftpd ←OS起動時に自動起動オン
+    # systemctl disable vsftpd ←自動起動のオフ
+    ```
+
 実行環境：CentOS Stream 8、vsftpd 3.0.3  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
