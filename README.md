@@ -493,8 +493,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 参考：『INTRODUCTION NOTES』112頁（ユーザー管理）  
 実行環境：CentOS Stream 8  
 作成者：夢寐郎  
-作成日：2023年2月13日 
-更新日：2023年XX月XX日 
+作成日：2023年2月13日  
+更新日：2023年XX月XX日  
 [[TOP]](#TOP)  
 
 
