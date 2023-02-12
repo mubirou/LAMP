@@ -347,6 +347,29 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     drwxr-xr-x.  4 root root   33  2月 12 09:01 www
     ```
 
+1. [ファイアウォール](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB)の設定
+    1. 稼働状況  
+        ```
+        # firewall-cmd --list-all
+        ……
+        services: cockpit dhcpv6-client http ssh ←ftpが無い
+        ```
+    1. httpを追加
+        ```
+        # firewall-cmd --permanent --add-service=ftp
+        ```
+    1. ファイアウォールの再起動
+        ```
+        # firewall-cmd --reload
+        ```
+    1. 再度、稼働確認
+        ```
+        # firewall-cmd --list-all
+        ……
+        services: cockpit dhcpv6-client ftp http ssh ←ftpが追加
+        ……
+        ```
+
 1. パーミッションの変更  
     d(rwx)(r-x)(r-x) = d(4+2+1)(4+0+1)(4+0+1) = d(755)  
     ＝「パーミッション755のディレクトリ」  
@@ -361,6 +384,14 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     ……
     drwxrwxr-x.  4 root root   33  2月 12 09:01 www
     ```
+
+================================うまくいかない
+1. SELinux設定の変更
+    1. SELinuxの状態を確認  
+        ```
+        # getenforce
+        Enforcing ←SELinuxは有効でアクセス制限も有効
+        ```
 
 1. [FileZilla](https://ja.wikipedia.org/wiki/FileZilla)（FTPソフト）による動作確認
     1. https://filezilla-project.org/ にアクセス
