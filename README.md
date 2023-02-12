@@ -341,16 +341,41 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # systemctl disable vsftpd ←自動起動のオフ
     ```
 
-1. 所有権とパーミッションの確認（rootは読込･書込･実行可能）  
+1. 所有権（今回はrootで接続）とパーミッションの確認  
     ```
     # ls -l /var/
     …
     drwxr-xr-x.  4 root root   33  2月 12 09:01 www
     ```
 
+1. パーミッションの変更  
+    d(rwx)(r-x)(r-x) = d(4+2+1)(4+0+1)(4+0+1) = d(755)  
+    つまり「パーミッション755のディレクトリ」を  
+    「パーミッション775のディレクトリ」に変更します
+    ```
+    # chmod -R 775 /var/www
+    ```
+
+1. 再びパーミッションの確認
+    ```
+    # ls -l /var/
+    ……
+    drwxrwxr-x.  4 root root   33  2月 12 09:01 www
+    ```
+
 1. [FileZilla](https://ja.wikipedia.org/wiki/FileZilla)（FTPソフト）による動作確認
     1. https://filezilla-project.org/ にアクセス
     1. [Download FileZilla Client] を選択しダウンロード
+    1. Windows上に「website」（任意）フォルダを作成
+    1. FileZillaを起動
+    1. [ファイル]-[サイトマネージャー]-[自分のサイト]-[新しいサイト] を選択
+    1. "新規サイト"→"MySite1”（任意）に変更
+    1. [一般] を各種設定
+        * ホスト：192.168.3.11（FTPサーバが起動しているIPアドレス）
+        * ユーザー：root
+        * 
+
+
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバのインストール）  
 参考：『INTRODUCTION NOTES』176頁（パーミッションと所有権）  
