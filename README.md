@@ -263,7 +263,40 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # systemctl disable httpd ←自動起動のオフ
     ```
 
-参考：『INTRODUCTION NOTES』110頁（2007.7.30）  
+1. ファイアウォールの設定
+    1. 稼働状況  
+        ```
+        # firewall-cmd --list-all
+        public (active)
+        target: default
+        icmp-block-inversion: no
+        interfaces: eno1
+        sources:
+        services: cockpit dhcpv6-client ssh ←http通信がない
+        ……
+    1. httpを追加
+        ```
+        # firewall-cmd --permanent --add-service=http
+        ```
+    1. ファイアウォールの再起動
+        ```
+        # firewall-cmd --reload
+        ```
+    1. 再度、稼働確認
+        ```
+        # firewall-cmd --list-all
+        public (active)
+        target: default
+        icmp-block-inversion: no
+        interfaces: eno1
+        sources:
+        services: cockpit dhcpv6-client http ssh ←httpが追加
+        ……
+        ```
+
+1. 動作確認（WebブラウザでApacheが起動しているLinuxのIPアドレスにアクセス）  
+    （「HTTP SERVER TEST PAGE」が表示されたら成功！）
+
 実行環境：CentOS Stream 8、Apache 2.4.37  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
