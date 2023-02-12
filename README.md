@@ -350,11 +350,11 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 1. [FileZilla](https://ja.wikipedia.org/wiki/FileZilla)（FTPソフト）による動作確認
     1. https://filezilla-project.org/ にアクセス
-    1. 
+    1. [Download FileZilla Client] を選択しダウンロード
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバのインストール）  
 参考：『INTRODUCTION NOTES』176頁（パーミッションと所有権）  
-実行環境：CentOS Stream 8、vsftpd 3.0.3  
+実行環境：CentOS Stream 8、vsftpd 3.0.3、FileZilla for Windows 3.63.1  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
