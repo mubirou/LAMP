@@ -299,7 +299,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 実行環境：CentOS Stream 8、Apache 2.4.37  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月12日  
 [[TOP]](#TOP)  
 
 
