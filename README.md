@@ -253,6 +253,16 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     Server built:   Jan 31 2023 21:56:20
     ```
 
+1. 各種操作  
+    ```
+    # systemctl status httpd ←状態の確認
+    # systemctl start httpd ←起動
+    # systemctl stop httpd ←停止
+    # systemctl restart httpd ←再起動
+    # systemctl enable httpd ←OS起動時に自動起動オン
+    # systemctl disable httpd ←自動起動のオフ
+    ```
+
 参考：『INTRODUCTION NOTES』110頁（2007.7.30）  
 実行環境：CentOS Stream 8、Apache 2.4.37  
 作成者：夢寐郎  
