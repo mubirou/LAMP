@@ -341,16 +341,15 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # systemctl disable vsftpd ←自動起動のオフ
     ```
 
-1. 所有権（今回はrootのまま）とパーミッションの確認  
+1. 所有権とパーミッションの確認（rootは読込･書込･実行可能）  
     ```
     # ls -l /var/
     …
     drwxr-xr-x.  4 root root   33  2月 12 09:01 www
     ```
 
-1. XXX
-
-参考：『INTRODUCTION NOTES』120頁（2007.8.6）  
+参考：『INTRODUCTION NOTES』120頁（FTPサーバのインストール）  
+参考：『INTRODUCTION NOTES』176頁（パーミッションと所有権）  
 実行環境：CentOS Stream 8、vsftpd 3.0.3  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
