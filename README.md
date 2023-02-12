@@ -348,6 +348,10 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     drwxr-xr-x.  4 root root   33  2月 12 09:01 www
     ```
 
+1. [FileZilla](https://ja.wikipedia.org/wiki/FileZilla)（FTPソフト）による動作確認
+    1. https://filezilla-project.org/ にアクセス
+    1. 
+
 参考：『INTRODUCTION NOTES』120頁（FTPサーバのインストール）  
 参考：『INTRODUCTION NOTES』176頁（パーミッションと所有権）  
 実行環境：CentOS Stream 8、vsftpd 3.0.3  
