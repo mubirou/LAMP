@@ -385,8 +385,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     drwxrwxr-x.  4 root root   33  2月 12 09:01 www
     ```
 
-================================うまくいかない
-1. SELinux設定の変更
+=======このあたりからうまくいかない
+1. SELinux設定の変更？？？
     1. SELinuxの状態を確認  
         ```
         # getenforce
