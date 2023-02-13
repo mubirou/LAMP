@@ -411,6 +411,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. "ファイルの一覧の取得は正常終了しました"と表示されたら成功！
     * FTPソフトには [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等もあります
 
+1. ファイルのアップロード
 
 いまここ検証中
 =  
