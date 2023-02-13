@@ -416,6 +416,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         * ローカルの初期フォルダ：（Windows上の任意のフォルダ）
         * ホストの初期フォルダ：/var/www/html
     1. [接続] を選択
+    1. "ファイルの一覧の取得は正常終了しました."と表示されたら成功！
     * FTPソフトには [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等もあります
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバのインストール）  
