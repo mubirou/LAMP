@@ -396,7 +396,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         ```
 
-1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（FTPソフト）による接続
+1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（他にも [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等あり）による接続
     1. https://forest.watch.impress.co.jp/library/software/ffftp/ にアクセス
     1. [FFFTP（64bit版）]をダウンロード＆インストール
     1. FFFTPを起動
@@ -409,7 +409,6 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         * ホストの初期フォルダ：/var/www/html（Webサーバ上）
     1. [接続] を選択
     1. "ファイルの一覧の取得は正常終了しました"と表示されたら成功！
-    * FTPソフトには [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等もあります
 
 1. ファイルのアップロード
 
