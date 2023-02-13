@@ -345,20 +345,22 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # vi /etc/group
         ……
         mubirou:x:1000:
-        web:x:1001:mubirou ←複数登録する場合「,」を付けて追加
+        apache:x:1001:mubirou ←複数登録する場合「,」を付けて追加
         ```
 
-1. /var/www の所有権とパーミッションの変更  
-    1. 所有権の確認  
+1. /var/www の所有者とグループの変更
+    1. 所有者とグループ、パーミッションの確認  
         ```
-        # ls -l /var/
+        # ls -l /var/www/
         …
-        drwxr-xr-x. ... root root ... www
+        drwxrwxr-x. 2 root root ... html
         ```
-    1. 所有権の変更  
+    1. 所有者とグループの変更  
         ```
-        # chgrp -R web /var/www ←所有権をwebに変更
+        # chown -R apache:apache /var/www/html/
         ```
+    
+1. /var/www のパーミッションの変更
     1. パーミッションの変更  
         d(rwx)(r-x)(r-x) = d(4+2+1)(4+0+1)(4+0+1) = d(755)  
         ＝「パーミッション755のディレクトリ」  
@@ -366,11 +368,11 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # chmod -R 775 /var/www
         ```
-    1. 再度、所有権とパーミッションの確認  
+    1. 再度、所有者とグループ、パーミッションの確認  
         ```
-        # ls -l /var/
+        # ls -l /var/www
         …
-        drwxrwxr-x. ... root web ... www
+        drwxrwxr-x. 2 apache apache ... html
         ```
 
 1. [ファイアウォール](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB)の設定
