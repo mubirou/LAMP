@@ -423,7 +423,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 参考：『INTRODUCTION NOTES』176頁（パーミッションと所有権）  
 実行環境：CentOS Stream 8、vsftpd 3.0.3、FFFTP 5.7  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月13日  
 [[TOP]](#TOP)  
 
 
