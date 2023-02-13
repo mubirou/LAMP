@@ -278,11 +278,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. 稼働状況  
         ```
         # firewall-cmd --list-all
-        public (active)
-        target: default
-        icmp-block-inversion: no
-        interfaces: eno1
-        sources:
+        ……
         services: cockpit dhcpv6-client ssh ←http通信がない
         ……
     1. httpを追加
@@ -296,11 +292,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. 再度、稼働確認
         ```
         # firewall-cmd --list-all
-        public (active)
-        target: default
-        icmp-block-inversion: no
-        interfaces: eno1
-        sources:
+        ……
         services: cockpit dhcpv6-client http ssh ←httpが追加
         ……
         ```
