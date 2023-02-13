@@ -396,7 +396,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         ```
 
-1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（FTPソフト）による動作確認
+1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（FTPソフト）による接続
     1. https://forest.watch.impress.co.jp/library/software/ffftp/ にアクセス
     1. [FFFTP（64bit版）]をダウンロード＆インストール
     1. FFFTPを起動
@@ -411,11 +411,13 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. "ファイルの一覧の取得は正常終了しました"と表示されたら成功！
     * FTPソフトには [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等もあります
 
+1. XXXX
+
 参考：『INTRODUCTION NOTES』120頁（FTPサーバ）  
 参考：『INTRODUCTION NOTES』176頁（パーミッション等）  
 実行環境：CentOS Stream 8、vsftpd 3.0.3、FFFTP 5.7  
 作成者：夢寐郎  
-作成日：2023年2月13日  
+作成日：2023年2月XX日  
 [[TOP]](#TOP)  
 
 
