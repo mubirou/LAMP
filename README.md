@@ -341,15 +341,6 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # systemctl is-active vsftpd ←起動しているか確認
     ```
 
-1. 所有権（今回はrootで接続）とパーミッションの確認  
-    ```
-    # ls -l /var/
-    …
-    drwxr-xr-x.  4 root root   33  2月 12 09:01 www
-    ```
-
-1. 
-
 1. 「[vi](#202302130554)」を使いWebページ管理者グループを作成  
     1. [ユーザー管理](#202302130631)を参考に登録ユーザーを確認
         ```
@@ -360,10 +351,35 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. Webページ管理者グループを作成
         ```
         # vi /etc/group
+        ……
+        mubirou:x:1000:
+        web:x:1001:mubirou ←複数登録する場合「,」を付けて追加
         ```
-        ================
-        只今ここを編集中
-        ================
+
+1. /var/www の所有権とパーミッションの変更  
+    1. 所有権の確認  
+        ```
+        # ls -l /var/
+        …
+        drwxr-xr-x. ... root root ... www
+        ```
+    1. 所有権の変更  
+        ```
+        # chgrp -R web /var/www ←所有権をwebに変更
+        ```
+    1. パーミッションの変更  
+        d(rwx)(r-x)(r-x) = d(4+2+1)(4+0+1)(4+0+1) = d(755)  
+        ＝「パーミッション755のディレクトリ」  
+        上記を「パーミッション775のディレクトリ」に変更する  
+        ```
+        # chmod -R 775 /var/www
+        ```
+    1. 再度、所有権とパーミッションの確認  
+        ```
+        # ls -l /var/
+        …
+        drwxrwxr-x. ... root web ... www
+        ```
 
 1. [ファイアウォール](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB)の設定
     1. 稼働状況  
@@ -388,44 +404,23 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         ```
 
-1. パーミッションの変更  
-    d(rwx)(r-x)(r-x) = d(4+2+1)(4+0+1)(4+0+1) = d(755)  
-    ＝「パーミッション755のディレクトリ」  
-    上記を「パーミッション775のディレクトリ」に変更する
-    ```
-    # chmod -R 775 /var/www
-    ```
-
-1. 再びパーミッションの確認
-    ```
-    # ls -l /var/
-    ……
-    drwxrwxr-x.  4 root root   33  2月 12 09:01 www
-    ```
-
-=======このあたりからうまくいかない
-1. SELinux設定の変更？？？
-    1. SELinuxの状態を確認  
-        ```
-        # getenforce
-        Enforcing ←SELinuxは有効でアクセス制限も有効
-        ```
-
-1. [FileZilla](https://ja.wikipedia.org/wiki/FileZilla)（FTPソフト）による動作確認
-    1. https://filezilla-project.org/ にアクセス
-    1. [Download FileZilla Client] を選択しダウンロード
-    1. Windows上に「website」（任意）フォルダを作成
-    1. FileZillaを起動
-    1. [ファイル]-[サイトマネージャー]-[自分のサイト]-[新しいサイト] を選択
-    1. "新規サイト"→"MySite1”（任意）に変更
-    1. [一般] を各種設定
-        * ホスト：192.168.3.11（FTPサーバが起動しているIPアドレス）
-        * ユーザー：root
-        * 
+1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（FTPソフト）による動作確認
+    1. https://forest.watch.impress.co.jp/library/software/ffftp/ にアクセス
+    1. [FFFTP（64bit版）]をダウンロード＆インストール
+    1. FFFTPを起動
+    1. [新規ホスト] を選択し各種設定  
+        * ホストの設定名：XXX@192.168.X.XX（任意）
+        * ホスト名（アドレス）：192.168.X.XX（Apacheが起動しているIPアドレス）
+        * ユーザー名：mubirou
+        * パスワード：XXXX
+        * ローカルの初期フォルダ：（Windows上の任意のフォルダ）
+        * ホストの初期フォルダ：/var/www/html
+    1. [接続] を選択
+    * FTPソフトには [FileZilla](https://ja.wikipedia.org/wiki/FileZilla)）等もあります
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバのインストール）  
 参考：『INTRODUCTION NOTES』176頁（パーミッションと所有権）  
-実行環境：CentOS Stream 8、vsftpd 3.0.3、FileZilla for Windows 3.63.1  
+実行環境：CentOS Stream 8、vsftpd 3.0.3、FFFTP 5.7  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
