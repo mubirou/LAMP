@@ -298,7 +298,9 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
 
 1. 動作確認（WebブラウザでApacheが起動しているLinuxのIPアドレスにアクセス）  
-    （「HTTP SERVER TEST PAGE」が表示されたら成功！）
+
+1. 「HTTP SERVER TEST PAGE」と表示されたら成功！  
+    （/var/www/html/index.html がない場合）
 
 実行環境：CentOS Stream 8、Apache 2.4.37  
 作成者：夢寐郎  
