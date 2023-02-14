@@ -428,7 +428,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ftpd_full_access --> on
         ```
 
-1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（他にも [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等あり）による接続
+1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（他にも [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等あり）によるファイル転送
     1. https://forest.watch.impress.co.jp/library/software/ffftp/ にアクセス
     1. [FFFTP（64bit版）]をダウンロード＆インストール
     1. FFFTPを起動
@@ -440,9 +440,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         * ローカルの初期フォルダ：（Windows上の任意のフォルダ）
         * ホストの初期フォルダ：/var/www/html（Webサーバ上）
     1. [接続] を選択
-    1. "ファイルの一覧の取得は正常終了しました"と表示されたら成功！
-
-1. ファイルのアップロード
+    1. "ファイルの一覧の取得は正常終了しました"と表示されたら接続成功！
     1. [ローカルの初期フォルダ] に以下の index.html ファイルを作成  
         ```
         <!DOCTYPE html>
@@ -457,7 +455,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         </html>
         ```
     1. [index.html] を選択し [コマンド]-[アップロード] を選択
-    1. リモートサイト側に上記ファイルがアップロードされたら成功！
+    1. リモートサイト側に上記ファイルがアップロードされたらファイル転送成功！
     1. Webブラウザ上で 192.168.X.XX にアクセスして Hello,world! と表示されたら大成功！
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバ）  
