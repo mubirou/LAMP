@@ -317,6 +317,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302121037"></a>
 # <b>FTP</b>
 
+## この項目は編集中です
+
 1. [vsftpd](https://linuc.org/study/knowledge/487/)（Very Secure FTP Daemon）のインストール
     ```
     # dnf -y update ←インストール済パッケージをアップデート
@@ -401,6 +403,45 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # firewall-cmd --list-services --permanent
         cockpit dhcpv6-client ftp http ssh ←ftpが追加
+        ```
+
+1. SELinuxの無効化  
+    1. SELinuxの状態の確認  
+        ```
+        # sestatus
+        SELinux status:                 enabled ←稼働中
+        SELinuxfs mount:                /sys/fs/selinux
+        SELinux root directory:         /etc/selinux
+        Loaded policy name:             targeted
+        Current mode:                   enforcing
+        Mode from config file:          enforcing
+        Policy MLS status:              enabled
+        Policy deny_unknown status:     allowed
+        Memory protection checking:     actual (secure)
+        Max kernel policy version:      33
+        ```
+
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
+    1. SELinuxの確認  
+        ```
+        # getsebool -a | grep ^ftp
+        ftpd_anon_write --> off
+        ftpd_connect_all_unreserved --> off
+        ftpd_connect_db --> off
+        ftpd_full_access --> off ←これをonにする必要がある
+        ftpd_use_cifs --> off
+        ftpd_use_fusefs --> off
+        ftpd_use_nfs --> off
+        ftpd_use_passive_mode --> off
+        ```
+    1. SELinuxは有効のままvsftpdのデータ転送を可能にする  
+        ```
+        # setsebool -P ftpd_full_access on
+        ```
+    1. 再度、SELinuxの確認  
+        ```
+        # getsebool -a | grep ftpd_full_access
+        ftpd_full_access --> on
         ```
 
 1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（他にも [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等あり）による接続
