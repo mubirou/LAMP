@@ -354,20 +354,21 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # vi /etc/group
         ……
+        apache:x:48:mubirou ←追加（複数登録する場合「,」を付ける）
         mubirou:x:1000:
-        apache:x:1001:mubirou ←複数登録する場合「,」を付けて追加
         ```
 
 1. /var/www の所有者とグループの変更
     1. 所有者とグループ、パーミッションの確認  
         ```
-        # ls -l /var/www/
-        …
-        drwxrwxr-x. 2 root root ... html
+        # ls -l /var/www
+        合計 0
+        drwxr-xr-x. 2 root root ... cgi-bin
+        drwxr-xr-x. 2 root root ... html
         ```
     1. 所有者とグループの変更  
         ```
-        # chown -R apache:apache /var/www/html/
+        # chown -R apache.apache /var/www
         ```
     
 1. /var/www のパーミッションの変更
@@ -382,6 +383,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # ls -l /var/www
         …
+        drwxrwxr-x. 2 apache apache ... cgi-bin
         drwxrwxr-x. 2 apache apache ... html
         ```
 
@@ -403,22 +405,6 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # firewall-cmd --list-services --permanent
         cockpit dhcpv6-client ftp http ssh ←ftpが追加
-        ```
-
-1. SELinuxの無効化  
-    1. SELinuxの状態の確認  
-        ```
-        # sestatus
-        SELinux status:                 enabled ←稼働中
-        SELinuxfs mount:                /sys/fs/selinux
-        SELinux root directory:         /etc/selinux
-        Loaded policy name:             targeted
-        Current mode:                   enforcing
-        Mode from config file:          enforcing
-        Policy MLS status:              enabled
-        Policy deny_unknown status:     allowed
-        Memory protection checking:     actual (secure)
-        Max kernel policy version:      33
         ```
 
 1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
