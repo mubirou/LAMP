@@ -546,8 +546,6 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302142236"></a>
 # <b>PHP</b>
 
-## この項目は書きかけです
-
 1. PHPのインストール  
     1. インストール可能なPHPの確認  
         ```
@@ -587,11 +585,44 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         名前         : php-xmlrpc
         概要         : A module for PHP applications which use the XML-RPC
         ```
+    1. PHPのインストール  
+        ```
+        # dnf install -y php php-mysqlnd php-json php-mbstring php-gd php-pdo php-xml php-xmlrpc
+        ```
+    1. インストール済のPHPパッケージの確認  
+        ```
+        # dnf list installed | grep php
+        php.x86_64           7.2.24-1. ...
+        php-cli.x86_64       7.2.24-1. ...
+        php-common.x86_64    7.2.24-1. ...
+        php-fpm.x86_64       7.2.24-1. ...
+        php-gd.x86_64        7.2.24-1. ...
+        php-json.x86_64      7.2.24-1. ...
+        php-mbstring.x86_64  7.2.24-1. ...
+        php-mysqlnd.x86_64   7.2.24-1. ...
+        php-pdo.x86_64       7.2.24-1. ...
+        php-xml.x86_64       7.2.24-1. ...
+        php-xmlrpc.x86_64    7.2.24-1. ...
+        ```
+    1. Apacheの再起動（Apacheモジュールとして動作しているため）  
+        ```
+        # systemctl restart httpd
+        ```
+    1. 動作確認  
+        1. /var/www/html/test.php を作成
+            ```
+            <?php
+            phpinfo();
+            ?>
+            ```
+        1. FTPソフトを使ってアップロード
+        1. Webブラウザで http://192.168.X.XX/test.php にアクセス
+        1. 各種データが表示されれば成功！
 
 参考：『INTRODUCTION NOTES』121頁（PHP）  
 実行環境：CentOS Stream 8、PHP 8.0  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月15日  
 [[TOP]](#TOP)  
 
 
