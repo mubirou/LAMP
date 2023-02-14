@@ -386,13 +386,12 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 1. [ファイアウォール](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB)の設定
     1. 稼働状況  
         ```
-        # firewall-cmd --list-all
-        ……
-        services: cockpit dhcpv6-client http ssh ←ftpが無い
+        # firewall-cmd --list-services --permanent
+        cockpit dhcpv6-client http ssh ←ftpが無い
         ```
     1. httpを追加
         ```
-        # firewall-cmd --permanent --add-service=ftp
+        # firewall-cmd --add-service=ftp --permanent
         ```
     1. ファイアウォールの再起動
         ```
@@ -400,10 +399,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
     1. 再度、稼働確認
         ```
-        # firewall-cmd --list-all
-        ……
-        services: cockpit dhcpv6-client ftp http ssh ←ftpが追加
-        ……
+        # firewall-cmd --list-services --permanent
+        cockpit dhcpv6-client ftp http ssh ←ftpが追加
         ```
 
 1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（他にも [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等あり）による接続
