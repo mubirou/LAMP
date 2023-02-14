@@ -317,8 +317,6 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302121037"></a>
 # <b>FTP</b>
 
-## この項目は編集中です
-
 1. [vsftpd](https://linuc.org/study/knowledge/487/)（Very Secure FTP Daemon）のインストール
     ```
     # dnf -y update ←インストール済パッケージをアップデート
