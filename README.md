@@ -458,7 +458,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
     1. [index.html] を選択し [コマンド]-[アップロード] を選択
     1. リモートサイト側に上記ファイルがアップロードされたら成功！
-    1. Webブラウザ上で 192.168.X.XX（http://192.168.3.11/index.html）にアクセスすると Hello,world! と表示されたら大成功！
+    1. Webブラウザ上で 192.168.X.XX にアクセスして Hello,world! と表示されたら大成功！
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバ）  
 参考：『INTRODUCTION NOTES』176頁（パーミッション等）  
