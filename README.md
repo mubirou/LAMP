@@ -561,29 +561,29 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # dnf info php php-mysqlnd php-json php-mbstring php-gd php-pdo php-xml php-xmlrpc
         ……
-        名前         : php
-        概要         : PHP scripting language for creating dynamic web sites
+        名前  : php
+        概要  : PHP scripting language for creating dynamic web sites
         ……
-        名前         : php-gd
-        概要         : A module for PHP applications for using the gd graphics
+        名前  : php-gd
+        概要  : A module for PHP applications for using the gd graphics
         ……
-        名前         : php-json
-        概要         : JavaScript Object Notation extension for PHP
+        名前  : php-json
+        概要  : JavaScript Object Notation extension for PHP
         ……
-        名前         : php-mbstring
-        概要         : A module for PHP applications which need multi-byte string handling
+        名前  : php-mbstring
+        概要  : A module for PHP applications which need multi-byte string handling
         ……
-        名前         : php-mysqlnd
-        概要         : A module for PHP applications that use MySQL databases
+        名前  : php-mysqlnd
+        概要  : A module for PHP applications that use MySQL databases
         ……
-        名前         : php-pdo
-        概要         : A database access abstraction module for PHP applications
+        名前  : php-pdo
+        概要  : A database access abstraction module for PHP applications
         ……
-        名前         : php-xml
-        概要         : A module for PHP applications which use XML
+        名前  : php-xml
+        概要  : A module for PHP applications which use XML
         ……
-        名前         : php-xmlrpc
-        概要         : A module for PHP applications which use the XML-RPC
+        名前  : php-xmlrpc
+        概要  : A module for PHP applications which use the XML-RPC
         ```
     1. PHPのインストール  
         ```
