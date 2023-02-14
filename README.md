@@ -2,19 +2,30 @@
 
 ### **Index**
 
-| [LAMP選択](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [ルーター](#202302102308) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [vi](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | MySQL | Samba | WordPress |
+| [LAMPについて](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [ルーター](#202302102308) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [vi](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | MySQL | Samba | WordPress |
 ***
 
 <a id="202301281000"></a>
-# <b>LAMP選択</b>
+# <b>LAMPについて</b>
 
-* [OS](https://ja.hostadvice.com/marketshare/os/jp/) : [**CentOS Stream**](https://www.centos.org/)  
-* [Web Server](https://manuon.com/webserver-share-ranking/#index_id4) : [**Apache**](https://httpd.apache.org/)  
-* [RDBMS](https://db-engines.com/en/ranking) : [**MySQL**](https://www.mysql.com/jp/) / [MariaDB](https://mariadb.com/kb/ja/mariadb/) / [SQLite](https://sqlite.org/)  
-* [Server Side Programming](https://w3techs.com/technologies/overview/programming_language) : [**PHP**](https://www.php.net/) / [Python](https://www.python.jp/)  
+1. LAMP選択
+    * [OS](https://ja.hostadvice.com/marketshare/os/jp/) : [**CentOS Stream**](https://www.centos.org/)  
+    * [Web Server](https://manuon.com/webserver-share-ranking/#index_id4) : [**Apache**](https://httpd.apache.org/)  
+    * [RDBMS](https://db-engines.com/en/ranking) : [**MySQL**](https://www.mysql.com/jp/) / [MariaDB](https://mariadb.com/kb/ja/mariadb/) / [SQLite](https://sqlite.org/)  
+    * [Server Side Programming](https://w3techs.com/technologies/overview/programming_language) : [**PHP**](https://www.php.net/) / [Python](https://www.python.jp/)  
+
+1. インストール順序  
+    1. [CentOS](#202302101739)
+    1. [SSH](#202302111947)
+    1. [Apache](#202302120812)
+    1. [FTP](#202302121037)
+    1. [PHP](#202302142236)
+    1. MySQL
+    1. WordPress
 
 作成者：夢寐郎  
 作成日：2023年1月28日  
+更新日：2023年2月14日  
 [[TOP]](#TOP)  
 
 
