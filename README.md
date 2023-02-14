@@ -620,7 +620,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         1. 各種データが表示されれば成功！
 
 参考：『INTRODUCTION NOTES』121頁（PHP）  
-実行環境：CentOS Stream 8、PHP 8.0  
+実行環境：CentOS Stream 8、PHP 7.2.24  
 作成者：夢寐郎  
 作成日：2023年2月15日  
 [[TOP]](#TOP)  
