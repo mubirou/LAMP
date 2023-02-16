@@ -146,6 +146,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 * 入力の終了
     ```
     > [Ctrl]+[d]
+    > [Ctrl]+[z]
     ```
 * IPアドレスを調べる
     ```
@@ -170,7 +171,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 作成者：夢寐郎  
 作成日：2023年2月12日  
-更新日：2023年2月14日 ファイルの削除を追加  
+更新日：2023年2月16日  
 [[TOP]](#TOP)  
 
 
@@ -697,10 +698,20 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         mysql_connect_http --> off
         selinuxuser_mysql_connect_enabled --> on
         ```
-1. 
+1. 各種操作  
+    ```
+    # systemctl status mariadb ←状態の確認
+    # systemctl start mariadb ←起動
+    # systemctl stop mariadb ←停止
+    # systemctl restart mariadb ←再起動
+    # systemctl enable mariadb ←OS起動時に自動起動オン
+    # systemctl disable mariadb ←自動起動のオフ
+    ```
+
+1. 動作確認  
 
 参考：『INTRODUCTION NOTES』122頁（MariaDB）  
-実行環境：CentOS Stream 8、MariaDB 10.3.28  
+実行環境：CentOS Stream 8、MariaDB 10.3  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
