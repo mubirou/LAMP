@@ -589,6 +589,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
     1. PHPのインストール  
         ```
+        # dnf -y update ←インストール済パッケージをアップデート
         # dnf install -y php php-mysqlnd php-json php-mbstring php-gd php-pdo php-xml php-xmlrpc
         ```
     1. インストール済のPHPパッケージの確認  
@@ -631,7 +632,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302162306"></a>
 # <b>MariaDB</b>
 
-1. MariaDBのインストール  
+1. [MariaDB](https://ja.wikipedia.org/wiki/MariaDB)のインストール  
     1. インストール可能なPHPの確認  
         ```
         # dnf list maria*
@@ -642,6 +643,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
     1. MariaDBのインストール  
         ```
+        # dnf -y update ←インストール済パッケージをアップデート
         # dnf install -y mariadb-server
         ```
     1. インストール済のMariaDBパッケージの確認  
