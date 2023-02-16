@@ -612,13 +612,13 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # systemctl restart httpd
         ```
     1. 動作確認  
-        1. /var/www/html/test.php を作成
+        1. test.php を作成
             ```
             <?php
             phpinfo();
             ?>
             ```
-        1. FTPソフトを使ってアップロード
+        1. FTPソフトを使って /var/www/html/ にアップロード
         1. Webブラウザで http://192.168.X.XX/test.php にアクセス
         1. 各種データが表示されれば成功！
 
@@ -741,7 +741,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 1. [PHPをインストール](#202302142236)
 
 1. 動作確認  
-    1. /var/www/html/sqltest.php を作成
+    1. sqltest.php を作成
         ```
         <?php
             $con = new PDO('mysql::memory:', 'root', '');
@@ -750,7 +750,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
             echo $statement->fetchColumn(); //-> 10.3.28-MariaDB
         ?>
         ```
-    1. FTPソフトを使ってアップロード
+    1. FTPソフトを使って /var/www/html/ にアップロード
     1. Webブラウザで http://192.168.X.XX/sqltest.php にアクセス
     1. "10.3.28-MariaDB" と表示されれば成功！
 
