@@ -709,6 +709,12 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     ```
 
 1. 動作確認  
+    ```
+    # mysql -uroot
+    ……
+    MariaDB [(none)]> ←これが表示されたら成功！
+    MariaDB [(none)]> exit
+    ```
 
 参考：『INTRODUCTION NOTES』122頁（MariaDB）  
 実行環境：CentOS Stream 8、MariaDB 10.3  
