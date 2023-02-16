@@ -739,12 +739,25 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 # <b>PHP+MySQL</b>
 
 1. [PHPをインストール](#202302142236)
-1. 
+
+1. 動作確認  
+    1. /var/www/html/sqltest.php を作成
+        ```
+        <?php
+            $con = new PDO('mysql::memory:', 'root', '');
+            $statement = $con->prepare("SELECT VERSION()");
+            $statement->execute();
+            echo $statement->fetchColumn(); //-> 10.3.28-MariaDB
+        ?>
+        ```
+    1. FTPソフトを使ってアップロード
+    1. Webブラウザで http://192.168.X.XX/sqltest.php にアクセス
+    1. "10.3.28-MariaDB" と表示されれば成功！
 
 参考：[Godot+PHP+MySQL](https://github.com/mubirou/Godot-Study-Notes#phpmysql)  
 実行環境：CentOS Stream 8、PHP 7.2.24、MariaDB 10.3.28  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月17日  
 [[TOP]](#TOP)  
 
 
