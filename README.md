@@ -738,6 +738,9 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302170022"></a>
 # <b>PHP+MySQL</b>
 
+1. [PHPをインストール](#202302142236)
+1. 
+
 参考：[Godot+PHP+MySQL](https://github.com/mubirou/Godot-Study-Notes#phpmysql)  
 実行環境：CentOS Stream 8、PHP 7.2.24、MariaDB 10.3.28  
 作成者：夢寐郎  
