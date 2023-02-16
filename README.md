@@ -771,7 +771,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. [WordPressを入手]-[ダウンロードしてインストール]-[WordPress 6.1.1をダウンロード] を選択
 
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
-実行環境：CentOS Stream 8、MariaDB 10.3.28、PHP 7.2.24  
+実行環境：CentOS Stream 8、MariaDB 10.3.28、PHP 7.2.24、WordPress 6.1.1  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
