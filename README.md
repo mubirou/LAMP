@@ -713,7 +713,17 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # mysql -uroot
     ……
     MariaDB [(none)]> ←これが表示されたら成功！
-    MariaDB [(none)]> exit
+    MariaDB [(none)]> select user,host from mysql.user;
+    +------+--------------------+
+    | user | host               |
+    +------+--------------------+
+    | root | 127.0.0.1          |
+    | root | ::1                |
+    | root | centos.mubirou.com |
+    | root | localhost          |
+    +------+--------------------+
+    MariaDB [(none)]> quit ←MariaDBからの切断し端末に戻る
+    Bye
     ```
 
 参考：『INTRODUCTION NOTES』122頁（MariaDB）  
