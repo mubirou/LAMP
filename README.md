@@ -403,7 +403,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # firewall-cmd --list-services --permanent
         cockpit dhcpv6-client http ssh ←ftpが無い
         ```
-    1. httpを追加
+    1. ftpを追加
         ```
         # firewall-cmd --add-service=ftp --permanent
         ```
@@ -656,6 +656,48 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         mariadb-server.x86_64              3:10.3.28...
         mariadb-server-utils.x86_64        3:10.3.28...
         ```
+
+1. [ファイアウォール](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB)の設定
+    1. 稼働状況  
+        ```
+        # firewall-cmd --list-services --permanent
+        cockpit dhcpv6-client ftp http ssh ←mysqlが無い
+        ```
+    1. mysqlを追加
+        ```
+        # firewall-cmd --add-service=mysql --permanent
+        ```
+    1. ファイアウォールの再起動
+        ```
+        # systemctl restart firewalld
+        ```
+    1. 再度、稼働確認
+        ```
+        # firewall-cmd --list-services --permanent
+        cockpit dhcpv6-client ftp http mysql ssh ←mysqlが追加
+        ```
+
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
+    1. SELinuxの確認  
+        ```
+        # getsebool -a | grep mysql_connect
+        mysql_connect_any --> off ←これをonにする
+        mysql_connect_http --> off
+        selinuxuser_mysql_connect_enabled --> off ←これをonにする
+        ```
+    1. SELinuxは有効のままmysqlのデータ転送を可能にする
+        ```
+        # setsebool -P mysql_connect_any on
+        # setsebool -P selinuxuser_mysql_connect_enabled on
+        ```
+    1. 再度、SELinuxの確認  
+        ```
+        # getsebool -a | grep mysql_connect
+        mysql_connect_any --> on
+        mysql_connect_http --> off
+        selinuxuser_mysql_connect_enabled --> on
+        ```
+1. 
 
 参考：『INTRODUCTION NOTES』122頁（MariaDB）  
 実行環境：CentOS Stream 8、MariaDB 10.3.28  
