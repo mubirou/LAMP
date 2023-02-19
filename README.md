@@ -802,7 +802,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. パスワードの変更  
         1. [ユーザー]-[mubirou]-[編集]-[新しいパスワード]
         1. [プロフィールを更新]
-        1. [ログアウト] 後に http://192.168.3.11/wordpress/wp-admin/ にアクセスして確認
+        1. [ログアウト] 後に http://192.168.X.XX/wordpress/wp-admin/ にアクセスして確認
 
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
 実行環境：CentOS Stream 8、MariaDB 10.3.28、PHP 7.2.24、WordPress 6.1.1  
