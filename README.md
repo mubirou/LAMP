@@ -776,11 +776,18 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         define( 'DB_NAME', 'wordpress_db' ); ←'database_name_here'から変更
         ……
-        define( 'DB_USER', 'root' ); ←'username_here'から変更
+        define( 'DB_USER', '' ); ←'username_here'から変更（後で変更）
         ……
         define( 'DB_PASSWORD', '〇〇〇' ); ←'password_here'から変更
         ```
     1. **wordpress** フォルダを [FTP](#202302121037) ソフトを使って **/var/www/html** フォルダ内にアップロード  
+
+1. [MariaDB](#202302162306) でデータベースを作成  
+    ```
+    # mysql -u root -p
+    ……
+    MariaDB [(none)]> CREATE DATABASE wordpress_db; ←上記と同じDB名
+    ```
 
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
 実行環境：CentOS Stream 8、MariaDB 10.3.28、PHP 7.2.24、WordPress 6.1.1  
