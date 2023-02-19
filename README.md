@@ -766,7 +766,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 ## この項目は書きかけです
 
-1. [WordPress](https://ja.wikipedia.org/wiki/WordPress)のダウンロード  
+1. [WordPress](https://ja.wikipedia.org/wiki/WordPress)のダウンロード＆設定  
     1. https://ja.wordpress.org/ にアクセス
     1. [WordPressを入手]-[ダウンロードしてインストール]-[WordPress 6.1.1をダウンロード] を選択
     1. ダウンロードした wordpress-6.1.1-ja.zip を解凍
