@@ -770,7 +770,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. https://ja.wordpress.org/ にアクセス
     1. [WordPressを入手]-[ダウンロードしてインストール]-[WordPress 6.1.1をダウンロード] を選択
     1. ダウンロードした wordpress-6.1.1-ja.zip を解凍
-    1. [wordpress] フォルダ内の wp-config-sample.php をコピーして名前を **wp-config.php** に変更し以下の通り編集  
+    1. **wordpress** フォルダ内の wp-config-sample.php をコピーして名前を **wp-config.php** に変更し以下の通り編集  
         ```
         <?php
         ……
@@ -780,7 +780,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         define( 'DB_PASSWORD', '〇〇〇' ); ←'password_here'から変更
         ```
-    1. [wordpress] フォルダを [FTP](#202302121037) ソフトを使って /var/www/html フォルダ内にアップロード  
+    1. **wordpress** フォルダを [FTP](#202302121037) ソフトを使って **/var/www/html** フォルダ内にアップロード  
 
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
 実行環境：CentOS Stream 8、MariaDB 10.3.28、PHP 7.2.24、WordPress 6.1.1  
