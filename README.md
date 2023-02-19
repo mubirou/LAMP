@@ -640,7 +640,12 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         php   7.4         ...
         php   8.0         ...
         ```
-    1. 
+    1. インストール  
+        ```
+        # dnf -y update ←インストール済パッケージをアップデート
+        # dnf module reset php  ←既存のPHPのモジュールをリセット
+        # dnf module -y install php:7.4
+        ```
 
 参考：『INTRODUCTION NOTES』121頁（PHP）  
 実行環境：CentOS Stream 8、PHP 7.2.24  
