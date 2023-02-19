@@ -859,7 +859,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 
 <a id="202302191517"></a>
-# <b>PHP+Samba</b>
+# <b>Samba</b>
 
 1. Samba パッケージ情報の確認（概要）  
     ```
