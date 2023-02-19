@@ -622,10 +622,16 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         1. Webブラウザで http://192.168.X.XX/test.php にアクセス
         1. 各種データが表示されれば成功！
 
+## 
+
+* PHP 7.2 → 7.4 へアップグレード  
+    1. XXX
+
 参考：『INTRODUCTION NOTES』121頁（PHP）  
 実行環境：CentOS Stream 8、PHP 7.2.24  
 作成者：夢寐郎  
 作成日：2023年2月15日  
+更新日：2023年2月XX日 7.4へアップグレード追加  
 [[TOP]](#TOP)  
 
 
