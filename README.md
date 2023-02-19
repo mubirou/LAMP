@@ -728,20 +728,20 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         cockpit dhcpv6-client ftp http mysql ssh ←mysqlが追加
         ```
 
-1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
-    1. SELinuxの確認  
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定  
+    1. SELinux の確認  
         ```
         # getsebool -a | grep mysql_connect
         mysql_connect_any --> off ←これをonにする
         mysql_connect_http --> off
         selinuxuser_mysql_connect_enabled --> off ←これをonにする
         ```
-    1. SELinuxは有効のままmysqlのデータ転送を可能にする
+    1. SELinux は有効のまま mysql のデータ転送を可能にする
         ```
         # setsebool -P mysql_connect_any on
         # setsebool -P selinuxuser_mysql_connect_enabled on
         ```
-    1. 再度、SELinuxの確認  
+    1. 再度、SELinux の確認  
         ```
         # getsebool -a | grep mysql_connect
         mysql_connect_any --> on
@@ -861,6 +861,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302191517"></a>
 # <b>Samba</b>
 
+## この項目は書きかけです
+
 1. Samba パッケージ情報の確認（概要）  
     ```
     # dnf info samba samba-client samba-winbind samba-winbind-clients cifs-utils
@@ -920,6 +922,50 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         services: cockpit dhcpv6-client ftp http mysql samba ssh ←samba!
         ……
+        ```
+
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定  
+    1. SELinux の確認  
+        ```
+        # getsebool -a | grep samba
+        samba_create_home_dirs --> off  ←これをonにする
+        samba_domain_controller --> off
+        samba_enable_home_dirs --> off  ←これをonにする
+        samba_export_all_ro --> off
+        samba_export_all_rw --> off  ←これをonにする
+        samba_load_libgfapi --> off
+        samba_portmapper --> off
+        samba_run_unconfined --> off
+        samba_share_fusefs --> off
+        samba_share_nfs --> off
+        sanlock_use_samba --> off
+        tmpreaper_use_samba --> off
+        use_samba_home_dirs --> off
+        virt_use_samba --> off
+        ```
+    1. SELinux は有効のままの Samba データ転送を可能にする
+        ```
+        # setsebool -P samba_create_home_dirs on
+        # setsebool -P samba_enable_home_dirs on
+        # setsebool -P samba_export_all_rw on
+        ```
+    1. 再度、SELinux の確認（概要）  
+        ```
+        # getsebool -a | grep samba
+        samba_create_home_dirs --> on ←onに変更された
+        samba_domain_controller --> off
+        samba_enable_home_dirs --> on ←onに変更された
+        samba_export_all_ro --> off
+        samba_export_all_rw --> on ←onに変更された
+        samba_load_libgfapi --> off
+        samba_portmapper --> off
+        samba_run_unconfined --> off
+        samba_share_fusefs --> off
+        samba_share_nfs --> off
+        sanlock_use_samba --> off
+        tmpreaper_use_samba --> off
+        use_samba_home_dirs --> off
+        virt_use_samba --> off
         ```
 
 実行環境：CentOS Stream 8、Samba 4.17.5  
