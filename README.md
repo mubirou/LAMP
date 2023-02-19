@@ -624,8 +624,23 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 ## 
 
-* PHP 7.2 → 7.4 へアップグレード  
-    1. XXX
+* 7.4 へアップグレード  
+    1. インストール済の PHP のバージョン確認  
+        ```
+        # php -v
+        PHP 7.2.24 (cli) ...
+        ```
+    1. インストール可能なPHPの確認  
+        ```
+        # dnf module list php
+        ……
+        Name  Stream      ...
+        php   7.2 [d][e]  ...
+        php   7.3         ...
+        php   7.4         ...
+        php   8.0         ...
+        ```
+    1. 
 
 参考：『INTRODUCTION NOTES』121頁（PHP）  
 実行環境：CentOS Stream 8、PHP 7.2.24  
