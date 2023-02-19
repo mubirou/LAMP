@@ -790,7 +790,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     ```
 
 1. ブログの作成  
-    1. http://192.168.3.11/wordpress/wp-admin/install.php にアクセス
+    1. http://192.168.X.XX/wordpress/wp-admin/install.php にアクセス
 
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
 実行環境：CentOS Stream 8、MariaDB 10.3.28、PHP 7.2.24、WordPress 6.1.1  
