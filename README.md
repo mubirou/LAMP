@@ -793,17 +793,21 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 1. ブログの作成  
     1. http://192.168.X.XX/wordpress/wp-admin/install.php にアクセス
     1. [ようこそ] 画面で各種設定  
-        * サイトのタイトル：〇〇〇（任意）
-        * ユーザー名：MUBIROU（任意）
-        * パスワード：〇〇〇（任意）
+        * サイトのタイトル：TODAY'S QUESTION（例）
+        * ユーザー名：mubirou（任意）
+        * パスワード：********（初期値を保管）
         * メールアドレス：mubirou.info@gmail.com（任意）
     1. [WordPress をインストール] を選択
-    1. "成功しました！"と表示されたら成功！
+    1. "成功しました！"と表示されたら [ログイン]
+    1. パスワードの変更  
+        1. [ユーザー]-[mubirou]-[編集]-[新しいパスワード]
+        1. [プロフィールを更新]
+        1. [ログアウト] 後に http://192.168.3.11/wordpress/wp-admin/ にアクセスして確認
 
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
 実行環境：CentOS Stream 8、MariaDB 10.3.28、PHP 7.2.24、WordPress 6.1.1  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月19日  
 [[TOP]](#TOP)  
 
 
