@@ -727,11 +727,12 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     MariaDB [(none)]> quit ←MariaDBからの切断し端末に戻る
     Bye
     ```
-
+参考：[MySQL / MariaDB 基礎文法](https://github.com/mubirou/HelloWorld/blob/master/languages/MySQL/MySQL_reference.md)  
 参考：『INTRODUCTION NOTES』122頁（MariaDB）  
 実行環境：CentOS Stream 8、MariaDB 10.3.28  
 作成者：夢寐郎  
 作成日：2023年2月17日  
+更新日：2023年2月19日  
 [[TOP]](#TOP)  
 
 
@@ -791,6 +792,13 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 1. ブログの作成  
     1. http://192.168.X.XX/wordpress/wp-admin/install.php にアクセス
+    1. [ようこそ] 画面で各種設定  
+        * サイトのタイトル：〇〇〇（任意）
+        * ユーザー名：MUBIROU（任意）
+        * パスワード：〇〇〇（任意）
+        * メールアドレス：mubirou.info@gmail.com（任意）
+    1. [WordPress をインストール] を選択
+    1. "成功しました！"と表示されたら成功！
 
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
 実行環境：CentOS Stream 8、MariaDB 10.3.28、PHP 7.2.24、WordPress 6.1.1  
