@@ -305,7 +305,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         services: cockpit dhcpv6-client ssh ←http通信がない
         ……
-    1. httpを追加
+    1. http を追加
         ```
         # firewall-cmd --permanent --add-service=http
         ```
@@ -409,7 +409,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # firewall-cmd --list-services --permanent
         cockpit dhcpv6-client http ssh ←ftpが無い
         ```
-    1. ftpを追加
+    1. ftp を追加
         ```
         # firewall-cmd --add-service=ftp --permanent
         ```
@@ -714,7 +714,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # firewall-cmd --list-services --permanent
         cockpit dhcpv6-client ftp http ssh ←mysqlが無い
         ```
-    1. mysqlを追加
+    1. mysql を追加
         ```
         # firewall-cmd --add-service=mysql --permanent
         ```
@@ -899,7 +899,28 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     samba-winbind-modules.x86_64   4.17.5...
     ```
 
-1. XXX
+1. [ファイアウォール](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB)の設定
+    1. 稼働状況  
+        ```
+        # firewall-cmd --list-all
+        ……
+        services: cockpit dhcpv6-client ftp http mysql ssh ←samba通信がない
+        ……
+    1. samba を追加
+        ```
+        # firewall-cmd --add-service=samba --permanent
+        ```
+    1. ファイアウォールの再起動
+        ```
+        # systemctl restart firewalld
+        ```
+    1. 再度、稼働確認
+        ```
+        # firewall-cmd --list-all
+        ……
+        services: cockpit dhcpv6-client ftp http mysql samba ssh ←samba!
+        ……
+        ```
 
 実行環境：CentOS Stream 8、Samba 4.17.5  
 作成者：夢寐郎  
