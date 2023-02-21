@@ -305,13 +305,19 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         services: cockpit dhcpv6-client ssh ←http通信がない
         ……
-    1. http を追加
+    1. http と https を追加
         ```
-        # firewall-cmd --permanent --add-service=http
+        # firewall-cmd --add-service=http --zone=public --permanent
+        # firewall-cmd --add-service=https --zone=public --permanent
         ```
-    1. ファイアウォールの再起動
+        * 削除方法  
+            ```
+            # firewall-cmd --remove-service=〇〇 ...
+            # firewall-cmd --reload
+            ```
+    1. firewalld の再起動
         ```
-        # firewall-cmd --reload
+        # systemctl restart firewalld
         ```
     1. 再度、稼働確認
         ```
@@ -319,6 +325,71 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         services: cockpit dhcpv6-client http ssh ←httpが追加
         ……
+        ```
+
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
+    1. SELinuxの確認  
+        ```
+        httpd_anon_write --> off
+        httpd_builtin_scripting --> on
+        httpd_can_check_spam --> off
+        httpd_can_connect_ftp --> off
+        httpd_can_connect_ldap --> off
+        httpd_can_connect_mythtv --> off
+        httpd_can_connect_zabbix --> off
+        httpd_can_network_connect --> off ←onにする必要ある
+        httpd_can_network_connect_cobbler --> off
+        httpd_can_network_connect_db --> off
+        httpd_can_network_memcache --> off
+        httpd_can_network_relay --> off
+        httpd_can_sendmail --> off
+        httpd_dbus_avahi --> off
+        httpd_dbus_sssd --> off
+        httpd_dontaudit_search_dirs --> off
+        httpd_enable_cgi --> on
+        httpd_enable_ftp_server --> off
+        httpd_enable_homedirs --> off ←onにする必要ある
+        httpd_execmem --> off
+        httpd_graceful_shutdown --> off  ←onにする必要ある
+        httpd_manage_ipa --> off
+        httpd_mod_auth_ntlm_winbind --> off
+        httpd_mod_auth_pam --> off
+        httpd_read_user_content --> off
+        httpd_run_ipa --> off
+        httpd_run_preupgrade --> off
+        httpd_run_stickshift --> off
+        httpd_serve_cobbler_files --> off
+        httpd_setrlimit --> off
+        httpd_ssi_exec --> off
+        httpd_sys_script_anon_write --> off
+        httpd_tmp_exec --> off
+        httpd_tty_comm --> off ←onにする必要ある
+        httpd_unified --> off
+        httpd_use_cifs --> off
+        httpd_use_fusefs --> off
+        httpd_use_gpg --> off
+        httpd_use_nfs --> off
+        httpd_use_opencryptoki --> off
+        httpd_use_openstack --> off
+        httpd_use_sasl --> off
+        httpd_verify_dns --> off
+        ```
+    1. SELinuxは有効のまま apache 関連のアクセスを可能にする  
+        ```
+        # setsebool -P httpd_can_network_connect on
+        # setsebool -P httpd_tty_comm on
+        # setsebool -P httpd_graceful_shutdown on
+        # setsebool -P httpd_enable_homedirs on
+        ```
+    1. 再度、SELinuxの確認  
+        ```
+        # getsebool -a | grep httpd | grep 'on$'
+        httpd_builtin_scripting --> on
+        httpd_can_network_connect --> on
+        httpd_enable_cgi --> on
+        httpd_enable_homedirs --> on
+        httpd_graceful_shutdown --> on
+        httpd_tty_comm --> on
         ```
 
 1. 動作確認（WebブラウザでApacheが起動しているLinuxのIPアドレスにアクセス）  
@@ -329,6 +400,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 実行環境：CentOS Stream 8、Apache 2.4.37  
 作成者：夢寐郎  
 作成日：2023年2月12日  
+更新日：2023年2月22日 firewalledの変更、SELinuxの追加  
 [[TOP]](#TOP)  
 
 
@@ -413,7 +485,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # firewall-cmd --add-service=ftp --permanent
         ```
-    1. ファイアウォールの再起動
+    1. firewalld の再起動
         ```
         # firewall-cmd --reload
         ```
@@ -718,7 +790,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # firewall-cmd --add-service=mysql --permanent
         ```
-    1. ファイアウォールの再起動
+    1. firewalld の再起動
         ```
         # systemctl restart firewalld
         ```
@@ -912,7 +984,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # firewall-cmd --add-service=samba --permanent
         ```
-    1. ファイアウォールの再起動
+    1. firewalld の再起動
         ```
         # systemctl restart firewalld
         ```
