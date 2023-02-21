@@ -323,7 +323,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
         # firewall-cmd --list-all
         ……
-        services: cockpit dhcpv6-client http ssh ←httpが追加
+        services: cockpit dhcpv6-client http https ssh ←http,httpsが追加
         ……
         ```
 
