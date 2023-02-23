@@ -940,7 +940,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 ## この項目は書きかけです
 
-1. Samba パッケージ情報の確認（概要）  
+1. [Samba](http://www.samba.gr.jp/doc/samba2.0_and_linux.html) パッケージ情報の確認（概要）  
     ```
     # dnf info samba samba-client samba-winbind samba-winbind-clients cifs-utils
     ……
@@ -1046,6 +1046,11 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
 
 1. [smb.conf](http://www.samba.gr.jp/project/translation/current/htmldocs/manpages/smb.conf.5.html) ファイルの編集  
+    1. 共有ディレクトリの作成
+        ```
+        # mkdir /home/samba
+        # chmod -R 777 /home/samba
+        ```
     1. smb.conf のバックアップ  
         ```
         # cp /etc/samba/smb.conf /etc/samba/smb.conf.org
@@ -1067,6 +1072,15 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
             guest ok = yes
         ```
 
+1. [Samba](http://www.samba.gr.jp/doc/samba2.0_and_linux.html) の起動＆自動起動  
+    ```
+    # systemctl enable smb.service
+    # systemctl enable nmb.service
+    # systemctl start smb.service
+    # systemctl start nmb.service
+    ```
+
+参考：『INTRODUCTION NOTES』177頁（Samba）  
 実行環境：CentOS Stream 8、Samba 4.17.5  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
