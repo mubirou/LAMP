@@ -1084,6 +1084,13 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
             writable = yes
             guest ok = yes
         ```
+    1. 文法チェック
+        ```
+        # testparm
+        ……
+        Loaded services file OK. →問題なし
+        ……
+        ```
 
 1. [Samba](http://www.samba.gr.jp/doc/samba2.0_and_linux.html) の起動＆自動起動  
     ```
