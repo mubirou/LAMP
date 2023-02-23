@@ -590,7 +590,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 実行環境：CentOS Stream 8、vim 8.0  
 作成者：夢寐郎  
 作成日：2023年2月13日  
-更新日：2023年2月23日 Vi → Vim（ヴィム）に変更  
+更新日：2023年2月23日 Vi → [Vim](https://ja.wikipedia.org/wiki/Vim)（ヴィム）に変更  
 [[TOP]](#TOP)  
 
 
