@@ -1134,8 +1134,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 <a id="202302232039"></a>
 # <b>PHP+SQLite</b>
 
-## この項目は書きかけです
-
 1. [PHP のインストール](#202302142236)
 
 1. [SQLite](https://ja.wikipedia.org/wiki/SQLite) のインストール  
