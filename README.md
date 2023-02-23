@@ -938,8 +938,6 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302191517"></a>
 # <b>Samba</b>
 
-## この項目は書きかけです
-
 1. [Samba](http://www.samba.gr.jp/doc/samba2.0_and_linux.html) パッケージ情報の確認（概要）  
     ```
     # dnf info samba samba-client samba-winbind samba-winbind-clients cifs-utils
