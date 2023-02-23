@@ -1081,7 +1081,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     ```
 
 1. 動作確認  
-    1. Windows で "windows の機能の有効化または無効化" を検索
+    1. Windows で以下を検索  
+        🔎 windows の機能の有効化または無効化
     1. 以下の項目に✓を入れ Windows を再起動  
         * SMB 1.0/CIFS ファイル共有のサポート
         * SMB ダイレクト
