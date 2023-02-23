@@ -881,6 +881,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. "10.3.28-MariaDB" と表示されれば成功！
 
 参考：[Godot+PHP+MySQL](https://github.com/mubirou/Godot-Study-Notes#phpmysql)  
+参考：[MySQL / MariaDB 基礎文法](https://github.com/mubirou/HelloWorld/blob/master/languages/MySQL/MySQL_reference.md)  
 実行環境：CentOS Stream 8、PHP 7.2.24、MariaDB 10.3.28  
 作成者：夢寐郎  
 作成日：2023年2月17日  
