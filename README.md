@@ -1080,8 +1080,15 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # systemctl start nmb.service
     ```
 
+1. 動作確認  
+    1. 
+
+
+    1. Windows 上で [設定]-[ネットワークとインターネット]-[ネットワークの詳細設定]-[共有の詳細設定]-[ネットワーク探索] を [オン] にする
+    1. Windoss 上で [エクスプローラー]-[]
+
 参考：『INTRODUCTION NOTES』177頁（Samba）  
-実行環境：CentOS Stream 8、Samba 4.17.5  
+実行環境：CentOS Stream 8、Samba 4.17.5、Windows 11（22H2）  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
