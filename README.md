@@ -1045,7 +1045,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         virt_use_samba --> off
         ```
 
-1. smb.conf ファイルの編集  
+1. [smb.conf](http://www.samba.gr.jp/project/translation/current/htmldocs/manpages/smb.conf.5.html) ファイルの編集  
     1. smb.conf のバックアップ  
         ```
         # cp /etc/samba/smb.conf /etc/samba/smb.conf.org
