@@ -1136,11 +1136,15 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 ## この項目は書きかけです
 
 1. [PHP のインストール](#202302142236)
-1. SQLite インストール  
+1. [SQLite](https://ja.wikipedia.org/wiki/SQLite) のインストール  
     ```
     # dnf -y update ←インストール済パッケージをアップデート
     # dnf -y install epel-release ←EPEL リポジトリの有効化
     # dnf -y install sqlite
+    ```
+1. SQLite のバージョンを調べる
+    ```
+
     ```
 
 参考：『INTRODUCTION NOTES』111頁（PHP→SQLite→PHP）  
