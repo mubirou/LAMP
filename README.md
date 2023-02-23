@@ -1137,24 +1137,40 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 ## この項目は書きかけです
 
 1. [PHP のインストール](#202302142236)
+
 1. [SQLite](https://ja.wikipedia.org/wiki/SQLite) のインストール  
     ```
     # dnf -y update ←インストール済パッケージをアップデート
     # dnf -y install epel-release ←EPEL リポジトリの有効化
     # dnf -y install sqlite
     ```
+
 1. SQLite のバージョンを調べる
     ```
     # sqlite3 -version
     3.26.0 2018-12-01 12:34:55 ...
     ```
 
+1. 動作確認  
+    1. sqlitetest.php を作成
+        ```
+        <?php
+            $con = new PDO('sqlite::memory:', null, null);
+            $statement = $con->prepare('SELECT sqlite_version()');
+            $statement->execute();
+            echo $statement->fetchColumn(); //-> 3.26.0
+        ?>
+        ```
+    1. FTP ソフトを使って /var/www/html/ にアップロード
+    1. Web ブラウザで http://192.168.X.XX/sqlitetest.php にアクセス
+    1. "3.26.0" と表示されれば成功！
+
 参考：[Godot+PHP+SQLite](https://github.com/mubirou/Godot-Study-Notes#phpsqlite)  
 参考：[SQLite 基礎文法](https://bit.ly/41kaJsS)  
 参考：『INTRODUCTION NOTES』111頁（PHP→SQLite→PHP）  
 実行環境：CentOS Stream 8、[PHP](#202302142236) 7.4.30、SQLite 3.26  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月23日  
 [[TOP]](#TOP)  
 
 
