@@ -1148,6 +1148,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     3.26.0 2018-12-01 12:34:55 ...
     ```
 
+参考：[Godot+PHP+SQLite](https://github.com/mubirou/Godot-Study-Notes#phpsqlite)  
+参考：[SQLite 基礎文法](https://bit.ly/41kaJsS)  
 参考：『INTRODUCTION NOTES』111頁（PHP→SQLite→PHP）  
 実行環境：CentOS Stream 8、[PHP](#202302142236) 7.4.30、SQLite 3.26  
 作成者：夢寐郎  
