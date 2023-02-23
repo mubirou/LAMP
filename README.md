@@ -159,6 +159,11 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # rm -f xxxx
     ```
 
+* ファイルのバックアップ  
+    ```
+    # cp 元ファイル 名前を変更したバックファイル名
+    ```
+
 * シャットダウン
     ```
     # shutdown now
@@ -176,7 +181,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 
 作成者：夢寐郎  
 作成日：2023年2月12日  
-更新日：2023年2月19日 ping を追加  
+更新日：2023年2月23日 ファイルのバックアップを追加  
 [[TOP]](#TOP)  
 
 
@@ -1038,6 +1043,28 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         tmpreaper_use_samba --> off
         use_samba_home_dirs --> off
         virt_use_samba --> off
+        ```
+
+1. smb.conf ファイルの編集  
+    1. smb.conf のバックアップ  
+        ```
+        # cp /etc/samba/smb.conf /etc/samba/smb.conf.org
+        ```
+    1. smb.conf の編集
+        ```
+        # vi /etc/samba/smb.conf
+        [global]
+            workgroup = WORKGROUP
+            security = user
+            netbios name = centos
+            server string = SAMBA SERVER Version %v
+            passdb backend = tdbsam
+
+        [share]
+            path = /home/samba
+            comment = Share Directory
+            writable = yes
+            guest ok = yes
         ```
 
 実行環境：CentOS Stream 8、Samba 4.17.5  
