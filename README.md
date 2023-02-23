@@ -33,15 +33,15 @@
 <a id="202301281748"></a>
 # <b>ブートUSBの作成</b>
 
-CentOS Streamをインストールするための「ブートUSB」を作成します  
+CentOS Stream をインストールするための「ブートUSB」を作成します  
 
-1. CentOSのISOファイルをダンロード
+1. CentOS の ISO ファイルをダンロード
     1. https://www.centos.org/download/ を開く
     1. 「CentOS Stream]-[8]-[x86_64] を選択
     1. http://ftp.riken.jp/Linux/centos/8-stream/isos/x86_64/ 等から選択
     1. [CentOS-Stream-8-x86_64-20230125-dvd1.iso] を選択しダウンロード（約11GB）
 
-1. Rufusのダウンロード
+1. Rufus のダウンロード
     * Rufus（ルーファス）について  
         * The Reliable USB Formatting Utility, with Sourceの略
         * USBメモリを起動可能ドライブにするフリーソフトウェア
@@ -49,7 +49,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     1. https://rufus.ie/ja/ を開く
     1. [ダウンロード]-[Rufus 3.21] を選択
 
-1. ブートUSBの作成
+1. ブート USB の作成
     1. 上記でダウンロードした [rufus-3.2.1.exe] を起動し各種設定  
         * デバイス：USBメモリ（16GB以上）
         * ブートの種類：ダウンロード済の上記のISOファイル
@@ -241,7 +241,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     ```
     # vi /etc/ssh/sshd_config
     ```
-* Windowsからの操作
+* Windows からの操作
     1. https://www.putty.org/ の [Download PuTTy] を選択
     1. [putty-64bit-0.78-installer.msi] をダウンロード＆インストール
     1. PuTTy（パティ）を起動し各種設定＆接続  
@@ -251,7 +251,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
             [Session]-[Host Name(or IP address)]：192.168.X.XX（LinuxパソコンのIPアドレス）
         1. 上記の設定の保存  
             [Session]-[Saved Sessions]：CentOS@192.168.X.XX 等に命名して [Save]
-    1. Linuxに接続  
+    1. Linux に接続  
         1. [Session] で上記の [CentOS@192.168.X.XX] を選択し [Load]-[Open]  
             * [PuTTy Security Alert] が表示されたら [Accept] し再度接続
         1. [login as:] と表示されたらログイン  
@@ -333,7 +333,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
 
 1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
-    1. SELinuxの確認  
+    1. SELinux の確認  
         ```
         httpd_anon_write --> off
         httpd_builtin_scripting --> on
@@ -379,14 +379,14 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         httpd_use_sasl --> off
         httpd_verify_dns --> off
         ```
-    1. SELinuxは有効のまま apache 関連のアクセスを可能にする  
+    1. SELinux は有効のまま apache 関連のアクセスを可能にする  
         ```
         # setsebool -P httpd_can_network_connect on
         # setsebool -P httpd_tty_comm on
         # setsebool -P httpd_graceful_shutdown on
         # setsebool -P httpd_enable_homedirs on
         ```
-    1. 再度、SELinuxの確認  
+    1. 再度 SELinux の確認  
         ```
         # getsebool -a | grep httpd | grep 'on$'
         httpd_builtin_scripting --> on
@@ -443,7 +443,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ……
         mubirou:x:1000:
         ```
-    1. Webページ管理者グループを作成
+    1. Web ページ管理者グループを作成
         ```
         # vi /etc/group
         ……
@@ -501,7 +501,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
 
 1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
-    1. SELinuxの確認  
+    1. SELinux の確認  
         ```
         # getsebool -a | grep ^ftp
         ftpd_anon_write --> off
@@ -513,11 +513,11 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ftpd_use_nfs --> off
         ftpd_use_passive_mode --> off
         ```
-    1. SELinuxは有効のままvsftpdのデータ転送を可能にする  
+    1. SELinux は有効のまま vsftpd のデータ転送を可能にする  
         ```
         # setsebool -P ftpd_full_access on
         ```
-    1. 再度、SELinuxの確認  
+    1. 再度 SELinux の確認  
         ```
         # getsebool -a | grep ftpd_full_access
         ftpd_full_access --> on
@@ -551,7 +551,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         ```
     1. [index.html] を選択し [コマンド]-[アップロード] を選択
     1. リモートサイト側に上記ファイルがアップロードされたらファイル転送成功！
-    1. Webブラウザ上で 192.168.X.XX にアクセスして Hello,world! と表示されたら大成功！
+    1. Web ブラウザ上で 192.168.X.XX にアクセスして Hello,world! と表示されたら大成功！
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバ）  
 参考：『INTRODUCTION NOTES』176頁（パーミッション等）  
@@ -630,8 +630,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302142236"></a>
 # <b>PHP</b>
 
-1. PHPのインストール  
-    1. インストール可能なPHPの確認  
+1. PHP のインストール  
+    1. インストール可能な PHP の確認  
         ```
         # dnf module list php
         ……
@@ -669,12 +669,12 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         名前  : php-xmlrpc
         概要  : A module for PHP applications which use the XML-RPC
         ```
-    1. PHPのインストール  
+    1. PHP のインストール  
         ```
         # dnf -y update ←インストール済パッケージをアップデート
         # dnf install -y php php-mysqlnd php-json php-mbstring php-gd php-pdo php-xml php-xmlrpc
         ```
-    1. インストール済のPHPパッケージの確認  
+    1. インストール済の PHP パッケージの確認  
         ```
         # dnf list installed | grep php
         php.x86_64           7.2.24-1. ...
@@ -689,7 +689,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         php-xml.x86_64       7.2.24-1. ...
         php-xmlrpc.x86_64    7.2.24-1. ...
         ```
-    1. Apacheの再起動（Apacheモジュールとして動作しているため）  
+    1. Apache の再起動（Apache モジュールとして動作しているため）  
         ```
         # systemctl restart httpd
         ```
@@ -712,7 +712,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # php -v
         PHP 7.2.24 (cli) ...
         ```
-    1. インストール可能なPHPの確認  
+    1. インストール可能な PHP の確認  
         ```
         # dnf module list php
         ……
@@ -729,7 +729,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # dnf module -y install php:7.4 ←インストール
         # systemctl restart httpd ←Apacheの再起動
         ```
-    1. インストール済のPHPパッケージの確認  
+    1. インストール済の PHP パッケージの確認  
         ```
         # dnf list installed | grep php
         php.x86_64           7.4.30-1. ...
@@ -758,7 +758,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 # <b>MariaDB</b>
 
 1. [MariaDB](https://ja.wikipedia.org/wiki/MariaDB)のインストール  
-    1. インストール可能なPHPの確認  
+    1. インストール可能な PHP の確認  
         ```
         # dnf list maria*
         mariadb.x86_64         3:10.3.28...
@@ -766,12 +766,12 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         mariadb-server.x86_64  3:10.3.28...
         ……
         ```
-    1. MariaDBのインストール  
+    1. MariaDB のインストール  
         ```
         # dnf -y update ←インストール済パッケージをアップデート
         # dnf install -y mariadb-server
         ```
-    1. インストール済のMariaDBパッケージの確認  
+    1. インストール済の MariaDB パッケージの確認  
         ```
         # dnf list installed | grep mariadb
         mariadb.x86_64                     3:10.3.28...
@@ -818,7 +818,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # setsebool -P mysql_connect_any on
         # setsebool -P selinuxuser_mysql_connect_enabled on
         ```
-    1. 再度、SELinux の確認  
+    1. 再度 SELinux の確認  
         ```
         # getsebool -a | grep mysql_connect
         mysql_connect_any --> on
@@ -864,7 +864,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
 <a id="202302170022"></a>
 # <b>PHP+MariaDB</b>
 
-1. [PHPをインストール](#202302142236)
+1. [PHP をインストール](#202302142236)
 
 1. 動作確認  
     1. sqltest.php を作成
@@ -876,8 +876,8 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
             echo $statement->fetchColumn(); //-> 10.3.28-MariaDB
         ?>
         ```
-    1. FTPソフトを使って /var/www/html/ にアップロード
-    1. Webブラウザで http://192.168.X.XX/sqltest.php にアクセス
+    1. FTP ソフトを使って /var/www/html/ にアップロード
+    1. Web ブラウザで http://192.168.X.XX/sqltest.php にアクセス
     1. "10.3.28-MariaDB" と表示されれば成功！
 
 参考：[Godot+PHP+MySQL](https://github.com/mubirou/Godot-Study-Notes#phpmysql)  
@@ -1024,7 +1024,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         # setsebool -P samba_enable_home_dirs on
         # setsebool -P samba_export_all_rw on
         ```
-    1. 再度、SELinux の確認（概要）  
+    1. 再度 SELinux の確認（概要）  
         ```
         # getsebool -a | grep samba
         samba_create_home_dirs --> on ←onに変更された
