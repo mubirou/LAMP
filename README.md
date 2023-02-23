@@ -1144,11 +1144,12 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     ```
 1. SQLite のバージョンを調べる
     ```
-
+    # sqlite3 -version
+    3.26.0 2018-12-01 12:34:55 ...
     ```
 
 参考：『INTRODUCTION NOTES』111頁（PHP→SQLite→PHP）  
-実行環境：CentOS Stream 8、[PHP](#202302142236) 7.4.30  
+実行環境：CentOS Stream 8、[PHP](#202302142236) 7.4.30、SQLite 3.26  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
 [[TOP]](#TOP)  
