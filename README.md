@@ -1051,7 +1051,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # pdbedit -a mubirou
     new password:
     ```
-    * 各種操作
+    * その他の操作
         ```
         # pdbedit -x 〇〇 ←任意の Samba ユーザーの削除
         # pdbedit -L ←Sambaユーザーの一覧表示
@@ -1092,6 +1092,11 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
     # systemctl start smb.service
     # systemctl start nmb.service
     ```
+    * その他の操作  
+        ```
+        # systemctl restart smb.service
+        # systemctl restart nmb.service
+        ```
 
 1. 動作確認  
     1. SMB 1.0 の有効化  
@@ -1104,7 +1109,7 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
                 * SMB 1.0/CIFS 自動削除
             * SMB ダイレクト
 
-    1. Windows 上で [エクスプローラー]-[ネットワーク]-[右クリック]-[ネットワークドライブの割り当て] を選択し以下を設定  
+    1. Windows 上で [エクスプローラー]-[ネットワーク]-[右クリック]-[**ネットワークドライブの割り当て**] を選択し以下を設定  
         * ドライブ：Z:
         * フォルダー：\\192.168.3.11\samba
     1. [ネットワーク資格情報の入力] で以下を設定
