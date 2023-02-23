@@ -1045,6 +1045,19 @@ CentOS Streamをインストールするための「ブートUSB」を作成し�
         virt_use_samba --> off
         ```
 
+1. Samba ユーザーの追加  
+    （注意）既存の [CentOS ユーザー](#202302130631)である必要がある  
+    ```
+    # pdbedit -a mubirou
+    new password:
+    ```
+    * 各種操作
+        ```
+        # pdbedit -x 〇〇 ←任意の Samba ユーザーの削除
+        # pdbedit -L ←Sambaユーザーの一覧表示
+        # pdbedit -v 〇〇 ←任意の Samba ユーザーの詳細表示
+        ```
+
 1. [smb.conf](http://www.samba.gr.jp/project/translation/current/htmldocs/manpages/smb.conf.5.html) ファイルの編集  
     1. 共有ディレクトリの作成
         ```
