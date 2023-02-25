@@ -1239,7 +1239,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         print("Hello,world!")
         ```
     1. FTP クライアントソフトを使って以下にアップロード  
-        **/var/www/html/cgi-bin**
+        **/var/www/cgi-bin**
     1. 動作確認（この時点では動作しない）  
         1. Web ブラウザで以下にアクセス  
             http://192.168.X.XX/cgi-bin/test.py
