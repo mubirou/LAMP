@@ -1188,8 +1188,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 <a id="202302232147"></a>
 # <b>Python</b>
 
-## この項目は書きかけです
-
 1. [Python](https://www.python.jp/) のインストール  
     ```
     # dnf -y update ←インストール済パッケージをアップデート
@@ -1213,6 +1211,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # python3 test.py
         Hello,world! ←と表示されたら成功！
+        ```
+        ※確認後[ファイルを削除](#202302121019)  
+        ```
+        # rm test.py
         ```
 
 実行環境：CentOS Stream 8、Python 3.9.16  
