@@ -1239,11 +1239,11 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         print("Hello,world!")
         ```
     1. FTP クライアントソフトを使って以下にアップロード  
-        **/var/www/cgi-bin**
+        **/var/www/html**
     1. 動作確認（この時点では動作しない）  
         1. Web ブラウザで以下にアクセス  
-            http://192.168.X.XX/cgi-bin/test.py
-        1. "Internal Server Error" が表示される
+            http://192.168.X.XX/test.py
+        1. 上記のコードが表示されてしまう
 
 1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
     1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
