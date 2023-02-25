@@ -1226,7 +1226,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 <a id="202302251334"></a>
 # <b>Python on Apache</b>
 
-[Apache](#202302120812) 上で [CGI](https://ja.wikipedia.org/wiki/Common_Gateway_Interface) として動作させる方法  
+[Python](#202302232147) を [Apache](#202302120812) 上で [CGI](https://ja.wikipedia.org/wiki/Common_Gateway_Interface) として動作させる方法  
 
 ## この項目は書きかけです
 
