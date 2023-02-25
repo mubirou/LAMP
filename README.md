@@ -1245,7 +1245,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             http://192.168.X.XX/cgi-bin/test.py
         1. "Internal Server Error" が表示される
 
-1. XXXX
+1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
