@@ -1242,7 +1242,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         **/var/www/html/cgi-bin**
     1. 動作確認  
         1. Web ブラウザで以下にアクセス  
-            http://192.168.X.XX/**cgi-bin/test.py**
+            http://192.168.X.XX/cgi-bin/test.py
         1. "Internal Server Error" が表示される
 
 1. XXXX
