@@ -1246,7 +1246,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         1. "Internal Server Error" が表示される
 
 1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
-    1. [Vim](#202302130554) で /etc/httpd/conf/httpd.conf 編集  
+    1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** 編集  
         ```
         # vi /etc/httpd/conf/httpd.conf
         ```
