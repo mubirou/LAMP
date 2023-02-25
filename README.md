@@ -1049,7 +1049,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
 
 1. Samba ユーザーの追加  
-    （注意）既存の [CentOS ユーザー](#202302130631)である必要がある  
+    ⚠ 既存の [CentOS ユーザー](#202302130631)である必要がある  
     ```
     # pdbedit -a mubirou
     new password:
@@ -1240,11 +1240,24 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         print("Hello,world!")
         ```
     1. FTP クライアントソフトを使って以下にアップロード  
-        **/var/www/html**
+        **/var/www/html/cgi-bin**
     1. 動作確認（この時点では動作しない）  
         1. Web ブラウザで以下にアクセス  
-            http://192.168.X.XX/test.py
-        1. 上記のコードが表示されてしまう
+            http://192.168.X.XX/cgi-bin/test.py
+        1. "Internal Server Error" が表示される
+
+1. 
+
+実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
+作成者：夢寐郎  
+作成日：2023年2月XX日  
+[[TOP]](#TOP)  
+
+
+© 2023 夢寐郎
+
+
+##
 
 1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
     1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
@@ -1289,12 +1302,22 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         -rwxr-xr-x. 1 mubirou mubirou ... ←パーミッション（755）
         ```
 
-1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定変更（/var/www/cgi-bin 以外で .py を実行する場合）  
 
-実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
-作成者：夢寐郎  
-作成日：2023年2月XX日  
-[[TOP]](#TOP)  
-
-
-© 2023 夢寐郎
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定変更  
+    ※ /var/www/cgi-bin 以外で .py を実行する場合
+    1. SELinux のセキュリティコンテキストの確認  
+        ```
+        # ls --context /var/www/html/test.py
+        system_u:object_r:httpd_sys_content_t:s0 /var/www/html/test.py
+        ```
+        ⚠ **httpd_sys_content_t** と表示されたら .py は動作しない  
+    1. SELinux のセキュリティコンテキストの変更  
+        ```
+        # chcon -t httpd_sys_script_exec_t /var/www/html/test.py
+        ```
+    1. 再度 SELinux のセキュリティコンテキストを確認  
+         ```
+        # ls --context /var/www/html/test.py
+        system_u:object_r:httpd_sys_script_exec_t:s0 /var/www/html/test.py
+        ↑ httpd_sys_script_exec_t になっていればOK
+        ```
