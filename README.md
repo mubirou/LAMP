@@ -1250,10 +1250,12 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # vi /etc/httpd/conf/httpd.conf
         ```
-    1. **httpd.conf** を以下の通り編集  
+    1. **httpd.conf** を以下の通り編集し保存  
         105行目前後  
         ```
         <Directory "/var/www/html"> ←変更
+            #　AllowOverride none ←「#」を付ける
+            #　Require all denied ←「#」を付ける
             Options +ExecCGI ←追加
         </Directory>
         ```
