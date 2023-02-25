@@ -337,6 +337,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
     1. SELinux の確認  
         ```
+        # getsebool -a | grep httpd
         httpd_anon_write --> off
         httpd_builtin_scripting --> on
         httpd_can_check_spam --> off
@@ -1271,6 +1272,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # systemctl restart httpd
         ```
+
+
+
+
 1. 実行権の追加（パーミッションの変更）  
     1. パーミッションの確認（全てに実行権無し）
         ```
