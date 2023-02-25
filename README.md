@@ -525,7 +525,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ftpd_full_access --> on
         ```
 
-1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（他にも [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等あり）によるファイル転送
+1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（＝FTP クライアントソフト／他にも [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等あり）によるファイル転送
     1. https://forest.watch.impress.co.jp/library/software/ffftp/ にアクセス
     1. [FFFTP（64bit版）]をダウンロード＆インストール
     1. FFFTPを起動
@@ -879,7 +879,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             echo $statement->fetchColumn(); //-> 10.3.28-MariaDB
         ?>
         ```
-    1. FTP ソフトを使って /var/www/html/ にアップロード
+    1. FTP クライアントソフトを使って /var/www/html/ にアップロード
     1. Web ブラウザで http://192.168.X.XX/sqltest.php にアクセス
     1. "10.3.28-MariaDB" と表示されれば成功！
 
@@ -1172,7 +1172,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             echo $statement->fetchColumn(); //-> 3.26.0
         ?>
         ```
-    1. FTP ソフトを使って /var/www/html/ にアップロード
+    1. FTP クライアントソフトを使って /var/www/html/ にアップロード
     1. Web ブラウザで http://192.168.X.XX/sqlitetest.php にアクセス
     1. "3.26.0" と表示されれば成功！
 
