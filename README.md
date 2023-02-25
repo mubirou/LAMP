@@ -1240,7 +1240,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
     1. FTP クライアントソフトを使って以下にアップロード  
         **/var/www/html/cgi-bin**
-    1. 動作確認  
+    1. 動作確認（この時点では動作しない）  
         1. Web ブラウザで以下にアクセス  
             http://192.168.X.XX/cgi-bin/test.py
         1. "Internal Server Error" が表示される
