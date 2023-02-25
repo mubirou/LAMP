@@ -502,7 +502,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         cockpit dhcpv6-client ftp http ssh ←ftpが追加
         ```
 
-1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux)の設定  
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定  
     1. SELinux の確認  
         ```
         # getsebool -a | grep ^ftp
