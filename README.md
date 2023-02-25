@@ -1271,6 +1271,21 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # systemctl restart httpd
         ```
+1. 実行権の追加（パーミッションの変更）  
+    1. パーミッションの確認（全てに実行権無し）
+        ```
+        # ls -l /var/www/html/test.py
+        -rw-r--r--. 1 mubirou mubirou ... ←パーミッション（644）
+        ```
+    1. 実行権の追加
+        ```
+        # chmod a+x /var/www/html/test.py
+        ```
+    1. 再度パーミッションの確認
+        ```
+        # ls -l /var/www/html/test.py
+        -rwxr-xr-x. 1 mubirou mubirou ... ←パーミッション（755）
+        ```
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
