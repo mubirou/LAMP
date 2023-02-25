@@ -1289,7 +1289,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         -rwxr-xr-x. 1 mubirou mubirou ... ←パーミッション（755）
         ```
 
-1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定変更  
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定変更（/var/www/cgi-bin 以外で .py を実行する場合）  
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
