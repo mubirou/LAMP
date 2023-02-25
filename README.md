@@ -1246,9 +1246,24 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         1. "Internal Server Error" が表示される
 
 1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
-    1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** 編集  
+    1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
         ```
         # vi /etc/httpd/conf/httpd.conf
+        ```
+    1. httpd.conf を以下の通り編集
+        106行目前後  
+        ```
+        <Directory "/var/www/html"> ←変更
+            Options +ExecCGI ←追加
+        </Directory>
+        ```
+        250行目前後  
+        ```
+        ScriptAlias /cgi-bin/ "/var/www/cgi-bin/" ←確認
+        ```
+        297行目前後  
+        ```
+        AddHandler cgi-script .cgi .py ←「#」を削除し「.py」を加える
         ```
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
