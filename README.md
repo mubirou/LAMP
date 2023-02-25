@@ -1200,10 +1200,24 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     # python3 --version
     Python 3.9.16
     ```
+1. 動作確認  
+    1. test.py を新規作成  
+        ```
+        # vi test.py
+        ```
+    1. [Vim](#202302130554) で編集＆保存
+        ```
+        print("Hello,world!")
+        ```
+    1. 実行  
+        ```
+        # python3 test.py
+        Hello,world! ←と表示されたら成功！
+        ```
 
 実行環境：CentOS Stream 8、Python 3.9.16  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月25日  
 [[TOP]](#TOP)  
 
 
