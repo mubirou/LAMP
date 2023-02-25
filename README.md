@@ -1070,7 +1070,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # cp /etc/samba/smb.conf /etc/samba/smb.conf.org
         ```
-    1. smb.conf の編集
+    1. smb.conf を以下の通りに編集
         ```
         # vi /etc/samba/smb.conf
         [global]
