@@ -1231,7 +1231,17 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 ## この項目は書きかけです
 
 1. [Apache](#202302120812) のインストール
-1. XXX
+
+1. Python スクリプトの用意
+    1. test.py を作成  
+        ```
+        #! /usr/bin/python3
+        print("Hello,world!")
+        ```
+    1. FTP クライアントソフトを使って /var/www/html/cgi-bin にアップロード
+    1. この時点では Web ブラウザで http://192.168.X.XX/cgi-bin/test.py にアクセスしても "Internal Server Error" が表示される
+
+1. XXXX
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
