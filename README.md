@@ -692,7 +692,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         php-xml.x86_64       7.2.24-1. ...
         php-xmlrpc.x86_64    7.2.24-1. ...
         ```
-    1. Apache の再起動（Apache モジュールとして動作しているため）  
+    1. [Apache](#202302120812) の再起動（Apache モジュールとして動作しているため）  
         ```
         # systemctl restart httpd
         ```
@@ -1266,6 +1266,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         297行目前後  
         ```
         AddHandler cgi-script .cgi .py ←「#」を削除し「.py」を加える
+        ```
+    1. [Apache](#202302120812) の再起動  
+        ```
+        # systemctl restart httpd
         ```
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
