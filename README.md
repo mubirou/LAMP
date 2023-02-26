@@ -1275,11 +1275,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             Options ExecCGI ←追加
         </Directory>
         ```
-        147行目以降  
-        ```
-        Options Includes ExecCGI FollowSymLinks
-        ↑「Options Indexes FollowSymLinks」から変更
-        ```
         250行目以降  
         ```
         ScriptAlias /cgi-bin/ "/var/www/cgi-bin/" ←確認
@@ -1305,6 +1300,12 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 
 ##
+
+147行目以降  
+```
+Options Includes ExecCGI FollowSymLinks
+↑「Options Indexes FollowSymLinks」から変更
+```
 
 1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
     1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
