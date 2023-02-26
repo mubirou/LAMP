@@ -1288,34 +1288,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # systemctl restart httpd
         ```
 
-1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
-    1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
-        ```
-        # vi /etc/httpd/conf/httpd.conf
-        ```
-    1. **httpd.conf** を以下の通り編集し保存  
-        105行目以降  
-        ```
-        <Directory "/var/www/cgi-bin"> ←「/>」から変更
-            AllowOverride none ←デフォルト
-            Require all granted ←「all denied」から変更
-            Options +ExecCGI ←追加
-            AddHandler cgi-script .cgi L.py ←追加
-        </Directory>
-        ```
-        250行目以降  
-        ```
-        ScriptAlias /cgi-bin/ "/var/www/cgi-bin/" ←確認
-        ```
-        297行目以降  
-        ```
-        #AddHandler cgi-script .cgi ←確認
-        ```
-    1. [Apache](#202302120812) の再起動  
-        ```
-        # systemctl restart httpd
-        ```
-
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
 作成日：2023年2月XX日  
