@@ -1272,7 +1272,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         <Directory "/var/www/cgi-bin"> ←「/>」から変更
             AllowOverride none
             Require all granted ←「all denied」から変更
-            Options +ExecCGI ←追加
+            Options ExecCGI ←追加
         </Directory>
         ```
         250行目以降  
