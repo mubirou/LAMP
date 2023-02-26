@@ -1288,8 +1288,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # systemctl restart httpd
         ```
-1. CGID モジュールの有効化
-
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
