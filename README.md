@@ -1243,16 +1243,16 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. FTP クライアントソフトを使って以下にアップロード  
         **/var/www/html/cgi-bin**
     1. パーミッションの変更  
-        パーミッションの確認  
+        確認  
         ```
         # ls -l /var/www/cgi-bin/test.py
         -rw-r--r--. 1 mubirou mubirou ... ←644
         ```
-        パーミッションの変更
+        変更
         ```
         # chmod 755 /var/www/cgi-bin/test.py
         ```
-        再度パーミッションの確認  
+        再度確認  
         ```
         # ls -l /var/www/cgi-bin/test.py
         -rwxr-xr-x. 1 mubirou mubirou ... ←755
