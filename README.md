@@ -1236,7 +1236,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 1. Python スクリプトの用意
     1. test.py を作成  
         ```
-        #! /usr/bin/python3
+        #!/usr/bin/python3
+        print('Content-Type: text/html')
+        print('')
         print("Hello,world!")
         ```
     1. FTP クライアントソフトを使って以下にアップロード  
