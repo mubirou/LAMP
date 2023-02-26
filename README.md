@@ -1237,7 +1237,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. test.py を作成  
         ```
         #!/usr/bin/python3
-        print("Content-type: text/html\n")
+        print("Content-Type: text/html; charset=utf-8\n")
         print("Hello,world!")
         ```
     1. FTP クライアントソフトを使って以下にアップロード  
@@ -1287,6 +1287,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # systemctl restart httpd
         ```
+1. CGID モジュールの有効化
+
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
