@@ -871,7 +871,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 1. [PHP をインストール](#202302142236)
 
 1. 動作確認  
-    1. sqltest.php を作成
+    1. mysqltest.php を作成
         ```
         <?php
             $con = new PDO('mysql::memory:', 'root', '');
@@ -881,7 +881,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ?>
         ```
     1. FTP クライアントソフトを使って /var/www/html/ にアップロード
-    1. Web ブラウザで http://192.168.X.XX/sqltest.php にアクセス
+    1. Web ブラウザで http://192.168.X.XX/mysqltest.php にアクセス
     1. "10.3.28-MariaDB" と表示されれば成功！
 
 参考：[Godot+PHP+MySQL](https://github.com/mubirou/Godot-Study-Notes#phpmysql)  
@@ -1246,7 +1246,74 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             http://192.168.X.XX/cgi-bin/test.py
         1. "Internal Server Error" が表示される
 
-1. 
+1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の確認＆変更  
+    1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
+        ```
+        # vi /etc/httpd/conf/httpd.conf
+        ```
+        105行目  
+        ```
+        <Directory />
+            AllowOverride none
+            Require all denied
+        </Directory>
+        ```
+        250行目  
+        ```
+        ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
+        ```
+        297行目  
+        ```
+        AddHandler cgi-script .cgi .py ←「#」を削除し「.py」を加える
+        ```
+    1. [Apache](#202302120812) の再起動  
+        ```
+        # systemctl restart httpd
+        ```
+
+1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
+    1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
+        ```
+        # vi /etc/httpd/conf/httpd.conf
+        ```
+    1. **httpd.conf** を以下の通り編集し保存  
+        105行目以降  
+        ```
+        <Directory "/var/www/cgi-bin"> ←「/>」から変更
+            AllowOverride none ←デフォルト
+            Require all granted ←「all denied」から変更
+            Options +ExecCGI ←追加
+            AddHandler cgi-script .cgi L.py ←追加
+        </Directory>
+        ```
+        250行目以降  
+        ```
+        ScriptAlias /cgi-bin/ "/var/www/cgi-bin/" ←確認
+        ```
+        297行目以降  
+        ```
+        #AddHandler cgi-script .cgi ←確認
+        ```
+    1. [Apache](#202302120812) の再起動  
+        ```
+        # systemctl restart httpd
+        ```
+
+1. 実行権の追加（パーミッションの変更）  
+    1. パーミッションの確認（全てに実行権無し）
+        ```
+        # ls -l /var/www/cgi-bin/test.py
+        -rw-r--r--. 1 mubirou mubirou ... ←パーミッション（644）
+        ```
+    1. 実行権の追加
+        ```
+        # chmod a+x /var/www/cgi-bin/test.py
+        ```
+    1. 再度パーミッションの確認
+        ```
+        # ls -l /var/www/cgi-bin/test.py
+        -rwxr-xr-x. 1 mubirou mubirou ... ←パーミッション（755）
+        ```
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
@@ -1301,7 +1368,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # ls -l /var/www/html/test.py
         -rwxr-xr-x. 1 mubirou mubirou ... ←パーミッション（755）
         ```
-
 
 1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定変更  
     ※ /var/www/cgi-bin 以外で .py を実行する場合
