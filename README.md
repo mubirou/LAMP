@@ -1237,12 +1237,26 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. test.py を作成  
         ```
         #!/usr/bin/python3
-        print('Content-Type: text/html')
-        print('')
+        print("Content-type: text/html\n")
         print("Hello,world!")
         ```
     1. FTP クライアントソフトを使って以下にアップロード  
         **/var/www/html/cgi-bin**
+    1. パーミッションの変更  
+        パーミッションの確認  
+        ```
+        # ls -l /var/www/cgi-bin/test.py
+        -rw-r--r--. 1 mubirou mubirou ... ←644
+        ```
+        パーミッションの変更
+        ```
+        # chmod 755 /var/www/cgi-bin/test.py
+        ```
+        再度パーミッションの確認  
+        ```
+        # ls -l /var/www/cgi-bin/test.py
+        -rwxr-xr-x. 1 mubirou mubirou ... ←755
+        ```
     1. 動作確認（この時点では動作しない）  
         1. Web ブラウザで以下にアクセス  
             http://192.168.X.XX/cgi-bin/test.py
@@ -1299,22 +1313,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. [Apache](#202302120812) の再起動  
         ```
         # systemctl restart httpd
-        ```
-
-1. 実行権の追加（パーミッションの変更）  
-    1. パーミッションの確認（全てに実行権無し）
-        ```
-        # ls -l /var/www/cgi-bin/test.py
-        -rw-r--r--. 1 mubirou mubirou ... ←パーミッション（644）
-        ```
-    1. 実行権の追加
-        ```
-        # chmod a+x /var/www/cgi-bin/test.py
-        ```
-    1. 再度パーミッションの確認
-        ```
-        # ls -l /var/www/cgi-bin/test.py
-        -rwxr-xr-x. 1 mubirou mubirou ... ←パーミッション（755）
         ```
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
