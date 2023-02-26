@@ -1275,6 +1275,11 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             Options ExecCGI ←追加
         </Directory>
         ```
+        147行目以降  
+        ```
+        Options Includes ExecCGI FollowSymLinks
+        ↑「Options Indexes FollowSymLinks」から変更
+        ```
         250行目以降  
         ```
         ScriptAlias /cgi-bin/ "/var/www/cgi-bin/" ←確認
