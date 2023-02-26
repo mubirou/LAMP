@@ -1257,30 +1257,31 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # ls -l /var/www/cgi-bin/test.py
         -rwxr-xr-x. 1 mubirou mubirou ... ←755
         ```
-    1. 動作確認（この時点ではエラー）  
+    1. 動作確認（この時点では）  
         1. Web ブラウザで以下にアクセス  
             http://192.168.X.XX/cgi-bin/test.py
         1. "Internal Server Error" が表示される
 
-1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の確認＆変更  
+1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
     1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
         ```
         # vi /etc/httpd/conf/httpd.conf
         ```
-        105行目  
+        105行目以降  
         ```
-        <Directory />
+        <Directory "/var/www/cgi-bin"> ←「/>」から変更
             AllowOverride none
-            Require all denied
+            Require all granted ←「all denied」から変更
+            Options +ExecCGI ←追加
         </Directory>
         ```
-        250行目  
+        250行目以降  
         ```
-        ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
+        ScriptAlias /cgi-bin/ "/var/www/cgi-bin/" ←確認
         ```
-        297行目  
+        297行目以降  
         ```
-        AddHandler cgi-script .cgi .py ←「#」を削除し「.py」を加える
+        AddHandler cgi-script .cgi .py ←「#」を削除し「.py」追加
         ```
     1. [Apache](#202302120812) の再起動  
         ```
