@@ -1273,6 +1273,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             AllowOverride none
             Require all granted ←「all denied」から変更
             Options ExecCGI ←追加
+            AddHandler cgi-script .py ←追加
         </Directory>
         ```
         250行目以降  
@@ -1281,7 +1282,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         297行目以降  
         ```
-        AddHandler cgi-script .cgi .py ←「#」を削除し「.py」追加
+        #AddHandler cgi-script .cgi ←確認
         ```
     1. [Apache](#202302120812) の再起動  
         ```
@@ -1327,7 +1328,7 @@ Options Includes ExecCGI FollowSymLinks
         ```
         297行目前後  
         ```
-        AddHandler cgi-script .cgi .py ←「#」を削除し「.py」を加える
+        #AddHandler cgi-script .cgi ←確認
         ```
     1. [Apache](#202302120812) の再起動  
         ```
