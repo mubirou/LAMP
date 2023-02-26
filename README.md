@@ -1257,7 +1257,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # ls -l /var/www/cgi-bin/test.py
         -rwxr-xr-x. 1 mubirou mubirou ... ←755
         ```
-    1. 動作確認（この時点では動作しない）  
+    1. 動作確認（この時点ではエラー）  
         1. Web ブラウザで以下にアクセス  
             http://192.168.X.XX/cgi-bin/test.py
         1. "Internal Server Error" が表示される
