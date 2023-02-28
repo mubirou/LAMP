@@ -1324,8 +1324,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 <a id="202302282229"></a>
 # <b>Python+SQLite</b>
 
-## この項目は書きかけです
-
 1. [Python の準備](#202302251334)
 
 1. [SQLite のインストール](#202302232039)
@@ -1349,14 +1347,15 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. [FileZilla](#202302121037-FileZilla) を使って以下の通りになるようにアップロード  
         **/var/www/html/cgi-bin/sqlitetest.py**
     1. [[パーミッションの変更](https://bit.ly/3EJeZss)] で **755** にする  
-    1. Web ブラウザで http://192.168.X.XX/cgi-bin/sqlitetest.py にアクセス
-    1. "3.26.0" と表示されれば成功！…ですが…💦
+    1. Web ブラウザで以下にアクセス  
+        http://192.168.X.XX/cgi-bin/sqlitetest.py
+    1. SQLite のバージョンが表示されれば成功！
 
 参考：[Godot+Python+SQLite](https://github.com/mubirou/Godot-Study-Notes#220624)  
 参考：[SQLite 基礎文法](https://bit.ly/41kaJsS)  
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、SQLite 3.26、FileZilla 3.63.2  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月28日  
 [[TOP]](#TOP)  
 
 
