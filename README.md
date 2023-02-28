@@ -1255,7 +1255,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 1. [Apache](#202302120812) のインストール
 
 1. Python スクリプトの用意
-    1. test.py を作成  
+    1. test.py を作成（[参考](https://github.com/mubirou/Godot-Study-Notes#pythonsqlite)）  
         ```
         #!/usr/bin/python3
         # -*- coding: utf-8 -*-
