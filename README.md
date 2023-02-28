@@ -1264,7 +1264,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         import platform
         print(platform.python_version()) #-> 3.9.16
         ```
-    1. [FileZilla](#202302121037-FileZilla) を使って以下のようにアップロード  
+    1. [FileZilla](#202302121037-FileZilla) を使って以下の通りになるようにアップロード  
         **/var/www/html/cgi-bin/test.py**
     1. パーミッション変更（[FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 上でも [パーミッションの変更] で可能）  
         確認  
