@@ -1267,7 +1267,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. [FileZilla](#202302121037-FileZilla) を使って以下の通りになるようにアップロード  
         **/var/www/html/cgi-bin/test.py**
     1. パーミッション変更  
-        （[FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 上でも [パーミッションの変更](https://bit.ly/3EJeZss) で可能）  
+        （[FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 上でも [[パーミッションの変更](https://bit.ly/3EJeZss)] で可能）  
         * 確認  
         ```
         # ls -l /var/www/cgi-bin/test.py
