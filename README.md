@@ -2,7 +2,7 @@
 
 ### **Index**
 
-| [LAMPについて](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [ルーター](#202302102308) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [Vim](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | [MariaDB](#202302162306) | [PHP+MariaDB](#202302170022) | [WordPress](#202302170208) | [Samba](#202302191517) | [SQLite](#202302232039) | [PHP+SQLite](#202302232127) | [Python](#202302232147) | [Python on Apache](#202302251334) |
+| [LAMPについて](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [ルーター](#202302102308) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [Vim](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | [MariaDB](#202302162306) | [PHP+MariaDB](#202302170022) | [WordPress](#202302170208) | [Samba](#202302191517) | [SQLite](#202302232039) | [PHP+SQLite](#202302232127) | [Python](#202302232147) | [Python on Apache](#202302251334) | [Python+SQLite](#202302282229) |
 ***
 
 <a id="202301281000"></a>
@@ -1318,6 +1318,44 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、FileZilla 3.63.2  
 作成者：夢寐郎  
 作成日：2023年2月28日  
+[[TOP]](#TOP)  
+
+
+<a id="202302282229"></a>
+# <b>Python+SQLite</b>
+
+## この項目は書きかけです
+
+1. [Python の準備](#202302251334)
+
+1. [SQLite のインストール](#202302232039)
+
+1. 動作確認  
+    1. sqlitetest.py を作成
+        ```
+        #!/usr/bin/python3
+        # -*- coding: utf-8 -*-
+        print("Content-Type: text/html\n")
+
+        import sqlite3
+
+        _con = sqlite3.connect(':memory:')
+        _cur = _con.cursor()
+        _cur.execute('SELECT sqlite_version()')
+        _result = _cur.fetchall()
+        print(_result[0][0]) #-> 3.26.0
+        ```
+    1. [FileZilla](#202302121037-FileZilla) を使って以下の通りになるようにアップロード  
+        **/var/www/html/cgi-bin/sqlitetest.py**
+    1. [[パーミッションの変更](https://bit.ly/3EJeZss)] で **755** にする  
+    1. Web ブラウザで http://192.168.X.XX/cgi-bin/sqlitetest.py にアクセス
+    1. "3.26.0" と表示されれば成功！
+
+参考：[Godot+Python+SQLite](https://github.com/mubirou/Godot-Study-Notes#220624)  
+参考：[SQLite 基礎文法](https://bit.ly/41kaJsS)  
+実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、SQLite 3.26、FileZilla 3.63.2  
+作成者：夢寐郎  
+作成日：2023年2月XX日  
 [[TOP]](#TOP)  
 
 
