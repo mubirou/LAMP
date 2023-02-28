@@ -1346,7 +1346,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         print(_result[0][0]) #-> 3.26.0
         ```
         ##
-        **⚠** [VSCode](https://code.visualstudio.com/) で [**改行コード**](https://atmarkit.itmedia.co.jp/ait/articles/1809/14/news025.html) を CRLF → **LF** に変更しないと **Internal Server Error** が発生する
+        **⚠** [VSCode](https://code.visualstudio.com/) で編集時に [**改行コード**](https://atmarkit.itmedia.co.jp/ait/articles/1809/14/news025.html) を CRLF → **LF** に変更しないと **Internal Server Error** が発生する
         ##
     1. [FileZilla](#202302121037-FileZilla) を使って以下の通りになるようにアップロード  
         **/var/www/html/cgi-bin/sqlitetest.py**
