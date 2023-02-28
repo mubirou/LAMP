@@ -1349,7 +1349,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         **/var/www/html/cgi-bin/sqlitetest.py**
     1. [[パーミッションの変更](https://bit.ly/3EJeZss)] で **755** にする  
     1. Web ブラウザで http://192.168.X.XX/cgi-bin/sqlitetest.py にアクセス
-    1. "3.26.0" と表示されれば成功！
+    1. "3.26.0" と表示されれば成功！…ですが…💦
 
 参考：[Godot+Python+SQLite](https://github.com/mubirou/Godot-Study-Notes#220624)  
 参考：[SQLite 基礎文法](https://bit.ly/41kaJsS)  
