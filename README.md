@@ -1266,21 +1266,22 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
     1. [FileZilla](#202302121037-FileZilla) を使って以下の通りになるようにアップロード  
         **/var/www/html/cgi-bin/test.py**
-    1. パーミッション変更（[FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 上でも [パーミッションの変更] で可能）  
-        確認  
-        ```
-        # ls -l /var/www/cgi-bin/test.py
-        -rw-r--r--. 1 mubirou mubirou ... ←644
-        ```
-        変更
-        ```
-        # chmod 755 /var/www/cgi-bin/test.py
-        ```
-        再度確認  
-        ```
-        # ls -l /var/www/cgi-bin/test.py
-        -rwxr-xr-x. 1 mubirou mubirou ... ←755
-        ```
+    1. パーミッション変更  
+        ※ [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 上でも [パーミッションの変更] で可能  
+        * 確認  
+            ```
+            # ls -l /var/www/cgi-bin/test.py
+            -rw-r--r--. 1 mubirou mubirou ... ←644
+            ```
+        * 変更
+            ```
+            # chmod 755 /var/www/cgi-bin/test.py
+            ```
+        * 再度確認  
+            ```
+            # ls -l /var/www/cgi-bin/test.py
+            -rwxr-xr-x. 1 mubirou mubirou ... ←755
+            ```
 
 1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
     1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
