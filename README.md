@@ -412,9 +412,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     （/var/www/html/index.html がない場合）  
 
 （参考）エラーログの表示  
-    ```
-    # cat /var/log/httpd/error_log
-    ```
+```
+# cat /var/log/httpd/error_log
+```
 
 実行環境：CentOS Stream 8、Apache 2.4.37  
 作成者：夢寐郎  
@@ -1252,8 +1252,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 [Python](#202302232147) を [Apache](#202302120812) 上で [CGI](https://ja.wikipedia.org/wiki/Common_Gateway_Interface) として動作させる方法  
 
-## この項目は書きかけです
-
 1. [Apache](#202302120812) のインストール
 
 1. Python スクリプトの用意
@@ -1310,6 +1308,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # systemctl restart httpd
         ```
+
+1. 動作確認  
+    1. Web ブラウザで http://192.168.X.XX/cgi-bin/test.py にアクセス
+    1. Python のバージョンが表示されたら成功！
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、FileZilla 3.63.2  
 作成者：夢寐郎  
