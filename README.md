@@ -409,12 +409,17 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 1. 動作確認（WebブラウザでApacheが起動しているLinuxのIPアドレスにアクセス）  
 
 1. 「HTTP SERVER TEST PAGE」と表示されたら成功！  
-    （/var/www/html/index.html がない場合）
+    （/var/www/html/index.html がない場合）  
+
+（参考）エラーログの表示  
+    ```
+    # cat /var/log/httpd/error_log
+    ```
 
 実行環境：CentOS Stream 8、Apache 2.4.37  
 作成者：夢寐郎  
 作成日：2023年2月12日  
-更新日：2023年2月22日 firewalledの変更、SELinuxの追加  
+更新日：2023年2月28日 エラーログの追加  
 [[TOP]](#TOP)  
 
 
@@ -531,6 +536,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # getsebool -a | grep ftpd_full_access
         ftpd_full_access --> on
         ```
+
+<a id="202302121037-FileZilla"></a>
 
 1. [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) によるファイル転送
     1. https://filezilla-project.org/download.php?type=client にアクセス
@@ -1253,12 +1260,15 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. test.py を作成  
         ```
         #!/usr/bin/python3
-        print("Content-Type: text/html; charset=utf-8\n")
-        print("Hello,world!")
+        # -*- coding: utf-8 -*-
+        print("Content-Type: text/html\n")
+
+        import platform
+        print(platform.python_version()) #-> 3.9.16
         ```
-    1. FTP クライアントソフトを使って以下にアップロード  
-        **/var/www/html/cgi-bin**
-    1. パーミッション変更（[FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/) 上でも [属性変更] 可能）  
+    1. [FileZilla](#202302121037-FileZilla) を使って以下のようにアップロード  
+        **/var/www/html/cgi-bin/test.py**
+    1. パーミッション変更（[FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 上でも [パーミッションの変更] で可能）  
         確認  
         ```
         # ls -l /var/www/cgi-bin/test.py
@@ -1273,10 +1283,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # ls -l /var/www/cgi-bin/test.py
         -rwxr-xr-x. 1 mubirou mubirou ... ←755
         ```
-    1. 動作確認（この時点では）  
-        1. Web ブラウザで以下にアクセス  
-            http://192.168.X.XX/cgi-bin/test.py
-        1. "Internal Server Error" が表示される
 
 1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
     1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
@@ -1305,95 +1311,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # systemctl restart httpd
         ```
 
-1. XXXXX
-    1. エラーログの確認
-        ```
-        # cat /var/log/httpd/error_log
-        ……
-        [... 2023] [cgid:error] [pid ...] [client ...] End of script output before headers: test.py
-        ```
-    1. ファイル形式の確認
-        ```
-        # file /var/www/cgi-bin/test.py
-        /var/www/cgi-bin/test.py: Python script, ASCII text executable, with CRLF line terminators
-        ```
-    1. 
-
-実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
+実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、FileZilla 3.63.2  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年2月28日  
 [[TOP]](#TOP)  
 
 
 © 2023 夢寐郎
-
-
-##
-
-147行目以降  
-```
-Options Includes ExecCGI FollowSymLinks
-↑「Options Indexes FollowSymLinks」から変更
-```
-
-1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の変更  
-    1. [Vim](#202302130554) で **/etc/httpd/conf/httpd.conf** を開く  
-        ```
-        # vi /etc/httpd/conf/httpd.conf
-        ```
-    1. **httpd.conf** を以下の通り編集し保存  
-        105行目前後  
-        ```
-        <Directory "/var/www/html"> ←変更
-            #　AllowOverride none ←「#」を付ける
-            #　Require all denied ←「#」を付ける
-            Options +ExecCGI ←追加
-        </Directory>
-        ```
-        250行目前後  
-        ```
-        ScriptAlias /cgi-bin/ "/var/www/cgi-bin/" ←確認
-        ```
-        297行目前後  
-        ```
-        #AddHandler cgi-script .cgi ←確認
-        ```
-    1. [Apache](#202302120812) の再起動  
-        ```
-        # systemctl restart httpd
-        ```
-
-1. 実行権の追加（パーミッションの変更）  
-    1. パーミッションの確認（全てに実行権無し）
-        ```
-        # ls -l /var/www/html/test.py
-        -rw-r--r--. 1 mubirou mubirou ... ←パーミッション（644）
-        ```
-    1. 実行権の追加
-        ```
-        # chmod a+x /var/www/html/test.py
-        ```
-    1. 再度パーミッションの確認
-        ```
-        # ls -l /var/www/html/test.py
-        -rwxr-xr-x. 1 mubirou mubirou ... ←パーミッション（755）
-        ```
-
-1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) の設定変更  
-    ※ /var/www/cgi-bin 以外で .py を実行する場合
-    1. SELinux のセキュリティコンテキストの確認  
-        ```
-        # ls --context /var/www/html/test.py
-        system_u:object_r:httpd_sys_content_t:s0 /var/www/html/test.py
-        ```
-        ⚠ **httpd_sys_content_t** と表示されたら .py は動作しない  
-    1. SELinux のセキュリティコンテキストの変更  
-        ```
-        # chcon -t httpd_sys_script_exec_t /var/www/html/test.py
-        ```
-    1. 再度 SELinux のセキュリティコンテキストを確認  
-         ```
-        # ls --context /var/www/html/test.py
-        system_u:object_r:httpd_sys_script_exec_t:s0 /var/www/html/test.py
-        ↑ httpd_sys_script_exec_t になっていればOK
-        ```
