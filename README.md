@@ -532,20 +532,30 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ftpd_full_access --> on
         ```
 
-1. [FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)（＝FTP クライアントソフト／他にも [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 等あり）によるファイル転送
-    1. https://forest.watch.impress.co.jp/library/software/ffftp/ にアクセス
-    1. [FFFTP（64bit版）]をダウンロード＆インストール
-    1. FFFTPを起動
+1. [FileZilla](https://ja.wikipedia.org/wiki/FileZilla) によるファイル転送
+    1. https://filezilla-project.org/download.php?type=client にアクセス
+    1. [Download FileZilla Client] を選択しダウンロード＆インストール
+    1. FileZilla を起動
+    1. [ファイル]-[サイトマネージャー]-[新しいサイト] で各種設定  
+        * [一般] タブ
+            * [新規サイト] → XXX@192.168.X.XX（任意）
+            * ホスト：192.168.X.XX（Apacheが起動しているIPアドレス）
+            * ポート：（とりあず空白）
+            * ログオンタイプ：パスワードを尋ねる
+            * ユーザー：mubirou
+        * [詳細] タブ
+            * デフォルトのローカルディレクトリ：（Windows 上の任意のフォルダ）
+            * デフォルトのリモートディレクトリ：/var/www/html（Webサーバ上）
+    1．[接続] を選択
+
     1. [新規ホスト] を選択し各種設定  
         * ホストの設定名：XXX@192.168.X.XX（任意）
         * ホスト名（アドレス）：192.168.X.XX（Apacheが起動しているIPアドレス）
         * ユーザー名：mubirou
         * パスワード：XXXX
-        * ローカルの初期フォルダ：（Windows上の任意のフォルダ）
-        * ホストの初期フォルダ：/var/www/html（Webサーバ上）
-    1. [接続] を選択
-    1. "ファイルの一覧の取得は正常終了しました"と表示されたら接続成功！
-    1. [ローカルの初期フォルダ] に以下の index.html ファイルを作成  
+        * ポート：（空白）
+    1. "ログインしました"と表示されたら接続成功！
+    1. [デフォルトのローカルディレクトリ] に以下の index.html ファイルを作成  
         ```
         <!DOCTYPE html>
         <html lang="ja">
@@ -558,15 +568,15 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         </body>
         </html>
         ```
-    1. [index.html] を選択し [コマンド]-[アップロード] を選択
-    1. リモートサイト側に上記ファイルがアップロードされたらファイル転送成功！
+    1. [ローカルサイト] の上記の [index.html] を [リモートサイト] にドラッグ＆ドロップできたら成功！
     1. Web ブラウザ上で 192.168.X.XX にアクセスして Hello,world! と表示されたら大成功！
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバ）  
 参考：『INTRODUCTION NOTES』176頁（パーミッション等）  
-実行環境：CentOS Stream 8、vsftpd 3.0.3、FFFTP 5.7  
+実行環境：CentOS Stream 8、vsftpd 3.0.3、FileZilla 3.63.2  
 作成者：夢寐郎  
 作成日：2023年2月14日  
+更新日：2023年2月28日 FFFTP → FileZilla に変更  
 [[TOP]](#TOP)  
 
 
@@ -1294,6 +1304,20 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # systemctl restart httpd
         ```
+
+1. XXXXX
+    1. エラーログの確認
+        ```
+        # cat /var/log/httpd/error_log
+        ……
+        [... 2023] [cgid:error] [pid ...] [client ...] End of script output before headers: test.py
+        ```
+    1. ファイル形式の確認
+        ```
+        # file /var/www/cgi-bin/test.py
+        /var/www/cgi-bin/test.py: Python script, ASCII text executable, with CRLF line terminators
+        ```
+    1. 
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37  
 作成者：夢寐郎  
