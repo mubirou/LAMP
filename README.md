@@ -1248,7 +1248,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
     1. FTP クライアントソフトを使って以下にアップロード  
         **/var/www/html/cgi-bin**
-    1. パーミッションの変更([FFFP](https://forest.watch.impress.co.jp/library/software/ffftp/) 上でも [属性変更] で変更可）  
+    1. パーミッションの変更([FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/) でも [属性変更] 可能）  
         確認  
         ```
         # ls -l /var/www/cgi-bin/test.py
