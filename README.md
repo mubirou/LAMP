@@ -1311,7 +1311,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
 
 1. 動作確認  
-    1. Web ブラウザで http://192.168.X.XX/cgi-bin/test.py にアクセス
+    1. Web ブラウザで以下にアクセス  
+        http://192.168.X.XX/cgi-bin/test.py
     1. Python のバージョンが表示されたら成功！
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、FileZilla 3.63.2  
