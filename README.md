@@ -1369,6 +1369,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. [MariaDB のインストール](#202302162306)
 
+1. [データベース](https://bit.ly/3m62yAi)（test_db）を作成
+
 1. 動作確認  
     1. mysqltest.py を作成
         ```
