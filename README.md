@@ -1252,7 +1252,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 [Python](#202302232147) を [Apache](#202302120812) 上で [CGI](https://ja.wikipedia.org/wiki/Common_Gateway_Interface) として動作させる方法  
 
-1. [Apache](#202302120812) のインストール
+1. [Apache の準備](#202302120812)
+
+1. [Python の準備](#202302232147)
 
 1. Python スクリプトの用意
     1. test.py を作成（[参考](https://github.com/mubirou/Godot-Study-Notes#pythonsqlite)）  
