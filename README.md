@@ -1442,6 +1442,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     Server version: Apache/2.4.37 (centos)
     ```
     ```
+    # php -v
+    PHP 7.4.30 (cli) ...
+    ```
+    ```
     # python3 --version
     Python 3.9.16
     ```
