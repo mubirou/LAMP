@@ -1428,7 +1428,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. [PHP の準備](#202302142236)
 
-1. [Python の準備](#202302251334)
+1. [Python on Apache の準備](#202302251334)
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
 作成者：夢寐郎  
