@@ -1369,6 +1369,12 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. [MariaDB のインストール](#202302162306)
 
+1. [MySQL Connector/Python](https://dev.mysql.com/doc/connector-python/en/) のインストール
+    ```
+    # dnf -y update ←インストール済パッケージをアップデート
+    # # pip3 install mysql-connector-python
+    ```
+
 1. データベース（test_db）を作成（[参考](https://bit.ly/3m62yAi)）  
     ```
     # mysql -u root
@@ -1413,7 +1419,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 参考：[MySQL / MariaDB 基礎文法](https://github.com/mubirou/HelloWorld/blob/master/languages/MySQL/MySQL_reference.md)  
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
 作成者：夢寐郎  
-作成日：2023年2月XX日  
+作成日：2023年3月1日  
 [[TOP]](#TOP)  
 
 
