@@ -1369,7 +1369,22 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. [MariaDB のインストール](#202302162306)
 
-1. [データベース](https://bit.ly/3m62yAi)（test_db）を作成
+1. データベース（test_db）を作成（[参考](https://bit.ly/3m62yAi)）  
+    ```
+    # mysql -u root
+    MariaDB [(xxx)]> CREATE DATABASE test_db; ←作成
+    MariaDB [(xxx)]> show databases; ←確認
+    MariaDB [(none)]> show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | test_db            | ←新しく作成
+    | wordpress_db       |
+    +--------------------+
+    ```
 
 1. 動作確認  
     1. mysqltest.py を作成
