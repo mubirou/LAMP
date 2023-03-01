@@ -136,9 +136,16 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 1. [インストールの開始] を選択  
 （5分程度でインストール完了）
 
+1. バージョンの確認  
+    ```
+    # cat /etc/system-release
+    CentOS Stream release 8
+    ```
+
 実行環境：CentOS Stream 8  
 作成者：夢寐郎  
 作成日：2023年2月10日  
+更新日：2023年3月01日 バージョンの確認  
 [[TOP]](#TOP)  
 
 
@@ -1420,39 +1427,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
 作成者：夢寐郎  
 作成日：2023年3月1日  
-[[TOP]](#TOP)  
-
-
-<a id="202303012147"></a>
-# <b>HTML+PHP→Python</b>
-
-## この項目は書きかけです
-
-1. [Python on Apache の準備](#202302251334)
-
-1. [PHP の準備](#202302142236)
-
-1. 各種バージョン確認  
-    ```
-    # cat /etc/system-release
-    CentOS Stream release 8
-    ```
-    ```
-    # httpd -v
-    Server version: Apache/2.4.37 (centos)
-    ```
-    ```
-    # php -v
-    PHP 7.4.30 (cli) ...
-    ```
-    ```
-    # python3 --version
-    Python 3.9.16
-    ```
-
-実行環境：CentOS Stream 8、Apache 2.4.37、PHP 7.4.3、Python 3.9.16、FileZilla 3.63.2  
-作成者：夢寐郎  
-作成日：2023年3月XX日  
 [[TOP]](#TOP)  
 
 
