@@ -1434,6 +1434,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. 各種バージョン確認  
     ```
+    # cat /etc/system-release
+    CentOS Stream release 8
+    ```
+    ```
     # httpd -v
     Server version: Apache/2.4.37 (centos)
     ```
