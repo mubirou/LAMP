@@ -1390,7 +1390,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. [[パーミッションの変更](https://bit.ly/3EJeZss)] で **755** にする  
     1. Web ブラウザで以下にアクセス  
         http://192.168.X.XX/cgi-bin/mysqltest.py
-    1. MariaDB のバージョンが表示されれば成功！……ですが💦
+    1. MariaDB のバージョンが表示されれば成功！
 
 参考：[Godot+Python+MySQL](https://github.com/mubirou/Godot-Study-Notes#pythonmysql)  
 参考：[MySQL / MariaDB 基礎文法](https://github.com/mubirou/HelloWorld/blob/master/languages/MySQL/MySQL_reference.md)  
