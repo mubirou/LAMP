@@ -278,12 +278,11 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         1. [Session] で上記の [CentOS@192.168.X.XX] を選択し [Load]-[Open]  
             * [PuTTy Security Alert] が表示されたら [Accept] し再度接続
         1. [login as:] と表示されたらログイン  
-            （rootログイン拒否設定も可）  
             ```
-            login as: root
+            login as: mubirou
             root@192.168.X.XX's password:
-            Last login: Sat Feb 11 13:08:13 2023
-            [root@centos ~]#
+            ……
+            [mubirou@centos ~]$
             ```
 
 参考：『INTRODUCTION NOTES』110頁（SSH）  
