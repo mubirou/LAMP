@@ -270,12 +270,12 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # systemctl restart sshd
         ```
 1. 任意のユーザーに全てのコマンドの実行権限を与える  
+    （$ sudo shutdown now 等のコマンドが可能になる）
     ```
     # visudo /etc/sudoers ←sudoの設定ファイル
     ……
     最終行 mubirou ALL=(ALL) ALL ←追加
     ```
-    💡$ sudo shutdown now 等が可能になる
 
 1. [新規ユーザーの登録](#202302130631)
 
