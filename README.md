@@ -964,11 +964,11 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) 関連の設定  
     （WordPress 上でファイルをアップロード可能にする）  
-    1. **パーミッションの変更**  
+    1. パーミッションの変更  
         ```
         # chmod -R 777 /var/www/html/wordpress
         ```
-    1. **Apache による書き込み権限を与える**  
+    1. Apache による書き込み権限を与える  
         ```
         # chcon -R -t httpd_sys_rw_content_t /var/www/html/wordpress
         ```
