@@ -252,15 +252,17 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     openssh-clients.x86_64  8.0p1-17.e18  @anaconda
     openssh-server.x86_64   8.0p1-17.e18  @anaconda
     ```
-1. root ユーザーのログイン禁止（設定ファイルの変更）
-    ```
-    # vi -R /etc/ssh/sshd_config
-    ……
-    43行目 PermitRootLogin no ←「yes」から変更
-    ```
-    ```
-    # systemctl restart sshd ←再起動
-    ```
+1. root ユーザーのログイン禁止
+    1. 設定ファイルの変更
+        ```
+        # vi -R /etc/ssh/sshd_config
+        ……
+        43行目 PermitRootLogin no ←「yes」から変更
+        ```
+    1. SSH の再起動
+        ```
+        # systemctl restart sshd
+        ```
 
 1. [新規ユーザーの登録](#202302130631)
 
