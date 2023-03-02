@@ -284,7 +284,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             login as: mubirou ←任意
             mubirou@192.168.X.XX's password:
             ……
-            [mubirou@centos ~]$ su - ←root権限にする
+            [mubirou@centos ~]$ su ←root権限にする
             パスワード:
             [root@centos ~]#
             ```
