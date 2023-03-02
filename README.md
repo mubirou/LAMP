@@ -968,19 +968,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         # chmod -R 777 /var/www/html/wordpress
         ```
-    1. Apache による書き込み権限の確認  
-        ```
-        # getsebool httpd_can_network_connect
-        httpd_can_network_connect --> off
-        ```
     1. **Apache による書き込み権限を与える**  
         ```
         # chcon -R -t httpd_sys_rw_content_t /var/www/html/wordpress
-        ```
-    1. 再度 Apache による書き込み権限の確認  
-        ```
-        # getsebool httpd_can_network_connect
-        httpd_can_network_connect --> on
         ```
 
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
@@ -988,7 +978,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 実行環境：CentOS Stream 8、[MariaDB](#202302162306) 10.3.28、[PHP](#202302142236) 7.4.30、WordPress 6.1.1  
 作成者：夢寐郎  
 作成日：2023年2月19日  
-更新日：2023年3月02日 SELinux 関連の設定追加  
+更新日：2023年3月02日 Apache による書き込み権限を追加  
 [[TOP]](#TOP)  
 
 
