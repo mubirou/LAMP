@@ -962,11 +962,15 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         1. [プロフィールを更新]
         1. [ログアウト] 後に http://192.168.X.XX/wordpress/wp-admin/ にアクセスして接続確認
 
+1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) 関連の設定  
+    （WordPress 上で画像等をアップロードできるようにする）  
+
 参考：『INTRODUCTION NOTES』215頁（WordPress）  
 参考：[WordPress の要件](https://ja.wordpress.org/about/requirements/)  
 実行環境：CentOS Stream 8、[MariaDB](#202302162306) 10.3.28、[PHP](#202302142236) 7.4.30、WordPress 6.1.1  
 作成者：夢寐郎  
 作成日：2023年2月19日  
+更新日：2023年3月02日 SELinux 関連の設定追加  
 [[TOP]](#TOP)  
 
 
