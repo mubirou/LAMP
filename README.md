@@ -281,7 +281,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
             * [PuTTy Security Alert] が表示されたら [Accept] し再度接続
         1. [login as:] と表示されたらログイン  
             ```
-            login as: mubirou
+            login as: mubirou ←任意
             mubirou@192.168.X.XX's password:
             ……
             [mubirou@centos ~]$ su - ←root権限にする
