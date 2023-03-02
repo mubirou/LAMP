@@ -964,9 +964,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) 関連の設定  
     （WordPress 上で画像等をアップロード可能にする）  
-    1. パーミッションの変更  
+    1. **パーミッションの変更**  
         ```
-        # chmod -R 775 /var/www/html/wordpress
+        # chmod -R 777 /var/www/html/wordpress
         ```
     1. Apache による書き込み権限の確認  
         ```
