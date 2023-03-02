@@ -973,7 +973,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # getsebool httpd_can_network_connect
         httpd_can_network_connect --> off
         ```
-    1. 書き込み権限を与える  
+    1. Apache による書き込み権限を与える  
         ```
         # chcon -R -t httpd_sys_rw_content_t /var/www/html/wordpress
         ```
