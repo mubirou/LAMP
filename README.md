@@ -963,7 +963,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         1. [ログアウト] 後に http://192.168.X.XX/wordpress/wp-admin/ にアクセスして接続確認
 
 1. [SELinux](https://ja.wikipedia.org/wiki/Security-Enhanced_Linux) 関連の設定  
-    （WordPress 上で画像等をアップロード可能にする）  
+    （WordPress 上でファイルをアップロード可能にする）  
     1. **パーミッションの変更**  
         ```
         # chmod -R 777 /var/www/html/wordpress
