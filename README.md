@@ -245,14 +245,14 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 <a id="202302111947"></a>
 # <b>SSH</b>
 
-* [SSH](https://www.kagoya.jp/howto/it-glossary/server/ssh/)（Secure Shell）のバージョンを調べる
+1. [SSH](https://www.kagoya.jp/howto/it-glossary/server/ssh/)（Secure Shell）のバージョンを調べる
     ```
     # dnf list installed | grep openssh
     openssh.x86_64          8.0p1-17.e18  @anaconda
     openssh-clients.x86_64  8.0p1-17.e18  @anaconda
     openssh-server.x86_64   8.0p1-17.e18  @anaconda
     ```
-* root ユーザーのログイン禁止（設定ファイルの変更）
+1. root ユーザーのログイン禁止（設定ファイルの変更）
     ```
     # vi -R /etc/ssh/sshd_config
     ……
@@ -262,7 +262,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     # systemctl restart sshd ←再起動
     ```
 
-* Windows からの操作
+1. [新規ユーザーの登録](#202302130631)
+
+1. Windows からの操作
     1. https://www.putty.org/ の [Download PuTTy] を選択
     1. [putty-64bit-0.78-installer.msi] をダウンロード＆インストール
     1. PuTTy（パティ）を起動し各種設定＆接続  
@@ -288,7 +290,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 実行環境：CentOS Stream 8、OpenSSH 8.0、PuTTy 0.78  
 作成者：夢寐郎  
 作成日：2023年2月11日  
-更新日：2023年2月12日 「フォントの変更」の更新  
+更新日：2023年3月02日 root ユーザーのログイン禁止の追加  
 [[TOP]](#TOP)  
 
 
