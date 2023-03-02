@@ -252,10 +252,16 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     openssh-clients.x86_64  8.0p1-17.e18  @anaconda
     openssh-server.x86_64   8.0p1-17.e18  @anaconda
     ```
-* 設定ファイルの確認＆変更
+* root ユーザーのログイン禁止（設定ファイルの変更）
     ```
-    # vi /etc/ssh/sshd_config
+    # vi -R /etc/ssh/sshd_config
+    ……
+    43行目 PermitRootLogin no ←「yes」から変更
     ```
+    ```
+    # systemctl restart sshd ←再起動
+    ```
+
 * Windows からの操作
     1. https://www.putty.org/ の [Download PuTTy] を選択
     1. [putty-64bit-0.78-installer.msi] をダウンロード＆インストール
