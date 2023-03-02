@@ -96,18 +96,18 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     * メモリ：8GB
     * HDD：128GB
 
-1. [上記のUSB](#202301281748)をパソコンに挿入し起動
+1. [上記のUSB](#202301281748)をパソコンに挿入し起動（下記参照）
 1. [BIOS（UEFI）](https://www.pc-master.jp/jisaku/bios-uefi.html)を起動  
 1. USBメモリを優先的に起動させる  
     * [ASUS UEFI BIOS Utility - Ez Mode] の場合  
-        (1)「F2」キーで起動
-        (1) [Boot Menu(F8)] を選択
-        (2) 上記のUSBを選択
-    * [NEC（InsydeH20 Setup Utility] の場合
-        (1)「F2」キーで起動
-        (2) [Boot]-[USB Memory]（上記のUSB）を選択
-        (3) [F6]キーで優先順位を最上位に移動
-        (4) [F10]キー（Save and Exit）を選択
+        (1)「F2」キーで起動  
+        (1) [Boot Menu(F8)] を選択  
+        (2) 上記のUSBを選択  
+    * [NEC（InsydeH20 Setup Utility] の場合  
+        (1)「F2」キーで起動  
+        (2) [Boot]-[USB Memory]（上記のUSB）を選択  
+        (3) [F6]キーで優先順位を最上位に移動  
+        (4) [F10]キー（Save and Exit）を選択  
 1. CentOSのインストール画面が表示されたら成功！
 
 実行環境：CentOS Stream 8  
