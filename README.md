@@ -770,6 +770,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     ……
     482行目 display_errors = On ←「Off」から変更
     ```
+    ```
+    # systemctl restart httpd ←Apacheの再起動
+    ```
     ⚠ 本稼働のサイトでは「Off」にしておく
 
 ## 
