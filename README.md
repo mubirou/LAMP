@@ -764,17 +764,18 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 ##
 
-* PHP のエラー表示
+* PHP のエラー表示（参考）  
     ```
-    # vi /etc/php.ini
-    ……
-    482行目 display_errors = On ←「Off」から変更
+    <?php
+        ini_set('display_errors', 1 );
+        error_reporting(E_ALL);
+        
+        echo $a;
+    ?>
     ```
     ```
-    # systemctl restart httpd ←Apacheの再起動
+    Notice: Undefined variable: a in /var/www/html/test.php on line 4
     ```
-    ⚠ 本稼働のサイトでは「Off」にしておく
-
 ## 
 
 * 7.2 → 7.4 へアップグレード  
