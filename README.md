@@ -1311,7 +1311,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
         > ⚠ [VSCode](https://code.visualstudio.com/) で編集時に [**改行コード**](https://atmarkit.itmedia.co.jp/ait/articles/1809/14/news025.html) を CRLF → **LF** に変更しないと **Internal Server Error** が発生する  
     1. [FileZilla](#202302121037-FileZilla) を使って以下の通りになるようにアップロード  
-        **/var/www/html/cgi-bin/test.py**
+        **/var/www/cgi-bin/test.py**
     1. パーミッション変更  
         （[FileZilla](https://ja.wikipedia.org/wiki/FileZilla) 上でも [[パーミッションの変更](https://bit.ly/3EJeZss)] で可能）  
         * 確認  
