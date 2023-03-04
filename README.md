@@ -769,7 +769,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     <?php
         ini_set('display_errors', 1 );
         error_reporting(E_ALL);
-        
+
         echo $a;
     ?>
     ```
