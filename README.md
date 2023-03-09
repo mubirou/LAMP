@@ -1499,6 +1499,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         # mysql -uroot
         > CREATE DATABASE mubirou_db; ←既存の場合はERROR
         Query OK, 1 row affected (0.000 sec)
+        ```
+        ```
         > show databases; ←既存のデータベースの確認
         +--------------------+
         | Database           |
@@ -1507,7 +1509,25 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         | mubirou_db         | ←新規作成されたデータベース
         | ……                 |
         ```
-    
+    1. [テーブルの作成](https://bit.ly/3F8tVk1)
+        ```
+        > USE mubirou_db ←既存のデータベースを開く
+        Database changed
+        > CREATE TABLE question_tb (
+        ->  id VARCHAR(4),
+        ->  answer INT
+        ->  );
+        Query OK, 0 rows affected (0.125 sec)
+        ```
+        ```
+        > SHOW FIELDS FROM question_tb; ←テーブルの確認
+        +--------+------------+------+-----+---------+-------+
+        | Field  | Type       | Null | Key | Default | Extra |
+        +--------+------------+------+-----+---------+-------+
+        | id     | varchar(4) | YES  |     | NULL    |       |
+        | answer | int(11)    | YES  |     | NULL    |       |
+        +--------+------------+------+-----+---------+-------+
+        ```
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
 作成者：夢寐郎  
