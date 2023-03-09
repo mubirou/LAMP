@@ -1596,6 +1596,26 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 ### 👉 JavaScript の記述  
     ```
+    // question.js
+    function onclick_btn1(_id) {
+    // Get the selected value
+    let _form1 = document.getElementById("form1");
+    let _value = _form1.elements["radio1"].value;
+
+    // Send to PHP
+    let _request = new XMLHttpRequest();
+    _request.onload = function() {
+        console.log(this.responseText); // Return value
+    }
+    _request.open("POST", "question.php");
+    _request.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+    let _data = "id=" + _id + "&" + "value=" + _value;
+    _request.send(_data); // Argument is a string (ex."id=001&value=3")
+
+    // Disable submit button
+    const _btn1 = document.getElementById("btn1");
+    _btn1.disabled = true;
+    }
     ```
 
 <a id="202303022135_php"></a>
