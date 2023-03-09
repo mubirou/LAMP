@@ -1541,7 +1541,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 <a id="202303022135_db"></a>
 
-👉 **MariaDB** の処理
+2. **MariaDB** の処理
     1. [MariaDB の準備](#202302162306)
     1. [データベースの作成](https://bit.ly/3kT7h8x)
         ```
@@ -1594,15 +1594,16 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 <a id="202303022135_js"></a>
 
-👉 **JavaScript** の記述  
+3. **JavaScript** の記述  
     ```
     ```
 
 <a id="202303022135_php"></a>
 
-1. **PHP** の記述  
+4. **PHP** の記述  
     ```
     ```
+
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
 作成者：夢寐郎  
