@@ -1489,6 +1489,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. [新規]-[投稿] の本文を記述  
     * タイトル：今日の問題  
+
+
+1. 
     
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
