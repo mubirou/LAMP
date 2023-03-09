@@ -1490,7 +1490,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 <a id="202303022135_html"></a>
 
-1. **HTML** の記述
+### 👉 HTML の記述
     1. 問題 001 のページ  
     ![image](https://github.com/mubirou/LAMP/blob/master/jpg/202303091627.jpg)  
         ```
@@ -1541,7 +1541,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 <a id="202303022135_db"></a>
 
-### 👉 **MariaDB** の処理  
+### 👉 MariaDB の処理  
 1. [MariaDB の準備](#202302162306)
 1. [データベースの作成](https://bit.ly/3kT7h8x)
     ```
@@ -1594,13 +1594,13 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 <a id="202303022135_js"></a>
 
-3. **JavaScript** の記述  
+### 👉 JavaScript の記述  
     ```
     ```
 
 <a id="202303022135_php"></a>
 
-4. **PHP** の記述  
+### 👉 PHP の記述  
     ```
     ```
 
