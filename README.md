@@ -1605,7 +1605,11 @@ function onclick_btn1(_id) {
     // Send to PHP
     let _request = new XMLHttpRequest();
     _request.onload = function() {
-        console.log(this.responseText); // Return value
+        if (this.responseText == true) {
+            alert("正解"); // Return value
+        } else {
+            alert("不正解\n" + "正解は「" + this.responseText + "」です");
+        }
     }
     _request.open("POST", "question.php");
     _request.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
@@ -1620,9 +1624,9 @@ function onclick_btn1(_id) {
 
 <a id="202303022135_php"></a>
 
-### 👉 PHP の記述  
+### 👉 PHP の記述    
 ```php
-<?php
+<?php // question.php
     // Get data from JavaScript
     $id = $_POST["id"];
     $value = $_POST["value"];
@@ -1638,9 +1642,9 @@ function onclick_btn1(_id) {
     $statement = $pdo->query($sql);
     $result = $statement->fetch();
     if ($value == $result["answer"]) {
-        echo "正解";
+        echo true;
     } else {
-        echo "不正解";
+        echo $result["answer"];
     }
 ?>
 ```
