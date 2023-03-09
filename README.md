@@ -1493,7 +1493,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 ### 👉 HTML の記述  
 1. 問題 001 のページ  
 ![image](https://github.com/mubirou/LAMP/blob/master/jpg/202303091627.jpg)  
-    ```
+    ```html
     <!DOCTYPE html>
     <html lang="ja">
     <head>
@@ -1517,7 +1517,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 1. 問題 002 のページ  
 ![image](https://github.com/mubirou/LAMP/blob/master/jpg/202303091636.jpg)  
-    ```
+    ```html
     <!DOCTYPE html>
     <html lang="ja">
     <head>
