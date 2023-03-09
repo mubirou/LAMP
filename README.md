@@ -1529,6 +1529,19 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         +--------+------------+------+-----+---------+-------+
         ```
     1. [データの追加](https://bit.ly/3J1vz88)
+        ```
+        > INSERT INTO question_tb VALUES ("0001", 3);
+        > INSERT INTO question_tb VALUES ("0002", 4);
+        ```
+        ```
+        >  SELECT * FROM question_tb;
+        +------+--------+
+        | id   | answer |
+        +------+--------+
+        | 0001 |      3 |
+        | 0002 |      4 |
+        +------+--------+
+        ```
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
 作成者：夢寐郎  
