@@ -1628,7 +1628,7 @@ function onclick_btn1(_id) {
     $value = $_POST["value"];
 
     // Open database
-    $dsn = "mysql:dbname=mubirou_db; host=localhost";
+    $dsn = "mysql:dbname=mubirou_db;host=localhost";
     $user = "root";
     $password = "";
     $pdo = new PDO($dsn, $user, $password);
@@ -1636,19 +1636,18 @@ function onclick_btn1(_id) {
     // Extract data matching the condition
     $sql = "SELECT * FROM question_tb WHERE id = {$id}";
     $statement = $pdo->query($sql);
-    foreach ($statement as $tmp) {
-        if ($value == $tmp["answer"]) {
-            echo 1;
-        } else {
-            echo 0;
-        }
+    $result = $statement->fetch();
+    if ($value == $result["answer"]) {
+        echo "正解";
+    } else {
+        echo "不正解";
     }
 ?>
 ```
 
 実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
 作成者：夢寐郎  
-作成日：2023年3月1日  
+作成日：2023年3月XX日  
 [[TOP]](#TOP)  
 
 © 2023 夢寐郎  
