@@ -1492,6 +1492,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 ##
 
+1. XXXX
+
+##
+
 1. [MariaDB](https://ja.wikipedia.org/wiki/MariaDB) の処理
     1. [MariaDB の準備](#202302162306)
     1. [データベースの作成](https://bit.ly/3kT7h8x)
