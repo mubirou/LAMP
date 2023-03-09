@@ -1541,56 +1541,56 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 <a id="202303022135_db"></a>
 
-2. **MariaDB** の処理
-    1. [MariaDB の準備](#202302162306)
-    1. [データベースの作成](https://bit.ly/3kT7h8x)
-        ```
-        # mysql -uroot
-        > CREATE DATABASE mubirou_db; ←既存の場合はERROR
-        Query OK, 1 row affected (0.000 sec)
-        ```
-        ```
-        > show databases; ←既存のデータベースの確認
-        +--------------------+
-        | Database           |
-        +--------------------+
-        | information_schema |
-        | mubirou_db         | ←新規作成されたデータベース
-        | ……                 |
-        ```
-    1. [テーブルの作成](https://bit.ly/3F8tVk1)
-        ```
-        > USE mubirou_db ←既存のデータベースを開く
-        Database changed
-        > CREATE TABLE question_tb (
-        ->  id VARCHAR(4),
-        ->  answer INT
-        ->  );
-        Query OK, 0 rows affected (0.125 sec)
-        ```
-        ```
-        > SHOW FIELDS FROM question_tb; ←テーブルの確認
-        +--------+------------+------+-----+---------+-------+
-        | Field  | Type       | Null | Key | Default | Extra |
-        +--------+------------+------+-----+---------+-------+
-        | id     | varchar(4) | YES  |     | NULL    |       |
-        | answer | int(11)    | YES  |     | NULL    |       |
-        +--------+------------+------+-----+---------+-------+
-        ```
-    1. [データの追加](https://bit.ly/3J1vz88)
-        ```
-        > INSERT INTO question_tb VALUES ("0001", 3);
-        > INSERT INTO question_tb VALUES ("0002", 4);
-        ```
-        ```
-        >  SELECT * FROM question_tb;
-        +------+--------+
-        | id   | answer |
-        +------+--------+
-        | 0001 |      3 |
-        | 0002 |      4 |
-        +------+--------+
-        ```
+👉 **MariaDB** の処理  
+1. [MariaDB の準備](#202302162306)
+1. [データベースの作成](https://bit.ly/3kT7h8x)
+    ```
+    # mysql -uroot
+    > CREATE DATABASE mubirou_db; ←既存の場合はERROR
+    Query OK, 1 row affected (0.000 sec)
+    ```
+    ```
+    > show databases; ←既存のデータベースの確認
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mubirou_db         | ←新規作成されたデータベース
+    | ……                 |
+    ```
+1. [テーブルの作成](https://bit.ly/3F8tVk1)
+    ```
+    > USE mubirou_db ←既存のデータベースを開く
+    Database changed
+    > CREATE TABLE question_tb (
+    ->  id VARCHAR(4),
+    ->  answer INT
+    ->  );
+    Query OK, 0 rows affected (0.125 sec)
+    ```
+    ```
+    > SHOW FIELDS FROM question_tb; ←テーブルの確認
+    +--------+------------+------+-----+---------+-------+
+    | Field  | Type       | Null | Key | Default | Extra |
+    +--------+------------+------+-----+---------+-------+
+    | id     | varchar(4) | YES  |     | NULL    |       |
+    | answer | int(11)    | YES  |     | NULL    |       |
+    +--------+------------+------+-----+---------+-------+
+    ```
+1. [データの追加](https://bit.ly/3J1vz88)
+    ```
+    > INSERT INTO question_tb VALUES ("0001", 3);
+    > INSERT INTO question_tb VALUES ("0002", 4);
+    ```
+    ```
+    >  SELECT * FROM question_tb;
+    +------+--------+
+    | id   | answer |
+    +------+--------+
+    | 0001 |      3 |
+    | 0002 |      4 |
+    +------+--------+
+    ```
 
 <a id="202303022135_js"></a>
 
