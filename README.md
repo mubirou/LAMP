@@ -1517,7 +1517,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         </html>
         ```
 
-    1. 問題 002 のページ
+    1. 問題 002 のページ  
+    ![image](https://github.com/mubirou/LAMP/blob/master/jpg/202303091636.jpg)  
         ```
         <!DOCTYPE html>
         <html lang="ja">
