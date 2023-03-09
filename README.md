@@ -1492,11 +1492,54 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 
 ##
 
-1. XXXX
+1. **HTML** の記述
+    1. 問題 001 のページ
+        ```
+        <!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8">
+            <title>xxx</title>
+            <script src="question.js"></script>
+        </head>
+        <body>
+            <form id="form1">
+                (001)<br>
+                virtualの意味は？<br>
+                <input type="radio" name="radio1" value="1">仮想<br>
+                <input type="radio" name="radio1" value="2">名目<br>
+                <input type="radio" name="radio1" value="3">実質<br>
+                <input type="radio" name="radio1" value="4">虚<br>
+                <input type="button" id="btn1" value="送信" onclick="onclick_btn1('001')"/>
+            </form>
+        </body>
+        </html>
+        ```
 
-##
+    1. 問題 002 のページ
+        ```
+        <!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8">
+            <title>xxx</title>
+            <script src="question.js"></script>
+        </head>
+        <body>
+            <form id="form1">
+                (002)<br>
+                VRの適切な日本語訳は？<br>
+                <input type="radio" name="radio1" value="1">複合現実感<br>
+                <input type="radio" name="radio1" value="2">拡張現実感<br>
+                <input type="radio" name="radio1" value="3">仮想現実感<br>
+                <input type="radio" name="radio1" value="4">人工現実感<br>
+                <input type="button" id="btn1" value="送信" onclick="onclick_btn1('002')"/>
+            </form>
+        </body>
+        </html>
+        ```
 
-1. [MariaDB](https://ja.wikipedia.org/wiki/MariaDB) の処理
+1. **MariaDB** の処理
     1. [MariaDB の準備](#202302162306)
     1. [データベースの作成](https://bit.ly/3kT7h8x)
         ```
