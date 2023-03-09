@@ -829,7 +829,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 <a id="202302162306"></a>
 # <b>MariaDB</b>
 
-1. [MariaDB](https://ja.wikipedia.org/wiki/MariaDB)のインストール  
+1. [MariaDB](https://ja.wikipedia.org/wiki/MariaDB) のインストール  
     1. インストール可能な PHP の確認  
         ```
         # dnf list maria*
@@ -1490,6 +1490,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 1. [新規]-[投稿] の本文を記述  
     * タイトル：今日の問題  
 
+##
+
+1. [MariaDB の準備](#202302162306)
 
 1. 
     
