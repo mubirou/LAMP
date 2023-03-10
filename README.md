@@ -1649,7 +1649,7 @@ function onclick_btn1(_id) {
 ?>
 ```
 
-実行環境：CentOS Stream 8、Python 3.9.16、Apache 2.4.37、MariaDB 10.3.28、FileZilla 3.63.2  
+実行環境：CentOS Stream 8、Apache 2.4.37、PHP 7.4.30、MariaDB 10.3.28  
 作成者：夢寐郎  
 作成日：2023年3月XX日  
 [[TOP]](#TOP)  
