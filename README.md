@@ -1478,8 +1478,6 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 <a id="202303022135"></a>
 # <b>サンプル</b>
 
-## この項目は書きかけです
-
 * サンプルのコンセプト  
     * 4択問題を2ページ作成
     * ラジオボタンによる選択と [送信] ボタンで解答
@@ -1646,6 +1644,7 @@ function onclick_btn1(_id) {
     $statement = $pdo->query($sql);
     $result = $statement->fetch();
 
+    // Create JSON Data
     $array = array();
     $array["bool"] = ($value == $result["answer"]);
     $array["correctAnswer"] = $result["answer"];
@@ -1656,7 +1655,7 @@ function onclick_btn1(_id) {
 
 実行環境：CentOS Stream 8、Apache 2.4.37、PHP 7.4.30、MariaDB 10.3.28  
 作成者：夢寐郎  
-作成日：2023年3月XX日  
+作成日：2023年3月13日  
 [[TOP]](#TOP)  
 
 © 2023 夢寐郎  
