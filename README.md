@@ -1624,6 +1624,7 @@ function onclick_btn1(_id) {
     _btn1.disabled = true;
 }
 ```
+※[XMLHttpRequest](https://developer.mozilla.org/ja/docs/Web/API/XMLHttpRequest) ではなく [fetch](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch) を使う方法もあり  
 
 <a id="202303022135_php"></a>
 
