@@ -1505,10 +1505,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         <form id="form1">
             (001)<br>
             virtualの意味は？<br>
-            <input type="radio" name="radio1" value="1">仮想<br>
-            <input type="radio" name="radio1" value="2">名目<br>
-            <input type="radio" name="radio1" value="3">実質<br>
-            <input type="radio" name="radio1" value="4">虚<br>
+            <input type="radio" name="radio1" value="1"><label id="label1">仮想</label><br>
+            <input type="radio" name="radio1" value="2"><label id="label2">名目</label><br>
+            <input type="radio" name="radio1" value="3"><label id="label3">実質</label><br>
+            <input type="radio" name="radio1" value="4"><label id="label4">虚</label><br>
             <input type="button" id="btn1" value="送信" onclick="onclick_btn1('001')"/>
         </form>
     </body>
@@ -1529,10 +1529,10 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         <form id="form1">
             (002)<br>
             VRの適切な日本語訳は？<br>
-            <input type="radio" name="radio1" value="1">複合現実感<br>
-            <input type="radio" name="radio1" value="2">拡張現実感<br>
-            <input type="radio" name="radio1" value="3">仮想現実感<br>
-            <input type="radio" name="radio1" value="4">人工現実感<br>
+            <input type="radio" name="radio1" value="1"><label id="label1">複合現実感</label><br>
+            <input type="radio" name="radio1" value="2"><label id="label2">拡張現実感</label><br>
+            <input type="radio" name="radio1" value="3"><label id="label3">仮想現実感</label><br>
+            <input type="radio" name="radio1" value="4"><label id="label4">人工現実感</label><br>
             <input type="button" id="btn1" value="送信" onclick="onclick_btn1('002')"/>
         </form>
     </body>
@@ -1605,10 +1605,13 @@ function onclick_btn1(_id) {
     // Send to PHP
     let _request = new XMLHttpRequest();
     _request.onload = function() {
-        if (this.responseText == true) {
-            alert("正解"); // Return value
+        let _json = JSON.parse(this.responseText);
+        if (_json.bool) {
+            alert("正解");
         } else {
-            alert("不正解\n" + "正解は「" + this.responseText + "」です");
+            let _correctAnswerNum = _json.correctAnswer;
+            let _correctAnswerText = document.getElementById("label" + _correctAnswerNum).innerText;
+            alert("不正解\n" + "正解は「" + _correctAnswerText + "」です");
         }
     }
     _request.open("POST", "question.php");
@@ -1641,11 +1644,12 @@ function onclick_btn1(_id) {
     $sql = "SELECT * FROM question_tb WHERE id = {$id}";
     $statement = $pdo->query($sql);
     $result = $statement->fetch();
-    if ($value == $result["answer"]) {
-        echo true;
-    } else {
-        echo $result["answer"];
-    }
+
+    $array = array();
+    $array["bool"] = ($value == $result["answer"]);
+    $array["correctAnswer"] = $result["answer"];
+    $json = json_encode($array);
+    echo $json;
 ?>
 ```
 
