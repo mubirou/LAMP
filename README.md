@@ -1669,10 +1669,6 @@ function onclick_btn1(_id) {
 
 👉 **Linux の IP アドレスの固定化**
 
-1. Web ブラウザで 172.16.255.254（192.168.3.1）を開く  
-    * ユーザー名：user
-    * パスワード：****（初期値 user）
-
 1. Linux の IP アドレス等を調べる  
     ```
     # ip address
@@ -1708,6 +1704,12 @@ function onclick_btn1(_id) {
     NETMASK=255.255.255.0 ←サブネットマスク
     NETWORK=192.168.3.0 ←ネットワークアドレス
     ```
+
+👉 XXXX  
+
+1. Web ブラウザで 172.16.255.254（192.168.3.1）を開く  
+    * ユーザー名：user
+    * パスワード：****（初期値 user）
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
 実行環境：[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、Windows 11  
