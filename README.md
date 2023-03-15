@@ -1697,7 +1697,7 @@ function onclick_btn1(_id) {
     NAME=eno1
     UUID=21a0bf1c-2195-43fe-971d-6724ba5f42b5
     DEVICE=eno1 ←デバイス名（初期値）
-    ONBOOT=yes ←起動時に有効にするか否か
+    ONBOOT=yes ←起動時に有効にするか否か（初期値）
     BROADCAST=192.168.3.255 ←ブロードキャストアドレス
     HWADDR=08:62:66:33:db:a8 ←MACアドレス（追加）
     IPADDR=192.168.3.16 ←IPアドレス（追加）
