@@ -1666,9 +1666,28 @@ function onclick_btn1(_id) {
 # <b>ポート開放</b>
 
 1. ルーターの初期化  
-    1. 本体裏面の [reset] ボタンを押し続けながら（30秒間）電源を入れる
-    1. 本体裏面の [LANポート]（4ポート）のいずれかと PC を有線接続
-    1. Web ブラウザで 192.168.2.1 でアクセス
+    1. http://router.asus.com にアクセス  
+        ユーザー名：admin
+        パスワード：*****
+    1. [管理]-
+    1. 
+
+    1. ファームウェア更新
+        1. ファームウェアファイルのダウンロード
+            1. https://www.asus.com/jp/supportonly/rt-ac68u/helpdesk_bios/ にアクセス
+            1. 最新版を [ダウンロード]
+            1. FW_RT_AC68U_XXX.zip を解凍（展開）
+        1. http://router.asus.com にアクセス 
+        1. [管理]-[ファームウェア更新]-[新しいファームウェアファイル]-[ファイルを選択] で上記でダウンロードした FW-RT_AC68U_XXX.trx を選び [アップロード] を選択（約3分で更新完了）
+
+
+
+    1. ルーターの電源が入った状態で [reset] ボタンを約30秒間押し続ける
+    1. 本体裏面の [電源ボタン] を押して電源を切る
+    1. 再び [電源ボタン] を押してルーターを起動（1分程待つ）  
+    1. Web ブラウザで 192.168.2.1 でアクセス  
+        ユーザー名：admin  
+        パスワード：a
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
 実行環境：[ASUS RT-AC68U](https://www.asus.com/jp/networking-iot-servers/wifi-routers/asus-wifi-routers/rtac68u/)、Windows 11  
