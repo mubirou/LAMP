@@ -1667,7 +1667,47 @@ function onclick_btn1(_id) {
 
 ## この項目は書きかけです
 
-1. 172.16.255.254 にアクセス
+1. 172.16.255.254 にアクセス  
+    * ユーザー名：user
+    * パスワード：****（初期値 user）
+
+
+
+1. Linux の IP アドレス等を調べる  
+    ```
+    # ip address
+    1: lo: ...
+        ...
+    2: eno1: ... ←デバイス名
+        link/ether 08:62:66:33:db:a8 ... ←MACアドレス
+        ...
+        inet 192.168.3.11/24 brd 192.168.3.255 ... ←IPアドレス等
+        ...
+    ```
+1. ネットワーク･インターフェイスの設定変更  
+    ```
+    # vi /etc/sysconfig/network-scripts/ifcfg-eno1 ←デバイス名
+    TYPE=Ethernet
+    PROXY_METHOD=none
+    BROWSER_ONLY=no
+    BOOTPROTO=static ←「dhcp」から変更
+    DEFROUTE=yes
+    IPV4_FAILURE_FATAL=no
+    IPV6INIT=yes
+    IPV6_AUTOCONF=yes
+    IPV6_DEFROUTE=yes
+    IPV6_FAILURE_FATAL=no
+    IPV6_ADDR_GEN_MODE=eui64
+    NAME=eno1
+    UUID=21a0bf1c-2195-43fe-971d-6724ba5f42b5
+    DEVICE=eno1 ←デバイス名（初期値）
+    ONBOOT=yes ←起動時に有効にするか否か
+    BROADCAST=192.168.3.255 ←ブロードキャストアドレス
+    HWADDR=08:62:66:33:db:a8 ←MACアドレス（追加）
+    IPADDR=192.168.3.16 ←IPアドレス（追加）
+    NETMASK=255.255.255.0 ←サブネットマスク
+    NETWORK=192.168.3.0 ←ネットワークアドレス
+    ```
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
 実行環境：[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、Windows 11  
