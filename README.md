@@ -1667,32 +1667,10 @@ function onclick_btn1(_id) {
 
 ## この項目は書きかけです
 
-1. **ファームウェア更新**（必要に応じて）
-    1. ファームウェアファイルのダウンロード
-        1. https://www.asus.com/jp/supportonly/rt-ac68u/helpdesk_bios/ にアクセス
-        1. 最新版を [ダウンロード]
-        1. FW_RT_AC68U_XXX.zip を解凍（展開）
-    1. http://router.asus.com にアクセス 
-    1. [管理]-[ファームウェア更新]-[新しいファームウェアファイル]-[ファイルを選択] で上記でダウンロードした FW-RT_AC68U_XXX.trx を選び [アップロード] を選択（約3分で更新完了）
-    1. ルーター本体裏面の [電源ボタン] を押して再起動
-
-1. **工場出荷時の状態にリセット**（必要に応じて）
-    1. http://router.asus.com にアクセス  
-        ユーザー名：admin
-        パスワード：*****
-    1. [管理]-[リセット/保存/復元]-[工場出荷時の状態にリセット]-[リストア]
-
-1. 
-
-    1. ルーターの電源が入った状態で [reset] ボタンを約30秒間押し続ける
-    1. 本体裏面の [電源ボタン] を押して電源を切る
-    1. 再び [電源ボタン] を押してルーターを起動（1分程待つ）  
-    1. Web ブラウザで 192.168.2.1 でアクセス  
-        ユーザー名：admin  
-        パスワード：a
+1. 172.16.255.254 にアクセス
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
-実行環境：[ASUS RT-AC68U](https://www.asus.com/jp/networking-iot-servers/wifi-routers/asus-wifi-routers/rtac68u/)（3.0.0.4.386.51255）、Windows 11  
+実行環境：[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、Windows 11  
 作成者：夢寐郎  
 作成日：2023年3月XX日  
 [[TOP]](#TOP)  
