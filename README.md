@@ -1717,7 +1717,7 @@ function onclick_btn1(_id) {
     * パスワード：****（初期値 user）
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
-実行環境：[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、Windows 11  
+実行環境：[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、CentOS Stream 8、Windows 11  
 作成者：夢寐郎  
 作成日：2023年3月XX日  
 [[TOP]](#TOP)  
