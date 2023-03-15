@@ -1672,13 +1672,13 @@ function onclick_btn1(_id) {
     1. [管理]-
     1. 
 
-    1. ファームウェア更新
-        1. ファームウェアファイルのダウンロード
-            1. https://www.asus.com/jp/supportonly/rt-ac68u/helpdesk_bios/ にアクセス
-            1. 最新版を [ダウンロード]
-            1. FW_RT_AC68U_XXX.zip を解凍（展開）
-        1. http://router.asus.com にアクセス 
-        1. [管理]-[ファームウェア更新]-[新しいファームウェアファイル]-[ファイルを選択] で上記でダウンロードした FW-RT_AC68U_XXX.trx を選び [アップロード] を選択（約3分で更新完了）
+1. **ファームウェア更新**（必要に応じて）
+    1. ファームウェアファイルのダウンロード
+        1. https://www.asus.com/jp/supportonly/rt-ac68u/helpdesk_bios/ にアクセス
+        1. 最新版を [ダウンロード]
+        1. FW_RT_AC68U_XXX.zip を解凍（展開）
+    1. http://router.asus.com にアクセス 
+    1. [管理]-[ファームウェア更新]-[新しいファームウェアファイル]-[ファイルを選択] で上記でダウンロードした FW-RT_AC68U_XXX.trx を選び [アップロード] を選択（約3分で更新完了）
 
 
 
