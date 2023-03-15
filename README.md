@@ -1713,7 +1713,7 @@ function onclick_btn1(_id) {
     * パスワード：****（初期値 user）
 1. [ルーター機能の設定]-[ポート転送設定] を選択
 1. [ポート転送設定] を以下の通り設定  
-    * 1. 有効 / TCP / 20-21 / 20-21 / 192.168.3.16　
+    * 1 / 有効 / TCP / 20-21 / 20-21 / 192.168.X.XX　
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
 参考：[ソフトバンク光のポート開放](https://naruhodo-wifi.com/softbank_hikari_port/)  
