@@ -1666,6 +1666,9 @@ function onclick_btn1(_id) {
 # <b>ポート開放</b>
 
 1. ルーターの初期化  
+    1. 本体裏面の [reset] ボタンを押し続けながら（30秒間）電源を入れる
+    1. 本体裏面の [LANポート]（4ポート）のいずれかと PC を有線接続
+    1. Web ブラウザで 192.168.2.1 でアクセス
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
 実行環境：[ASUS RT-AC68U](https://www.asus.com/jp/networking-iot-servers/wifi-routers/asus-wifi-routers/rtac68u/)、Windows 11  
