@@ -1714,7 +1714,9 @@ function onclick_btn1(_id) {
 1. [ルーター機能の設定]-[ポート転送設定] で以下の通り設定
     * 1 / 有効 / TCP / 20-21 / 20-21 / 192.168.X.XX　
     * 2 / 有効 / TCP/UDP / 22-22 / 22-22 / 192.168.X.XX　
-    
+    * 3 / 有効 / TCP/UDP / 80-80 / 80-80 / 192.168.X.XX　
+1. [設定を保存する]
+
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
 参考：[ソフトバンク光のポート開放](https://naruhodo-wifi.com/softbank_hikari_port/)  
