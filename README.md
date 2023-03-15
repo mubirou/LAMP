@@ -226,7 +226,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     * 設定画面：192.168.1.1（192.168.2.1）
         * ユーザー名：admin
         * パスワード：*****
-    * 取扱説明書：http://dlcdnet.asus.com/pub/ASUS/wireless/RT-AC68U/APAC9455_RT_AC68U_QSG.pdf（49～63頁）  
+    * 取扱説明書：http://dlcdnet.asus.com/pub/ASUS/wireless/RT-AC68U/APAC9455_RT_AC68U_QSG.pdf  
+    （日本語 49～63頁）  
 
 * IODATA WN-AC583TR（ポケットルーター）
     * 2014年7月発売（2018年6月生産終了）
