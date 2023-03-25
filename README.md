@@ -1667,6 +1667,13 @@ function onclick_btn1(_id) {
 
 ## この項目は書きかけです
 
+👉 **光回線終端装置の設定**
+    * [PR-S300SE/GV-ONU](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf) について  
+        ➀ 光回線終端装置（ONU ＝ Optical Network Unit）  
+        ➁ ホームゲートウェイ（光電話対応のルータ）  
+        ➂ 映像用回線終端装置  
+        が一体になったもの
+
 👉 **Linux の IP アドレスの固定化**
 
 1. Linux の IP アドレス等を調べる  
@@ -1686,7 +1693,7 @@ function onclick_btn1(_id) {
     TYPE=Ethernet
     PROXY_METHOD=none
     BROWSER_ONLY=no
-    BOOTPROTO=static ←「dhcp」から変更
+    BOOTPROTO=none ←「dhcp」から変更
     DEFROUTE=yes
     IPV4_FAILURE_FATAL=no
     IPV6INIT=yes
@@ -1694,15 +1701,14 @@ function onclick_btn1(_id) {
     IPV6_DEFROUTE=yes
     IPV6_FAILURE_FATAL=no
     IPV6_ADDR_GEN_MODE=eui64
-    NAME=eno1
-    UUID=21a0bf1c-2195-43fe-971d-6724ba5f42b5
+    NAME=eno1 ←デバイス名（初期値）
+    UUID=21a0bf1c-2195-43fe-971d-XXXXXXXXXXXX
     DEVICE=eno1 ←デバイス名（初期値）
     ONBOOT=yes ←起動時に有効にするか否か（初期値）
-    BROADCAST=192.168.X.255 ←ブロードキャストアドレス
-    HWADDR=08:62:66:33:db:a8 ←MACアドレス（追加）
     IPADDR=192.168.X.XX ←IPアドレス（追加）
-    NETMASK=255.255.255.0 ←サブネットマスク（追加）
-    NETWORK=192.168.X.0 ←ネットワークアドレス（追加）
+    PREFIX=24 ←サブネットマスク（追加）
+    GATEWAY=192.168.X.XX ←ルータのアドレス（追加） 
+    DNS1=192.168.X.XX ←IPアドレス（追加）
     ```
     ※ 設定終了後「reboot now」で OS を再起動  
 
@@ -1717,9 +1723,44 @@ function onclick_btn1(_id) {
     * 3 / 有効 / TCP/UDP / 80-80 / 80-80 / 192.168.X.XX　←HTTP
 1. [設定を保存する] を選択、ルーターの再起動
 
-👉 光回線終端装置（ONU）設定確認
 
-* ルーター機能の無効化
+```
+# dnf -y update ←インストール済パッケージをアップデート
+# dnf -y install nmap ←nmapのインストール
+# nmap 192.168.x.xx ←開放しているポートを調べる
+……
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+……
+```
+
+1. **ホームネットワークセキュリティ機能**をオフにする
+    1. http://aterm.me/（192.168.1.210）にアクセス  
+        * ユーザー名：admin
+        * パスワード：*****
+    1. [詳細設定]-[ホームネットワークセキュリティ機能]-[OFF]
+
+1. **メッシュ機能**をオフにする  
+    [Wi-Fi基本設定]-[メッシュWi-Fi機能]-[OFF]
+
+1. **SSID名**等の変更  
+    1. [Wi-Fi詳細設定（2.4GHz）] を選択して各種設定  
+        * 対象ネットワークを選択：プライマリSSID：XXXX
+        * ネットワーク名（SSID）：aterm-xxxxxx-5p（初期値）
+        * 暗号化キー：（任意の値に変更）  
+        ※[セカンダリSSID] は [ESS-IDステルス機能] を [ON]
+    1. [Wi-Fi詳細設定（5GHz）] を選択して各種設定  
+        * 対象ネットワークを選択：プライマリSSID：XXXX
+        * ネットワーク名（SSID）：aterm-xxxxxx-5p（初期値）
+        * 暗号化キー：（任意の値に変更）  
+        ※[セカンダリSSID] は [ESS-IDステルス機能] を [ON]
+
+1. **動作モード**の変更
+    * 電源を抜く
+    * 本体の [MODE] スイッチを [RT]（ルーターモード）→ [BR]（ブリッジモード）に変更
+    * 電源を入れる
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
 参考：[ソフトバンク光のポート開放](https://naruhodo-wifi.com/softbank_hikari_port/)  
