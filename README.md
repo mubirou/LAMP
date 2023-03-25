@@ -1668,7 +1668,7 @@ function onclick_btn1(_id) {
 ## この項目は書きかけです
 
 👉 **光回線終端装置の設定**  
-> [**PR-S300SE/GV-ONU**](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf) について  
+    > [**PR-S300SE/GV-ONU**](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf) について  
     ➀ 光回線終端装置（ONU ＝ Optical Network Unit）  
     ➁ ホームゲートウェイ（光電話対応のルータ）  
     ➂ 映像用回線終端装置（V-ONU）  
