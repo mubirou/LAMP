@@ -1735,9 +1735,9 @@ function onclick_btn1(_id) {
     22/tcp   open  ssh
     80/tcp   open  http
     ```
-1. ルータのポート開放確認  
+1. ルータ（光BBユニット）のポート開放確認  
     ```
-    # nmap 192.168.3.1 ←ルータ（光BBユニット）のIPアドレス
+    # nmap 192.168.X.1 ←ルータ（光BBユニット）のIPアドレス
     ……
     PORT      STATE    SERVICE
     ……
