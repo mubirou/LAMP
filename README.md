@@ -1752,7 +1752,7 @@ function onclick_btn1(_id) {
         * ユーザー名：user
         * パスワード：****（初期値 user）
     1. [設定／接続情報]-[**WAN側IPアドレス**]-[IPアドレス] で確認
-1. ルーター外から http://（IPアドレス）にアクセスできたら成功！
+1. ルーター外から上記の[グローバルIPアドレス](https://atmarkit.itmedia.co.jp/aig/06network/globalip.html)にアクセスできたら成功！
 1. 同様にルータ外から [SSH](#202302111947) と [FTP](#202302121037) に接続できたら成功！
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
