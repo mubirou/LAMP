@@ -1714,7 +1714,7 @@ function onclick_btn1(_id) {
     ```
     ※ 設定終了後「reboot now」で OS を再起動  
 
-👉 光BBユニットのポート開放  
+👉 ルータ（光BBユニット）のポート開放  
 
 1. Web ブラウザで 172.16.255.254（192.168.X.1）を開く  
     * ユーザー名：user
@@ -1722,21 +1722,44 @@ function onclick_btn1(_id) {
 1. [ルーター機能の設定]-[ポート転送設定] で以下の通り設定
     * 1 / 有効 / TCP / 20-21 / 20-21 / 192.168.X.XX　←FTP
     * 2 / 有効 / TCP/UDP / 22-22 / 22-22 / 192.168.X.XX　←SSH
-    * 3 / 有効 / TCP/UDP / 80-80 / 80-80 / 192.168.X.XX　←HTTP
+    * 3 / 有効 / TCP / 80-80 / 80-80 / 192.168.X.XX　←HTTP
 1. [設定を保存する] を選択、ルーターの再起動
 
+👉 ポート開放の確認（概要）  
 
-```
-# dnf -y update ←インストール済パッケージをアップデート
-# dnf -y install nmap ←nmapのインストール
-# nmap 192.168.x.xx ←開放しているポートを調べる
-……
-PORT     STATE SERVICE
-21/tcp   open  ftp
-22/tcp   open  ssh
-80/tcp   open  http
-……
-```
+1. Linux サーバーのポート開放確認
+    ```
+    # dnf -y update ←インストール済パッケージをアップデート
+    # dnf -y install nmap ←nmapのインストール
+    # nmap 192.168.x.xx ←LinuxサーバのIPアドレス
+    PORT     STATE SERVICE
+    21/tcp   open  ftp
+    22/tcp   open  ssh
+    80/tcp   open  http
+    ```
+1. ルータのポート開放確認（概要）
+    ```
+    # nmap 192.168.3.1 ←ルータ（光BBユニット）のIPアドレス
+    ……
+    PORT      STATE    SERVICE
+    ……
+    80/tcp    open     http
+    ……
+    ```
+
+参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
+参考：[ソフトバンク光のポート開放](https://naruhodo-wifi.com/softbank_hikari_port/)  
+実行環境：[PR-S300SE/GV-ONU](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf)、[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、CentOS Stream 8  
+作成者：夢寐郎  
+作成日：2023年3月XX日  
+[[TOP]](#TOP)  
+
+
+© 2023 夢寐郎  
+
+
+
+### メモ📝
 
 1. **ホームネットワークセキュリティ機能**をオフにする
     1. http://aterm.me/（192.168.1.210）にアクセス  
@@ -1763,13 +1786,3 @@ PORT     STATE SERVICE
     * 電源を抜く
     * 本体の [MODE] スイッチを [RT]（ルーターモード）→ [BR]（ブリッジモード）に変更
     * 電源を入れる
-
-参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
-参考：[ソフトバンク光のポート開放](https://naruhodo-wifi.com/softbank_hikari_port/)  
-実行環境：[PR-S300SE/GV-ONU](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf)、[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、CentOS Stream 8  
-作成者：夢寐郎  
-作成日：2023年3月XX日  
-[[TOP]](#TOP)  
-
-
-© 2023 夢寐郎  
