@@ -1712,7 +1712,7 @@ function onclick_btn1(_id) {
     ```
     ※ 設定終了後「reboot now」で OS を再起動  
 
-👉 ルータ（光BBユニット）のポート開放  
+👉 **ルータ（光BBユニット）のポート開放**  
 
 1. Web ブラウザで 172.16.255.254（192.168.X.1）を開く  
     * ユーザー名：user
@@ -1723,7 +1723,7 @@ function onclick_btn1(_id) {
     * 3 / 有効 / TCP / **80-80** / 80-80 / 192.168.X.XX ←[HTTP](#202302120812)
 1. [設定を保存する] を選択、ルーターの再起動
 
-👉 ポート開放の確認  
+👉 **ポート開放の確認**  
 
 1. Linux サーバーのポート開放確認  
     ```
@@ -1744,7 +1744,7 @@ function onclick_btn1(_id) {
     80/tcp    open     http
     ……
     ```
-👉 動作確認
+👉 **動作確認**
 
 1. [グローバルIPアドレス](https://atmarkit.itmedia.co.jp/aig/06network/globalip.html)の確認
     1. ルータ（光BBユニット）の設定画面を開く  
