@@ -2,7 +2,7 @@
 
 ### **Index**
 
-| [LAMPについて](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [ルーター](#202302102308) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [Vim](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | [MariaDB](#202302162306) | [PHP+MariaDB](#202302170022) | [WordPress](#202302170208) | [Samba](#202302191517) | [SQLite](#202302232039) | [PHP+SQLite](#202302232127) | [Python](#202302232147) | [Python on Apache](#202302251334) | [Python+SQLite](#202302282229) | [Python+MariaDB](#202302282308) | [サンプル](#202303022135) | [ポート開放](#202303151240) |
+| [LAMPについて](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [ルーター](#202302102308) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [Vim](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | [MariaDB](#202302162306) | [PHP+MariaDB](#202302170022) | [WordPress](#202302170208) | [Samba](#202302191517) | [SQLite](#202302232039) | [PHP+SQLite](#202302232127) | [Python](#202302232147) | [Python on Apache](#202302251334) | [Python+SQLite](#202302282229) | [Python+MariaDB](#202302282308) | [サンプル](#202303022135) | [ポート開放](#202303151240) | [ドメイン名取得](#202303262200) | [HTTPS](#202303262032) |
 
 ***
 
@@ -1794,6 +1794,75 @@ function onclick_btn1(_id) {
 実行環境：[PR-S300SE/GV-ONU](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf)、[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、CentOS Stream 8  
 作成者：夢寐郎  
 作成日：2023年3月26日  
+[[TOP]](#TOP)  
+
+
+<a id="202303262023032622002032"></a>
+# <b>ドメイン名取得</b>
+
+作成者：夢寐郎  
+作成日：2023年X月XX日  
+[[TOP]](#TOP)  
+
+
+<a id="202303262032"></a>
+# <b>HTTPS</b>
+
+1. xxxx
+```
+# dnf -y install mod_ssl ←インストール
+```
+```
+# cat /etc/httpd/conf.d/ssl.conf ←HTTPSの設定ファイルの確認
+```
+```
+# openssl version ←Open SSLの確認
+OpenSSL 1.1.1k  FIPS 25 Mar 2021
+```
+
+1. 秘密鍵とCSRの生成（800頁）
+```
+# cd /etc/pki/tls/certs
+# cp /usr/share/doc/penssl/Makefile.certificate Makefile
+```
+
+1. CSRと秘密鍵の作成（1064頁）
+```
+# dnf -y install make ←makeコマンドのインストール
+# make /etc/pki/tls/certs/server.csr
+……
+Enter pass phrase:****
+Country Name (2 letter code) [XX]:JP
+State or Province NAme (full name) []:Tokyo
+Locality Name (eg, city) [Default City]:Setagaya
+Organization Name (eg, company) [Default Company Ltd]:mubirou
+Organization Unit (eg, section) []:Network
+Commmon Name (eg, your name or your server's hostname) []:mubirou.com
+Email Address []:mubirou.info@gmail.com
+A challenge password []: ↲
+An optional company name []: ↲
+```
+
+1. CSRの内容の表示
+```
+# openssl req -in server.csr -text
+Certificate Request:
+    ……
+    Subject: C = JP, ST = Tokyo, L = Setagaya, O = mubirou, OU = Network, CN = mubirou.com, emailAddress = mubirou.info@gmail.com
+    ……
+    Public Key Algorithm: rsaEncryption
+        RSA Public-Key: (2048 bit) ←RSA暗号
+    ……
+```
+
+1. CAに公開鍵証明書の発行申請  
+    1. XXXX
+
+参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)
+参考：[SSL/TLSサーバ証明書を取得する方法](https://e-penguiner.com/how-to-get-ssl-tls-certificate-in-letsencrypt-and-update/)
+参考：[SSL証明書の導入手順](https://blog.senseshare.jp/encrypt.html)
+作成者：夢寐郎  
+作成日：2023年X月XX日  
 [[TOP]](#TOP)  
 
 
