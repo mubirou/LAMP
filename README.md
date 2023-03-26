@@ -607,12 +607,39 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     1. [ローカルサイト] の上記の [index.html] を [リモートサイト] にドラッグ＆ドロップできたら成功！（アップロード方法は他にもあり）
     1. Web ブラウザ上で 192.168.X.XX にアクセスして Hello,world! と表示されたら大成功！
 
+**⚠ ディレクトリ一覧表示対策**  
+
+1. [httpd.conf](https://e-words.jp/w/httpd.conf.html) の編集  
+    ```
+    # vi /etc/httpd/conf/httpd.conf
+    136行目 <Directory "/var/www/html">
+    ……
+    156行目 AllowOverride All ←「None」から変更
+    ……
+    162行目 </Directory>
+    ```
+1. httpd の再起動  
+    ```
+    # systemctl restart httpd ←再起動
+    ```
+1. 以下の内容の [.htaccess](https://ja.wikipedia.org/wiki/.htaccess) ファイルを作成
+    ```
+    Options -Indexes
+    ```
+1. /var/www/htmlに上記の [.htaccess](https://ja.wikipedia.org/wiki/.htaccess) ファイルを配置（配下のディレクトリにも適応される）  
+
+1. index.html が配置されていないディレクトリにアクセスし以下の表示がされたら成功！  
+    ```
+    Forbidden
+    You don't have permission to access this resource.
+    ```
+
 参考：『INTRODUCTION NOTES』120頁（FTPサーバ）  
 参考：『INTRODUCTION NOTES』176頁（パーミッション等）  
 実行環境：CentOS Stream 8、vsftpd 3.0.3、FileZilla 3.63.2  
 作成者：夢寐郎  
 作成日：2023年2月14日  
-更新日：2023年2月28日 FFFTP → FileZilla に変更  
+更新日：2023年3月26日 .htaccess を追加  
 [[TOP]](#TOP)  
 
 
