@@ -440,6 +440,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
 1. 「HTTP SERVER TEST PAGE」と表示されたら成功！  
     （/var/www/html/index.html がない場合）  
 
+[**⚠ディレクトリ一覧表示対策**](#202302121037-htaccess)も必要です！
+
 （参考）エラーログの表示  
 ```
 # cat /var/log/httpd/error_log
@@ -606,6 +608,8 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
         ```
     1. [ローカルサイト] の上記の [index.html] を [リモートサイト] にドラッグ＆ドロップできたら成功！（アップロード方法は他にもあり）
     1. Web ブラウザ上で 192.168.X.XX にアクセスして Hello,world! と表示されたら大成功！
+
+<a id="202302121037-htaccess"></a>
 
 **⚠ ディレクトリ一覧表示対策**  
 
