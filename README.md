@@ -636,6 +636,7 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     ```
     Forbidden
     You don't have permission to access this resource.
+    （禁じ手 このリソースにアクセスする権限がありません。）
     ```
 
 参考：『INTRODUCTION NOTES』120頁（FTPサーバ）  
