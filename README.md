@@ -1665,8 +1665,6 @@ function onclick_btn1(_id) {
 <a id="202303151240"></a>
 # <b>ポート開放</b>
 
-## この項目は書きかけです
-
 👉 **光回線終端装置の設定（UNI接続）**  
 > [**PR-S300SE/GV-ONU**](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf) について  
 ➀ 光回線終端装置（ONU＝Optical Network Unit）  
@@ -1725,9 +1723,9 @@ function onclick_btn1(_id) {
     * 3 / 有効 / TCP / 80-80 / 80-80 / 192.168.X.XX　←HTTP
 1. [設定を保存する] を選択、ルーターの再起動
 
-👉 ポート開放の確認（概要）  
+👉 ポート開放の確認  
 
-1. Linux サーバーのポート開放確認
+1. Linux サーバーのポート開放確認  
     ```
     # dnf -y update ←インストール済パッケージをアップデート
     # dnf -y install nmap ←nmapのインストール
@@ -1737,7 +1735,7 @@ function onclick_btn1(_id) {
     22/tcp   open  ssh
     80/tcp   open  http
     ```
-1. ルータのポート開放確認（概要）
+1. ルータのポート開放確認  
     ```
     # nmap 192.168.3.1 ←ルータ（光BBユニット）のIPアドレス
     ……
@@ -1746,12 +1744,22 @@ function onclick_btn1(_id) {
     80/tcp    open     http
     ……
     ```
+👉 動作確認
+
+1. [グローバルIPアドレス](https://atmarkit.itmedia.co.jp/aig/06network/globalip.html)の確認
+    1. ルータ（光BBユニット）の設定画面を開く  
+        * 172.16.255.254（192.168.X.1）
+        * ユーザー名：user
+        * パスワード：****（初期値 user）
+    1. [設定／接続情報]-[WAN側IPアドレス]-[IPアドレス] で確認
+1. ルーター外から http://（IPアドレス）にアクセスできたら成功！
+1. 同様にルータ外から [SSH](#202302111947) と [FTP](#202302121037) に接続できたら成功！
 
 参考：『INTRODUCTION NOTES 6』2頁（ポートの開放）  
 参考：[ソフトバンク光のポート開放](https://naruhodo-wifi.com/softbank_hikari_port/)  
 実行環境：[PR-S300SE/GV-ONU](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf)、[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、CentOS Stream 8  
 作成者：夢寐郎  
-作成日：2023年3月XX日  
+作成日：2023年3月26日  
 [[TOP]](#TOP)  
 
 
