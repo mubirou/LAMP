@@ -1673,8 +1673,8 @@ function onclick_btn1(_id) {
 ➁ ホームゲートウェイ（光電話対応のルーター）  
 ➂ 映像用回線終端装置（V-ONU）  
 が一体になったもの
-1. 本体上部のルータ機能部と接続されている UNI（User-Network Interface）ポートを外す
-1. **UNI ポート** →（LAN ケーブル）→ **ルータ**（光BBユニット）→ Linux サーバ に接続
+1. 本体上部のルータ機能部と接続されている UNI（User-Network Interface）ポートのケーブル（青）外す
+1. UNI ポート → LAN ケーブル → ルータ（光BBユニット）→ Linux サーバ に接続
 
 👉 **Linux の IP アドレスの固定化**
 
