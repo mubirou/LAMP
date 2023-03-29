@@ -1849,7 +1849,7 @@ function onclick_btn1(_id) {
     mod_ssl-2.4.37-54.module_el8.8.0+1256+e1598b50.x86_64
     ```
 
-👉 南京錠（公開鍵と秘密鍵）の購入と上司（CA）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
+👉 南京錠（公開鍵と秘密鍵）の購入と上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
 
 
 1. **秘密鍵**と [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html) の生成（800頁）
