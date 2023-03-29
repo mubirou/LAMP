@@ -1820,7 +1820,8 @@ function onclick_btn1(_id) {
         * お名前ID（会員ID）：XXXXXXXX（8桁の数字）
         * パスワード：XXXXX
 1. 半日ほど経過するとメールおよび LINE に「ドメイン登録完了」の連絡あり
-1. [ドメイン名とIPアドレスを紐づける](https://www.tagtec.net/onamaecom-dns-setting)（設定の概要は以下の通り）  
+1. [ドメイン名とIPアドレスを紐づける](https://www.tagtec.net/onamaecom-dns-setting)  
+（設定の概要は以下の通り）  
     * ホスト名：www
     * TYPE：A（IPv4ホストのIPアドレス情報）
     * TTL：3600（通過可能ルータ数）
