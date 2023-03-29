@@ -1843,6 +1843,14 @@ function onclick_btn1(_id) {
 
 ### この項目は書きかけです
 
+👉 [ファイアウォール](https://bit.ly/2LzW3iT)の設定確認  
+```
+# firewall-cmd --list-all
+……
+services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがあるか？
+……
+```
+
 👉 [Apache](#202302120812) で [HTTPS](https://ja.wikipedia.org/wiki/HTTPS) 化（常時 [SSL](https://bit.ly/3JRqfVu) 化）するのに必要なソフトウェアの準備
 
 1. [OpenSSL](https://ja.wikipedia.org/wiki/OpenSSL) のインストール  
