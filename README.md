@@ -1822,6 +1822,9 @@ function onclick_btn1(_id) {
 1. 半日ほど経過するとメールおよび LINE に「ドメイン登録完了」の連絡あり
 
 参考：[ドメイン名とIPアドレスを紐づける手順](https://www.tagtec.net/onamaecom-dns-setting)  
+
+1. XXXX
+
 作成者：夢寐郎  
 作成日：2023年3月28日  
 [[TOP]](#TOP)  
