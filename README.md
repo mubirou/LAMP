@@ -1900,6 +1900,9 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
 
 1. [Let’s Encrypt](https://letsencrypt.org/ja/) の発行  
+    ```
+    certbot certonly --webroot -w /var/www/html -d mubirou.com -d www.mubirou.com
+    ```
 
 
 ***
