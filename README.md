@@ -1832,6 +1832,13 @@ function onclick_btn1(_id) {
 
 ### この項目は書きかけです
 
+1. [Apache](#202302120812) で [HTTPS](https://ja.wikipedia.org/wiki/HTTPS) 化（常時 [SSL](https://bit.ly/3JRqfVu) 化）に必要なソフトウェアの準備
+    1. XXX
+
+1. [OpenSSL](https://ja.wikipedia.org/wiki/OpenSSL) と mod_ssl の準備
+
+***
+
 1. xxxx
 ```
 # dnf -y install mod_ssl ←インストール
