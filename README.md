@@ -1882,18 +1882,9 @@ function onclick_btn1(_id) {
         ……
     ```
 
-***
+👉 上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の提出  
 
-
-```
-# cat /etc/httpd/conf.d/ssl.conf ←HTTPSの設定ファイルの確認
-```
-
-
-
-
-1. CAに公開鍵証明書の発行申請  
-    1. XXXX
+1. XXX
 
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 参考：[SSL/TLSサーバ証明書を取得する方法](https://e-penguiner.com/how-to-get-ssl-tls-certificate-in-letsencrypt-and-update/)  
@@ -1908,6 +1899,10 @@ function onclick_btn1(_id) {
 
 ***
 ### メモ📝
+
+```
+# cat /etc/httpd/conf.d/ssl.conf ←HTTPSの設定ファイルの確認
+```
 
 1. **ホームネットワークセキュリティ機能**をオフにする
     1. http://aterm.me/（192.168.1.210）にアクセス  
