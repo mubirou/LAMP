@@ -1886,7 +1886,7 @@ function onclick_btn1(_id) {
     # openssl req -in server.csr -text
     Certificate Request:
         ……
-        Subject: C = JP, ST = Tokyo, L = Setagaya, O = mubirou, OU = Network, CN = mubirou.com, emailAddress = mubirou.info@gmail.com
+        Subject: C = JP, ST = Tokyo, L = Setagaya, O = mubirou, OU = Network, CN = www.mubirou.com, emailAddress = mubirou.info@gmail.com
         ……
         Public Key Algorithm: rsaEncryption ←公開鍵（≒南京錠本体）
             RSA Public-Key: (2048 bit) ←RSA暗号
