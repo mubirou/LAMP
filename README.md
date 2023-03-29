@@ -1848,6 +1848,7 @@ function onclick_btn1(_id) {
     mod_ssl-2.4.37-54.module_el8.8.0+1256+e1598b50.x86_64
     ```
 
+👉 [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)（[SSLサーバ証明書](https://bit.ly/3Kgsxyy)を発行するための署名要求）の作成
 
 ***
 
