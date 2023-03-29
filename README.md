@@ -1901,7 +1901,17 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 1. [Let’s Encrypt](https://letsencrypt.org/ja/) の発行  
     ```
-    certbot certonly --webroot -w /var/www/html -d mubirou.com -d www.mubirou.com
+    # certbot certonly --webroot -w /var/www/html -d www.mubirou.com
+    ……
+    (Enter 'c' to cancel): vvestvillage.info@gmail.com
+    ……
+    - - - - - - - - - - - - - - - - - - - - - - - - - 
+    Please read the Terms of Service at …
+    (Y)es/(N)o: Y
+    ……
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    Would you be willing, once your first certificate
+    (Y)es/(N)o: N
     ```
 
 
