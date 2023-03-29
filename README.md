@@ -1875,6 +1875,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 # dnf -y update ←インストール済パッケージをアップデート
 # dnf -y install epel-release ←epelリポジトリの追加
 # dnf -y install snapd ←snapdのインストール
+# systemctl enable --now snapd.socket ←snapdの起動＆自動起動ON
 ```
 
 
