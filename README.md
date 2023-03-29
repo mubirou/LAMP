@@ -1866,7 +1866,7 @@ function onclick_btn1(_id) {
     Organization Unit (eg, section) []:Network
     Commmon Name (eg, your name or your server's hostname) []:mubirou.com
     Email Address []:mubirou.info@gmail.com
-    A challenge password []: ↲
+    A challenge password []: ↲（何も入力しない）
     An optional company name []: ↲
     ```
 
