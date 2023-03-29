@@ -1852,27 +1852,27 @@ function onclick_btn1(_id) {
 👉 [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)（[SSLサーバ証明書](https://bit.ly/3Kgsxyy)を発行するための署名要求）の作成
 
 1. **秘密鍵**と [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html) の生成（800頁）
-```
-# cd /etc/pki/tls/certs
-# cp /usr/share/doc/penssl/Makefile.certificate Makefile
-```
+    ```
+    # cd /etc/pki/tls/certs
+    # cp /usr/share/doc/penssl/Makefile.certificate Makefile
+    ```
 
 1. [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html) と **秘密鍵の作成（1064頁）
-```
-# dnf -y install make ←makeコマンドのインストール
-# make /etc/pki/tls/certs/server.csr
-……
-Enter pass phrase:****
-Country Name (2 letter code) [XX]:JP
-State or Province NAme (full name) []:Tokyo
-Locality Name (eg, city) [Default City]:Setagaya
-Organization Name (eg, company) [Default Company Ltd]:mubirou
-Organization Unit (eg, section) []:Network
-Commmon Name (eg, your name or your server's hostname) []:mubirou.com
-Email Address []:mubirou.info@gmail.com
-A challenge password []: ↲
-An optional company name []: ↲
-```
+    ```
+    # dnf -y install make ←makeコマンドのインストール
+    # make /etc/pki/tls/certs/server.csr
+    ……
+    Enter pass phrase:****
+    Country Name (2 letter code) [XX]:JP
+    State or Province NAme (full name) []:Tokyo
+    Locality Name (eg, city) [Default City]:Setagaya
+    Organization Name (eg, company) [Default Company Ltd]:mubirou
+    Organization Unit (eg, section) []:Network
+    Commmon Name (eg, your name or your server's hostname) []:mubirou.com
+    Email Address []:mubirou.info@gmail.com
+    A challenge password []: ↲
+    An optional company name []: ↲
+    ```
 
 1. CSRの内容の表示
 ```
