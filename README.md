@@ -1851,7 +1851,7 @@ function onclick_btn1(_id) {
 
 👉 南京錠（[公開鍵と秘密鍵](https://bit.ly/40O0MTH)）の購入と上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
 
-1. 各作業
+1. 作成作業
     ```
     # cd /etc/pki/tls/certs
     # cp /usr/share/doc/openssl/Makefile.certificate Makefile
