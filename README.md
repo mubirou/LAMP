@@ -1850,20 +1850,13 @@ function onclick_btn1(_id) {
     ```
 
 👉 南京錠（[公開鍵と秘密鍵](https://bit.ly/40O0MTH)）の購入と上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
-
-
-1. **秘密鍵**と [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html) の生成（800頁）
     ```
     # cd /etc/pki/tls/certs
-    # cp /usr/share/doc/penssl/Makefile.certificate Makefile
-    ```
-
-1. [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html) と **秘密鍵の作成（1064頁）
-    ```
+    # cp /usr/share/doc/openssl/Makefile.certificate Makefile
     # dnf -y install make ←makeコマンドのインストール
     # make /etc/pki/tls/certs/server.csr
     ……
-    Enter pass phrase:****
+    Enter pass phrase:**** ←パスワードの入力（3回繰返す）
     Country Name (2 letter code) [XX]:JP
     State or Province NAme (full name) []:Tokyo
     Locality Name (eg, city) [Default City]:Setagaya
@@ -1875,17 +1868,17 @@ function onclick_btn1(_id) {
     An optional company name []: ↲
     ```
 
-1. CSRの内容の表示
-```
-# openssl req -in server.csr -text
-Certificate Request:
-    ……
-    Subject: C = JP, ST = Tokyo, L = Setagaya, O = mubirou, OU = Network, CN = mubirou.com, emailAddress = mubirou.info@gmail.com
-    ……
-    Public Key Algorithm: rsaEncryption
-        RSA Public-Key: (2048 bit) ←RSA暗号
-    ……
-```
+    ※報告書([CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)の内容の確認
+    ```
+    # openssl req -in server.csr -text
+    Certificate Request:
+        ……
+        Subject: C = JP, ST = Tokyo, L = Setagaya, O = mubirou, OU = Network, CN = mubirou.com, emailAddress = mubirou.info@gmail.com
+        ……
+        Public Key Algorithm: rsaEncryption ←公開鍵（≒南京錠本体）
+            RSA Public-Key: (2048 bit) ←RSA暗号
+        ……
+    ```
 
 ***
 
