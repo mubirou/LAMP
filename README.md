@@ -1894,6 +1894,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     # ll /snap
     lrwxrwxrwx. 1 root root 19  3月 29 22:59 /snap -> /var/lib/snapd/snap
     # snap install --classic certbot ←certbotのインストール
+    # ln -s /snap/bin/certbot /usr/bin/certbot ←シンボリックシンクを作成
     ```
 
 ***
