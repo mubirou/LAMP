@@ -1833,9 +1833,17 @@ function onclick_btn1(_id) {
 ### この項目は書きかけです
 
 1. [Apache](#202302120812) で [HTTPS](https://ja.wikipedia.org/wiki/HTTPS) 化（常時 [SSL](https://bit.ly/3JRqfVu) 化）するのに必要なソフトウェアの準備
-    1. XXX
+    1. [OpenSSL](https://ja.wikipedia.org/wiki/OpenSSL) の確認  
+        ```
+        # openssl version ←バージョン確認
+        OpenSSL 1.1.1k  FIPS 25 Mar 2021
+        ```
+    1. **mod_ssl** のインストール  
+        ```
+        # dnf -y update ←インストール済パッケージをアップデート
+        # dnf -y install mod_ssl ←インストール
+        ```
 
-1. [OpenSSL](https://ja.wikipedia.org/wiki/OpenSSL) と mod_ssl の準備
 
 ***
 
