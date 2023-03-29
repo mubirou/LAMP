@@ -1888,8 +1888,10 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     kernel  4.18.0-448.el8.x86_64
     ```
 
-1. 
-
+1. [certbot](https://avinton.com/academy/creating-ssl-certificate-by-certbot/) のインストール  
+    ```
+    # snap install --classic certbot
+    ```
 
 ***
 
