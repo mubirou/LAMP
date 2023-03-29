@@ -1833,6 +1833,7 @@ function onclick_btn1(_id) {
 ### この項目は書きかけです
 
 👉 [Apache](#202302120812) で [HTTPS](https://ja.wikipedia.org/wiki/HTTPS) 化（常時 [SSL](https://bit.ly/3JRqfVu) 化）するのに必要なソフトウェアの準備
+
 1. [OpenSSL](https://ja.wikipedia.org/wiki/OpenSSL) のインストール  
     ```
     # openssl version ←バージョン確認
@@ -1850,27 +1851,13 @@ function onclick_btn1(_id) {
 
 👉 [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)（[SSLサーバ証明書](https://bit.ly/3Kgsxyy)を発行するための署名要求）の作成
 
-***
-
-1. xxxx
-```
-# dnf -y install mod_ssl ←インストール
-```
-```
-# cat /etc/httpd/conf.d/ssl.conf ←HTTPSの設定ファイルの確認
-```
-```
-# openssl version ←Open SSLの確認
-OpenSSL 1.1.1k  FIPS 25 Mar 2021
-```
-
-1. 秘密鍵とCSRの生成（800頁）
+1. **秘密鍵**と [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html) の生成（800頁）
 ```
 # cd /etc/pki/tls/certs
 # cp /usr/share/doc/penssl/Makefile.certificate Makefile
 ```
 
-1. CSRと秘密鍵の作成（1064頁）
+1. [CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html) と **秘密鍵の作成（1064頁）
 ```
 # dnf -y install make ←makeコマンドのインストール
 # make /etc/pki/tls/certs/server.csr
@@ -1898,6 +1885,16 @@ Certificate Request:
         RSA Public-Key: (2048 bit) ←RSA暗号
     ……
 ```
+
+***
+
+
+```
+# cat /etc/httpd/conf.d/ssl.conf ←HTTPSの設定ファイルの確認
+```
+
+
+
 
 1. CAに公開鍵証明書の発行申請  
     1. XXXX
