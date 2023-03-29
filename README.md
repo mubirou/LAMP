@@ -1899,6 +1899,9 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     certbot 2.4.0
     ```
 
+1. [Let’s Encrypt](https://letsencrypt.org/ja/) の発行  
+
+
 ***
 
 👉 南京錠（[公開鍵と秘密鍵](https://bit.ly/40O0MTH)）の購入と上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
