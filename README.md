@@ -1871,14 +1871,24 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 👉 
 
-```
-# dnf -y update ←インストール済パッケージをアップデート
-# dnf -y install epel-release ←epelリポジトリの追加
-# dnf -y install snapd ←snapdのインストール
-# systemctl enable --now snapd.socket ←snapdの起動＆自動起動ON
-# dnf -y update ←インストール済パッケージをアップデート
-# snap install core ←snapのインストール（errorが出たらもう1度実行）
-```
+1. [snap](https://wiki.archlinux.jp/index.php/Snap)（パッケージ管理システム）のインストール  
+    ```
+    # dnf -y update ←インストール済パッケージをアップデート
+    # dnf -y install epel-release ←epelリポジトリの追加
+    # dnf -y install snapd ←snapdのインストール
+    # systemctl enable --now snapd.socket ←snapdの起動＆自動起動ON
+    # dnf -y update ←インストール済パッケージをアップデート
+    # snap install core ←snapのインストール（errorが出たらもう1度実行）
+    # snap refresh core ←最新バージョンにアップデート
+    # snap --version ←バージョン確認
+    snap    2.58.3-1.el8
+    snapd   2.58.3-1.el8
+    series  16
+    centos  8
+    kernel  4.18.0-448.el8.x86_64
+    ```
+
+1. 
 
 
 ***
