@@ -1820,14 +1820,21 @@ function onclick_btn1(_id) {
         * お名前ID（会員ID）：XXXXXXXX（8桁の数字）
         * パスワード：XXXXX
 1. 半日ほど経過するとメールおよび LINE に「ドメイン登録完了」の連絡あり
-
-参考：[ドメイン名とIPアドレスを紐づける手順](https://www.tagtec.net/onamaecom-dns-setting)  
-
-1. XXXX
+1. [ドメイン名とIPアドレスを紐づける](https://www.tagtec.net/onamaecom-dns-setting)（設定の概要は以下の通り）  
+    * ホスト名：www
+    * TYPE：A（IPv4ホストのIPアドレス情報）
+    * TTL：3600（通過可能ルータ数）
+    * VALUE：（グローバルIPアドレス）←"グローバルIPアドレス"で検索
+    * 状態：有効
+    * 追加：追加
+    * ✓ DNSレコード設定用ネームサーバー変更確認
+    * 意図しないDNS設定変更を防ぐために：設定しない
 
 作成者：夢寐郎  
 作成日：2023年3月28日  
+更新日：2023年3月29日「ドメイン名とIPアドレスを紐づける」を追加  
 [[TOP]](#TOP)  
+
 
 
 <a id="202303262032"></a>
@@ -1867,7 +1874,7 @@ function onclick_btn1(_id) {
     Locality Name (eg, city) [Default City]:Setagaya
     Organization Name (eg, company) [Default Company Ltd]:mubirou
     Organization Unit (eg, section) []:Network
-    Commmon Name (eg, your name or your server's hostname) []:mubirou.com
+    Commmon Name (eg, your name or your server's hostname) []:www.mubirou.com
     Email Address []:mubirou.info@gmail.com
     A challenge password []: ↲（何も入力しない）
     An optional company name []: ↲
