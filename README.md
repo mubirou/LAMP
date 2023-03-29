@@ -1852,35 +1852,35 @@ function onclick_btn1(_id) {
 👉 南京錠（[公開鍵と秘密鍵](https://bit.ly/40O0MTH)）の購入と上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
 
 1. 各作業
-```
-# cd /etc/pki/tls/certs
-# cp /usr/share/doc/openssl/Makefile.certificate Makefile
-# dnf -y install make ←makeコマンドのインストール
-# make /etc/pki/tls/certs/server.csr
-……
-Enter pass phrase:**** ←パスワードの入力（3回繰返す）
-Country Name (2 letter code) [XX]:JP
-State or Province NAme (full name) []:Tokyo
-Locality Name (eg, city) [Default City]:Setagaya
-Organization Name (eg, company) [Default Company Ltd]:mubirou
-Organization Unit (eg, section) []:Network
-Commmon Name (eg, your name or your server's hostname) []:mubirou.com
-Email Address []:mubirou.info@gmail.com
-A challenge password []: ↲
-An optional company name []: ↲
-```
+    ```
+    # cd /etc/pki/tls/certs
+    # cp /usr/share/doc/openssl/Makefile.certificate Makefile
+    # dnf -y install make ←makeコマンドのインストール
+    # make /etc/pki/tls/certs/server.csr
+    ……
+    Enter pass phrase:**** ←パスワードの入力（3回繰返す）
+    Country Name (2 letter code) [XX]:JP
+    State or Province NAme (full name) []:Tokyo
+    Locality Name (eg, city) [Default City]:Setagaya
+    Organization Name (eg, company) [Default Company Ltd]:mubirou
+    Organization Unit (eg, section) []:Network
+    Commmon Name (eg, your name or your server's hostname) []:mubirou.com
+    Email Address []:mubirou.info@gmail.com
+    A challenge password []: ↲
+    An optional company name []: ↲
+    ```
 
 1. 報告書([CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)の内容の確認
-```
-# openssl req -in server.csr -text
-Certificate Request:
-    ……
-    Subject: C = JP, ST = Tokyo, L = Setagaya, O = mubirou, OU = Network, CN = mubirou.com, emailAddress = mubirou.info@gmail.com
-    ……
-    Public Key Algorithm: rsaEncryption ←公開鍵（≒南京錠本体）
-        RSA Public-Key: (2048 bit) ←RSA暗号
-    ……
-```
+    ```
+    # openssl req -in server.csr -text
+    Certificate Request:
+        ……
+        Subject: C = JP, ST = Tokyo, L = Setagaya, O = mubirou, OU = Network, CN = mubirou.com, emailAddress = mubirou.info@gmail.com
+        ……
+        Public Key Algorithm: rsaEncryption ←公開鍵（≒南京錠本体）
+            RSA Public-Key: (2048 bit) ←RSA暗号
+        ……
+    ```
 
 ***
 
