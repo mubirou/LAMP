@@ -1797,7 +1797,7 @@ function onclick_btn1(_id) {
     </VirtualHost>
     ```
     ```
-    # systemctl restart httpd ←Apacheの再起動
+    # systemctl restart httpd ←Apache の再起動
     ```
 1. ルーター外からドメイン名で開ければ大成功！
 
@@ -1945,11 +1945,6 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
 
-1. [Apache](#202302120812) の停止
-    ```
-    # systemctl stop httpd ←停止（保険的に…）
-    ```
-
 1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の削除
     1. 証明書のパスの確認
         ```
@@ -1965,16 +1960,10 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
         # certbot revoke --cert-path /etc/letsencrypt/archive/www.mubirou.com/cert1.pem ←実行後（Yesを2回入力）
         ```
 
-1. [Apache](#202302120812) の起動
-    ```
-    # systemctl start httpd
-    ```
-
 1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の再発行（前述と同じ）
     ```
     # certbot certonly --webroot -w /var/www/html -d mubirou.com -d www.mubirou.com
     ```
-
 
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 作成者：夢寐郎  
