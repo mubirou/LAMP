@@ -1932,10 +1932,19 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
 
 1. 証明書の削除
-    ```
-    # certbot revoke --cert-name=hogehoge
-    # certbot revoke --cert-path ./hoge.example.com/cert1.pem
-    ```
+    1. 証明書のパスの確認
+        ```
+        # ll /etc/letsencrypt/live/www.mubirou.com
+        ……
+        lrwxrwxrwx. … cert.pem -> ../../archive/www.mubirou.com/cert1.pem
+        ……
+        # ll /etc/letsencrypt/archive/www.mubirou.com/cert1.pem
+        -rw-r--r--. … /etc/letsencrypt/archive/www.mubirou.com/cert1.pem ←これが証明書の絶対パス
+        ```
+    1. 証明書の削除
+        ```
+        # certbot revoke --cert-path /etc/letsencrypt/archive/www.mubirou.com/cert1.pem
+        ```
 
 1. 証明書の再発行  
     ```
