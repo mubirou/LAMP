@@ -1868,6 +1868,8 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     certbot 2.4.0
     ```
 
+<a id="202303262032-SSL"></a>
+
 1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の発行  
     ```
     # certbot certonly --webroot -w /var/www/html -d mubirou.com -d www.mubirou.com
@@ -1964,7 +1966,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
         # certbot revoke --cert-path /etc/letsencrypt/archive/www.mubirou.com/cert1.pem ←実行後（Yesを2回入力）
         ```
 
-1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の再発行（前述と同じ）
+1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の再発行（[前述](#202303262032-SSL)と同じ）
     ```
     # certbot certonly --webroot -w /var/www/html -d mubirou.com -d www.mubirou.com
     ```
