@@ -1931,7 +1931,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
 
-1. 証明書の削除
+1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の削除
     1. 証明書のパスの確認
         ```
         # ll /etc/letsencrypt/live/www.mubirou.com
@@ -1946,7 +1946,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
         # certbot revoke --cert-path /etc/letsencrypt/archive/www.mubirou.com/cert1.pem
         ```
 
-1. 証明書の再発行  
+1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の再発行（前述と同じ）
     ```
     # certbot certonly --webroot -w /var/www/html -d mubirou.com -d www.mubirou.com
     ```
