@@ -2,7 +2,7 @@
 
 ### **Index**
 
-| [LAMPについて](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [ルーター](#202302102308) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [Vim](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | [MariaDB](#202302162306) | [PHP+MariaDB](#202302170022) | [WordPress](#202302170208) | [Samba](#202302191517) | [SQLite](#202302232039) | [PHP+SQLite](#202302232127) | [Python](#202302232147) | [Python on Apache](#202302251334) | [Python+SQLite](#202302282229) | [Python+MariaDB](#202302282308) | [サンプル](#202303022135) | [ポート開放](#202303151240) | [ドメイン名取得](#202303262200) | [HTTPS](#202303262032) |
+| [LAMPについて](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [ルーター](#202302102308) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [Vim](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | [MariaDB](#202302162306) | [PHP+MariaDB](#202302170022) | [WordPress](#202302170208) | [Samba](#202302191517) | [SQLite](#202302232039) | [PHP+SQLite](#202302232127) | [Python](#202302232147) | [Python on Apache](#202302251334) | [Python+SQLite](#202302282229) | [Python+MariaDB](#202302282308) | [サンプル](#202303022135) | [ポート開放](#202303151240) | [ドメイン名取得](#202303262200) | [HTTPS](#202303262032) | [Let's Encryptの証明書の再発行](#202303302038) |
 
 ***
 
@@ -1970,46 +1970,6 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
     # systemctl restart httpd
     ```
-
-***
-### 参考（[Let’s Encrypt](https://letsencrypt.org/ja/) を使わない方法）
-
-👉 南京錠（[公開鍵と秘密鍵](https://bit.ly/40O0MTH)）の購入と上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
-
-1. 作成作業
-    ```
-    # cd /etc/pki/tls/certs
-    # cp /usr/share/doc/openssl/Makefile.certificate Makefile
-    # dnf -y install make ←makeコマンドのインストール
-    # make /etc/pki/tls/certs/server.csr
-    ……
-    Enter pass phrase:**** ←パスワードの入力（3回繰返す）
-    Country Name (2 letter code) [XX]:JP
-    State or Province NAme (full name) []:Tokyo
-    Locality Name (eg, city) [Default City]:Setagaya
-    Organization Name (eg, company) [Default Company Ltd]:mubirou
-    Organization Unit (eg, section) []:Network
-    Commmon Name (eg, your name or your server's hostname) []:www.mubirou.com
-    Email Address []:mubirou.info@gmail.com
-    A challenge password []: ↲（何も入力しない）
-    An optional company name []: ↲
-    ```
-
-1. 報告書([CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)の内容の確認
-    ```
-    # openssl req -in server.csr -text
-    Certificate Request:
-        ……
-        Subject: C = JP, ST = Tokyo, L = Setagaya, O = mubirou, OU = Network, CN = www.mubirou.com, emailAddress = mubirou.info@gmail.com
-        ……
-        Public Key Algorithm: rsaEncryption ←公開鍵（≒南京錠本体）
-            RSA Public-Key: (2048 bit) ←RSA暗号
-        ……
-    ```
-
-👉 上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の提出  
-
-……つづく
 
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 作成者：夢寐郎  
