@@ -1928,6 +1928,12 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 1. ルーター外からドメイン名 "http://www.mubirou.com" "https://www.mubirou.com" "www.mubirou.com" "mubirou.com" でアクセスし "https://www.mubirou.com" が開けば大成功！
 
+***
+👉 [Let’s Encrypt](https://letsencrypt.org/ja/)の証明書の再発行  
+
+1. 
+
+
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 作成者：夢寐郎  
 作成日：2023年3月30日  
