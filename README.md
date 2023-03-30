@@ -2011,7 +2011,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 ……つづく
 
-参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install) 
+参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 作成者：夢寐郎  
 作成日：2023年3月XX日  
 [[TOP]](#TOP)  
