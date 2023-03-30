@@ -1784,12 +1784,13 @@ function onclick_btn1(_id) {
     * 状態：有効
     * 追加：追加
     * ✓ DNSレコード設定用ネームサーバー変更確認
-    * 意図しないDNS設定変更を防ぐために：設定しない
+    * 意図しないDNS設定変更を防ぐために：設定しない  
+    ⚠ 同様の設定で「**ホスト名を空白**」にしたものも [追加] する  
 1. ルーター外からドメイン名で開ければ大成功！
 
 作成者：夢寐郎  
 作成日：2023年3月28日  
-更新日：2023年3月29日「ドメイン名とIPアドレスを紐づける」を追加  
+更新日：2023年3月30日「ホスト名を空白」にしたものを追加  
 [[TOP]](#TOP)  
 
 
@@ -1948,8 +1949,13 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
         ```
     1. 証明書の削除
         ```
-        # certbot revoke --cert-path /etc/letsencrypt/archive/www.mubirou.com/cert1.pem
+        # certbot revoke --cert-path /etc/letsencrypt/archive/www.mubirou.com/cert1.pem ←実行後（Yesを2回入力）
         ```
+
+1. [Apache](#202302120812) の起動
+    ```
+    # systemctl start httpd
+    ```
 
 1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の再発行（前述と同じ）
     ```
