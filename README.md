@@ -1886,7 +1886,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ……
     ```
 
-1. 証明書を設置する  
+1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)などの確認  
     ```
     # cd /etc/letsencrypt/live/
     # ll ←「ls -l」と同じ
@@ -1895,7 +1895,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     # cd mubirou.com
     # ls -l
     ……
-    lrwxrwxrwx. … cert.pem -> ../../archive/mubirou.com/cert1.pem
+    lrwxrwxrwx. … cert.pem -> ../../archive/mubirou.com/cert1.pem ←SSLサーバ証明書
     lrwxrwxrwx. … chain.pem -> ../../archive/mubirou.com/chain1.pem
     lrwxrwxrwx. … fullchain.pem -> ../../archive/mubirou.com/fullchain1.pem
     lrwxrwxrwx. … privkey.pem -> ../../archive/mubirou.com/privkey1.pem
