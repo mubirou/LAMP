@@ -1937,7 +1937,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     # systemctl restart httpd ←Apacheの再起動
     ```
 
-👉 ポート（443番）の開放
+👉 [ポート開放](#202303151240)（TCP443番）
 
 👉 「https://〇〇」でアクセス可能にする  
 
