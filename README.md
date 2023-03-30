@@ -1940,7 +1940,11 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     # systemctl restart httpd
     ```
 
-1. ルーター外からドメイン名 "http://www.mubirou.com" "https://www.mubirou.com" "www.mubirou.com" "mubirou.com" でアクセスし "https://www.mubirou.com" が開けば大成功！
+1. ルーター外からドメイン名を…  
+"mubirou.com" "www.mubirou.com"  
+"http://mubirou.com" "http://www.mubirou.com"  
+"https://mubirou.com" "https://www.mubirou.com"  
+…でアクセスし "https://www.mubirou.com" が開けば大成功！
 
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
