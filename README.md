@@ -1943,7 +1943,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
 
 1. ルーター外からドメイン名を…  
-➀ "mubirou.com"  
+➀"mubirou.com"  
 ➁"www.mubirou.com"  
 ➂"http://mubirou.com"  
 ➃"http://www.mubirou.com"  
