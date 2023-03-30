@@ -1939,7 +1939,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 👉 [ポート開放](#202303151240)（TCP443番）
 
-👉 "https:～" でアクセス可能にする  
+👉 XXXX  
     ```
     # vi /etc/httpd/conf.d/ssl.conf
     ……
@@ -1950,7 +1950,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     102行目 SSLCertificateChainFile /etc/letsencrypt/live/www.mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
     ```
 
-👉 XXXX
+👉 XXXX  
     ```
     # vi /etc/httpd/conf/httpd.conf ←開いて末尾に以下を追加
     ……
