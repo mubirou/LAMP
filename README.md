@@ -1952,6 +1952,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
 
 👉 "http://〇〇" → "https://〇〇" に自動接続する  
+
     ```
     # vi /etc/httpd/conf/httpd.conf ←開いて末尾に以下を追加
     ……
