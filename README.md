@@ -1924,7 +1924,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     # systemctl restart httpd
     ```
 
-👉 "http://〇〇" → "https://〇〇" に自動変更する  
+👉 "http://〇〇" → "https://〇〇" に自動接続する  
 1. httpd.conf の編集  
     ```
     # vi /etc/httpd/conf/httpd.conf ←開いて末尾に以下を追加
