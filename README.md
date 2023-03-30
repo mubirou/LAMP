@@ -1797,8 +1797,6 @@ function onclick_btn1(_id) {
 <a id="202303262032"></a>
 # <b>HTTPS</b>
 
-### この項目は書きかけです
-
 [Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)を利用する方法（無料）  
 
 👉 [ファイアウォール](https://bit.ly/2LzW3iT)の設定確認  
@@ -1930,7 +1928,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 作成者：夢寐郎  
-作成日：2023年3月XX日  
+作成日：2023年3月30日  
 [[TOP]](#TOP)  
 
 
