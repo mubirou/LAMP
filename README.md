@@ -1913,11 +1913,11 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
     # vi /etc/httpd/conf.d/ssl.conf
     ……
-    85行目 SSLCertificateFile /etc/letsencrypt/live/www.mubirou.com/cert.pem ←変更（サーバー証明書の指定）
+    85行目 SSLCertificateFile /etc/letsencrypt/live/mubirou.com/cert.pem ←変更（サーバー証明書の指定）
     ……
-    93行目 SSLCertificateKeyFile /etc/letsencrypt/live/www.mubirou.com/privkey.pem ←変更（秘密鍵を指定）
+    93行目 SSLCertificateKeyFile /etc/letsencrypt/live/mubirou.com/privkey.pem ←変更（秘密鍵を指定）
     ……
-    102行目 SSLCertificateChainFile /etc/letsencrypt/live/www.mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
+    102行目 SSLCertificateChainFile /etc/letsencrypt/live/mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
     ```
 1. Apache の再起動
     ```
