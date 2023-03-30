@@ -1891,14 +1891,14 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     # cd /etc/letsencrypt/live/
     # ll ←「ls -l」と同じ
     ……
-    drwxr-xr-x. 2 root root  93  3月 30 00:35 www.mubirou.com
-    # cd www.mubirou.com
+    drwxr-xr-x. 2 root root  93  3月 30 00:35 mubirou.com
+    # cd mubirou.com
     # ls -l
     ……
-    lrwxrwxrwx. … cert.pem -> ../../archive/www.mubirou.com/cert1.pem
-    lrwxrwxrwx. … chain.pem -> ../../archive/www.mubirou.com/chain1.pem
-    lrwxrwxrwx. … fullchain.pem -> ../../archive/www.mubirou.com/fullchain1.pem
-    lrwxrwxrwx. … privkey.pem -> ../../archive/www.mubirou.com/privkey1.pem
+    lrwxrwxrwx. … cert.pem -> ../../archive/mubirou.com/cert1.pem
+    lrwxrwxrwx. … chain.pem -> ../../archive/mubirou.com/chain1.pem
+    lrwxrwxrwx. … fullchain.pem -> ../../archive/mubirou.com/fullchain1.pem
+    lrwxrwxrwx. … privkey.pem -> ../../archive/mubirou.com/privkey1.pem
     ```
     ```
     # service httpd configtest
