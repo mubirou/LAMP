@@ -1939,7 +1939,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 👉 [ポート開放](#202303151240)（TCP443番）
 
-👉 「https://〇〇」でアクセス可能にする  
+👉 "https://〇〇" でアクセス可能にする  
 
     ```
     # vi /etc/httpd/conf.d/ssl.conf
