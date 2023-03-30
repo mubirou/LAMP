@@ -1931,6 +1931,11 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
 
+1. [Apache](#202302120812) の停止
+    ```
+    # systemctl stop httpd ←停止（保険的に…）
+    ```
+
 1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の削除
     1. 証明書のパスの確認
         ```
