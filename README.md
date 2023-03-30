@@ -1929,7 +1929,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 1. ルーター外からドメイン名 "http://www.mubirou.com" "https://www.mubirou.com" "www.mubirou.com" "mubirou.com" でアクセスし "https://www.mubirou.com" が開けば大成功！
 
 ***
-👉 [Let’s Encrypt](https://letsencrypt.org/ja/)の証明書の再発行  
+👉 [Let’s Encrypt](https://letsencrypt.org/ja/)の証明書の再発行（参考）  
 
 1. 
 
