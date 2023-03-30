@@ -1786,6 +1786,19 @@ function onclick_btn1(_id) {
     * ✓ DNSレコード設定用ネームサーバー変更確認
     * 意図しないDNS設定変更を防ぐために：設定しない  
 1. 同様の設定で「**ホスト名を空白**」にしたものも [追加] する  
+1. "http://〇〇" → "http://www.〇〇" に自動変更する  
+    ```
+    # vi /etc/httpd/conf/httpd.conf
+    ……
+    <VirtualHost *:80>
+        ServerName www.vvestvillage.com
+        ServerAlias vvestvillage.com
+        DocumentRoot /var/www/html
+    </VirtualHost>
+    ```
+    ```
+    # systemctl restart httpd ←Apacheの再起動
+    ```
 1. ルーター外からドメイン名で開ければ大成功！
 
 作成者：夢寐郎  
