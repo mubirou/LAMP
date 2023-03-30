@@ -1901,9 +1901,9 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 1. [Let’s Encrypt](https://letsencrypt.org/ja/) の発行  
     ```
-    # certbot certonly --webroot -w /var/www/html -d www.mubirou.com
+    # certbot certonly --webroot -w /var/www/html -d mubirou.com -d www.mubirou.com
     ……
-    (Enter 'c' to cancel): vvestvillage.info@gmail.com
+    (Enter 'c' to cancel): mubirou.info@gmail.com
     ……
     - - - - - - - - - - - - - - - - - - - - - - - - - 
     Please read the Terms of Service at …
@@ -1926,10 +1926,10 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     # cd www.mubirou.com
     # ls -l
     ……
-    lrwxrwxrwx. … cert.pem -> ../../archive/www.vvestvillage.com/cert1.pem
-    lrwxrwxrwx. … chain.pem -> ../../archive/www.vvestvillage.com/chain1.pem
-    lrwxrwxrwx. … fullchain.pem -> ../../archive/www.vvestvillage.com/fullchain1.pem
-    lrwxrwxrwx. … privkey.pem -> ../../archive/www.vvestvillage.com/privkey1.pem
+    lrwxrwxrwx. … cert.pem -> ../../archive/www.mubirou.com/cert1.pem
+    lrwxrwxrwx. … chain.pem -> ../../archive/www.mubirou.com/chain1.pem
+    lrwxrwxrwx. … fullchain.pem -> ../../archive/www.mubirou.com/fullchain1.pem
+    lrwxrwxrwx. … privkey.pem -> ../../archive/www.mubirou.com/privkey1.pem
     ```
     ```
     # service httpd configtest
@@ -2005,11 +2005,9 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 ……つづく
 
-参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
-参考：[SSL/TLSサーバ証明書を取得する方法](https://e-penguiner.com/how-to-get-ssl-tls-certificate-in-letsencrypt-and-update/)  
-参考：[SSL証明書の導入手順](https://blog.senseshare.jp/encrypt.html)  
+参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install) 
 作成者：夢寐郎  
-作成日：2023年X月XX日  
+作成日：2023年3月XX日  
 [[TOP]](#TOP)  
 
 
