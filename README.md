@@ -1939,9 +1939,36 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 👉 [ポート開放](#202303151240)（TCP443番）
 
-👉 XXXX  
+👉 "https://〇〇" でアクセス可能にする  
+1. ssl.conf の編集  
     ```
     # vi /etc/httpd/conf.d/ssl.conf
+    ……
+    85行目 SSLCertificateFile /etc/letsencrypt/live/www.mubirou.com/cert.pem ←変更（サーバー証明書の指定）
+    ……
+    93行目 SSLCertificateKeyFile /etc/letsencrypt/live/www.mubirou.com/privkey.pem ←変更（秘密鍵を指定）
+    ……
+    102行目 SSLCertificateChainFile /etc/letsencrypt/live/www.mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
+    ```
+1. Apache の再起動
+    ```
+    # systemctl restart httpd
+    ```
+
+👉 "http://〇〇" → "https://〇〇" に自動変更する  
+1. httpd.conf の編集  
+    ```
+    # vi /etc/httpd/conf/httpd.conf ←開いて末尾に以下を追加
+    ……
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteCond %{HTTPS} off
+        RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+    </IfModule>
+    ```
+1. Apache の再起動
+    ```
+    # systemctl restart httpd
     ```
 
 ***
