@@ -1875,7 +1875,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 1. 証明書を設置する  
     ```
     # cd /etc/letsencrypt/live/
-    # ll
+    # ll ←「ls -l」と同じ
     ……
     drwxr-xr-x. 2 root root  93  3月 30 00:35 www.mubirou.com
     # cd www.mubirou.com
@@ -1931,7 +1931,16 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
 
-1. 
+1. 証明書の削除
+    ```
+    # certbot revoke --cert-name=hogehoge
+    # certbot revoke --cert-path ./hoge.example.com/cert1.pem
+    ```
+
+1. 証明書の再発行  
+    ```
+    # certbot certonly --webroot -w /var/www/html -d mubirou.com -d www.mubirou.com
+    ```
 
 
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
