@@ -1939,7 +1939,8 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 👉 ポート（443番）の開放
 
-👉 [SSL](https://bit.ly/3nvKIaH) の有効化  
+👉 「https://〇〇」でアクセス可能にする  
+
     ```
     # vi /etc/httpd/conf.d/ssl.conf
     ……
@@ -1949,12 +1950,23 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ……
     102行目 SSLCertificateChainFile /etc/letsencrypt/live/www.mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
     ```
+
+👉 「http://〇〇」→「https://〇〇」に自動接続する  
+    ```
+    # vi /etc/httpd/conf/httpd.conf ←開いて末尾に以下を追加
+    ……
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteCond %{HTTPS} off
+        RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+    </IfModule>
+    ```
     ```
     # systemctl restart httpd ←Apacheの再起動
     ```
 
-
 ***
+### 参考（[Let’s Encrypt](https://letsencrypt.org/ja/) を使わない方法）
 
 👉 南京錠（[公開鍵と秘密鍵](https://bit.ly/40O0MTH)）の購入と上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
 
@@ -1991,7 +2003,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 👉 上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の提出  
 
-1. XXX
+……つづく
 
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 参考：[SSL/TLSサーバ証明書を取得する方法](https://e-penguiner.com/how-to-get-ssl-tls-certificate-in-letsencrypt-and-update/)  
