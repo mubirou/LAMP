@@ -1799,6 +1799,8 @@ function onclick_btn1(_id) {
 
 ### この項目は書きかけです
 
+[Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)を利用する方法（無料）  
+
 👉 [ファイアウォール](https://bit.ly/2LzW3iT)の設定確認  
 ```
 # firewall-cmd --list-all
@@ -1824,7 +1826,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     mod_ssl-2.4.37-54.module_el8.8.0+1256+e1598b50.x86_64
     ```
 
-👉 [Let’s Encrypt](https://letsencrypt.org/ja/)（レッツインクリプト）で**無料**の[SSLサーバ証明書](https://bit.ly/3Kgsxyy)を作成
+👉 [SSLサーバ証明書](https://bit.ly/3Kgsxyy)を作成
 
 1. [snap](https://wiki.archlinux.jp/index.php/Snap)（パッケージ管理システム）のインストール  
     ```
