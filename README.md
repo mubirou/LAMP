@@ -1951,7 +1951,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     102行目 SSLCertificateChainFile /etc/letsencrypt/live/www.mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
     ```
 
-👉 「http://〇〇」→「https://〇〇」に自動接続する  
+👉 "http://〇〇" → "https://〇〇" に自動接続する  
     ```
     # vi /etc/httpd/conf/httpd.conf ←開いて末尾に以下を追加
     ……
