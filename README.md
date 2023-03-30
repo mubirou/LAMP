@@ -1912,8 +1912,32 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     - - - - - - - - - - - - - - - - - - - - - - - - -
     Would you be willing, once your first certificate
     (Y)es/(N)o: N
+    ……
+    Successfully received certificate. ←成功！
+    ……
     ```
 
+1. 証明書を設置する  
+    ```
+    # cd /etc/letsencrypt/live/
+    # ll
+    ……
+    drwxr-xr-x. 2 root root  93  3月 30 00:35 www.mubirou.com
+    # cd www.mubirou.com
+    # ls -l
+    ……
+    lrwxrwxrwx. … cert.pem -> ../../archive/www.vvestvillage.com/cert1.pem
+    lrwxrwxrwx. … chain.pem -> ../../archive/www.vvestvillage.com/chain1.pem
+    lrwxrwxrwx. … fullchain.pem -> ../../archive/www.vvestvillage.com/fullchain1.pem
+    lrwxrwxrwx. … privkey.pem -> ../../archive/www.vvestvillage.com/privkey1.pem
+    ```
+    ```
+    # service httpd configtest
+    Syntax OK
+    # systemctl restart httpd ←Apacheの再起動
+    ```
+
+👉 ポート（443番）の開放
 
 ***
 
