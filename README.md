@@ -1939,6 +1939,21 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 👉 ポート（443番）の開放
 
+👉 [SSL](https://bit.ly/3nvKIaH) の有効化  
+    ```
+    # vi /etc/httpd/conf.d/ssl.conf
+    ……
+    85行目 SSLCertificateFile /etc/letsencrypt/live/www.mubirou.com/cert.pem ←変更（サーバー証明書の指定）
+    ……
+    93行目 SSLCertificateKeyFile /etc/letsencrypt/live/www.mubirou.com/privkey.pem ←変更（秘密鍵を指定）
+    ……
+    102行目 SSLCertificateChainFile /etc/letsencrypt/live/www.mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
+    ```
+    ```
+    # systemctl restart httpd ←Apacheの再起動
+    ```
+
+
 ***
 
 👉 南京錠（[公開鍵と秘密鍵](https://bit.ly/40O0MTH)）の購入と上司（[CA](https://bit.ly/3LWrWnb)）への報告書（[CSR](https://jp.globalsign.com/support/ssl/certificates/about-csr.html)＝[SSLサーバ証明書](https://bit.ly/3Kgsxyy)発行の署名要求）の作成  
