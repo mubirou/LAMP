@@ -1760,6 +1760,7 @@ function onclick_btn1(_id) {
 > 【[お名前.com](https://www.onamae.com/)】  
     ・[GMOインターネットグループ(株)](https://www.gmo.jp/)が運営するドメイン登録サービス  
     ・アジアで初めて認定（現在は19社）を受け1999年からサービス開始された [ICANN](https://www.nic.ad.jp/ja/basics/terms/icann.html) 公認の[レジストラ](https://bit.ly/40mPd6b)  
+    ・海外の [Network Solutions](https://www.networksolutions.com/) 等もあり
 
 1. https://www.onamae.com/ にアクセス
 1. 取得したいドメイン名を検索
