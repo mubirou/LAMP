@@ -1793,9 +1793,9 @@ function onclick_btn1(_id) {
 
 ***
 👉 ルーター内からドメイン名でアクセスする方法  
-（Windowsパソコン毎に設定）  
+（Windowsパソコン毎に設定する必要あり）  
 
-1. XXXX
+1. [hostsファイル](https://glodia.jp/blog/10365/)の確認  
 
 作成者：夢寐郎  
 作成日：2023年3月28日  
