@@ -1804,7 +1804,7 @@ function onclick_btn1(_id) {
         #	::1             localhost
         192.168.3.16 www.mubirou.com mubirou.com <-追加
         ```
-1. 接続の確認（コマンドプロンプト）
+1. 接続の確認（Windowsコマンドプロンプト）
     ```
     > ping www.mubirou.com <-pingテスト（www.〇〇.com）
     www.mubirou.com [192.168.x.xx]に ping を送信しています…
