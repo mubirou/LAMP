@@ -1959,7 +1959,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 * http://www.mubirou.com  
 * https://mubirou.com
 * https://www.mubirou.com  
-…でアクセスし "https://www.mubirou.com" が開けば成功！
+…でアクセスし 🔒https://www.mubirou.com が開けば成功！
 
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
