@@ -1922,6 +1922,14 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     93行目 SSLCertificateKeyFile /etc/letsencrypt/live/mubirou.com/privkey.pem ←変更（秘密鍵を指定）
     ……
     102行目 SSLCertificateChainFile /etc/letsencrypt/live/mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
+    ……
+    <IfModule mod_rewrite.c> ←以下5行を</VirtualHost>内に記述
+        RewriteEngine On
+        RewriteCond %{HTTP_HOST} !^www\. [NC]
+        RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    </IfModule>
+
+    最終行 </VirtualHost>
     ```
 1. Apache の再起動
     ```
@@ -1944,13 +1952,13 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     # systemctl restart httpd
     ```
 
-1. ルーター外からドメイン名を…  
-➀"mubirou.com"  
-➁"www.mubirou.com"  
-➂"http://mubirou.com"  
-➃"http://www.mubirou.com"  
-➄"https://mubirou.com"  
-➅"https://www.mubirou.com"  
+👉 動作確認（ルーター外からアクセス）  
+* "mubirou.com"  
+* "www.mubirou.com"  
+* "http://mubirou.com"  
+* "http://www.mubirou.com"  
+* "https://mubirou.com"  
+* "https://www.mubirou.com"  
 …でアクセスし "https://www.mubirou.com" が開けば成功！
 
 ***
