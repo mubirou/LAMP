@@ -1953,12 +1953,12 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
 
 👉 動作確認（ルーター外からアクセス）  
-* "mubirou.com"  
-* "www.mubirou.com"  
-* "http://mubirou.com"  
-* "http://www.mubirou.com"  
-* "https://mubirou.com"  
-* "https://www.mubirou.com"  
+* mubirou.com
+* www.mubirou.com
+* http://mubirou.com 
+* http://www.mubirou.com  
+* https://mubirou.com
+* https://www.mubirou.com  
 …でアクセスし "https://www.mubirou.com" が開けば成功！
 
 ***
