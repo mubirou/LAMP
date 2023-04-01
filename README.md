@@ -1790,7 +1790,7 @@ function onclick_btn1(_id) {
 
 作成者：夢寐郎  
 作成日：2023年3月28日  
-更新日：2023年3月30日「ホスト名を空白」にしたものを追加  
+更新日：2023年4月01日  
 [[TOP]](#TOP)  
 
 
@@ -1910,6 +1910,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ……
     102行目 SSLCertificateChainFile /etc/letsencrypt/live/mubirou.com/chain.pem ←変更（CAが自分自身を認証する為に発行する証明書）
     ……
+    ↓ "〇〇.com"→"www.〇〇.com"に自動接続する
     <IfModule mod_rewrite.c> ←以下5行を</VirtualHost>内に記述
         RewriteEngine On
         RewriteCond %{HTTP_HOST} !^www\. [NC]
@@ -1973,7 +1974,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 作成者：夢寐郎  
-作成日：2023年3月XX日  
+作成日：2023年4月1日  
 [[TOP]](#TOP)  
 
 
