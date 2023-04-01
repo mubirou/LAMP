@@ -1798,8 +1798,6 @@ function onclick_btn1(_id) {
 <a id="202303262032"></a>
 # <b>HTTPS</b>
 
-### この項目は書きかけです
-
 [Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)を利用する方法（**無料**）  
 
 👉 [ファイアウォール](https://bit.ly/2LzW3iT)の設定確認  
