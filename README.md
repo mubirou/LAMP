@@ -1,6 +1,6 @@
 # LAMP環境構築メモ <a id="TOP"></a>
 
-[Red Hat系](https://bit.ly/40TvlHI)、[CUI](https://e-words.jp/w/CUI.html)ベース、[firewall](https://eng-entrance.com/linux-centos-firewall)・[SELinux](https://red.ht/3zkzRmK) 有効で構築  
+💡[Red Hat系](https://bit.ly/40TvlHI)、[CUI](https://e-words.jp/w/CUI.html)ベース、[firewall](https://eng-entrance.com/linux-centos-firewall)・[SELinux](https://red.ht/3zkzRmK) 有効で構築  
 
 ### **Index**
 
