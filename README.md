@@ -2037,6 +2037,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 作成者：夢寐郎  
 作成日：2023年4月1日  
+更新日：2023年4月X日 証明書の自動更新の追加  
 [[TOP]](#TOP)  
 
 
