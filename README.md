@@ -1830,8 +1830,6 @@ function onclick_btn1(_id) {
 <a id="202303262032"></a>
 # <b>HTTPS</b>
 
-### この項目は書きかけです
-
 [Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)を利用する方法（**無料**）  
 
 > 【[Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)】  
@@ -1985,6 +1983,9 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 …で 🔒https://www.mubirou.com が開けば大成功！
 
 ***
+
+### 以下の項目は書きかけです
+
 👉 **[Let’s Encrypt](https://letsencrypt.org/ja/) の「[SSLサーバ証明書](https://bit.ly/3Kgsxyy)」の自動更新**  
 * [Let’s Encrypt](https://letsencrypt.org/ja/) で発行した証明書は90日間有効
 * 60日間程度での更新を推奨  
