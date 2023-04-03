@@ -1834,6 +1834,9 @@ function onclick_btn1(_id) {
 
 [Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)を利用する方法（**無料**）  
 
+> [Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)  
+2014年設立。2016年4月に正式に開始。商用利用可能の証明書[認証局](https://bit.ly/40IzWgc)（無料で発行）
+
 👉 [ファイアウォール](https://bit.ly/2LzW3iT)の設定確認  
 ```
 # firewall-cmd --list-all
@@ -1988,8 +1991,18 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 1. XXXX
     ```
-    00 04 01 * * certbot renew --dry-run 2>&1 | mail -s "Let's Encrypt update information" myname@mydomain.com && systemctl restart httpd
+    00 04 01 * * certbot renew --dry-run 2>&1 | mail -s "Let's Encrypt update information" mubirou.info@gmail.com && systemctl restart httpd
     ```
+    * 00 04 01 * *
+    * certbot renew
+    * --dry-run
+    * 2>&1 |
+    * mail -s "Let's Encrypt update information" mubirou.info@gmail.com
+    * &&
+    * Apache の再起動  
+        ```
+        systemctl restart httpd
+        ```
 
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
