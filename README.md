@@ -1991,7 +1991,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 * 60日間程度での更新を推奨  
 * [参考サイト](https://weblabo.oscasierra.net/letsencrypt-renew-cron/)
 
-1. 更新テスト（**--dry-run**を付ける）
+1. 更新の実験（**--dry-run**を付ける）
     ```
     # certbot renew --dry-run
     ……
@@ -2000,7 +2000,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
 1. 実際に更新を試みる
     ```
-    # certbot renew ←「--dry-run」なし
+    # certbot renew
     ……
     The following certificates are not due for renewal yet:
     /etc/letsencrypt/live/xxx.com/fullchain.pem expires on 2023-06-28 (skipped)
