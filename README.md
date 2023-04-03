@@ -1993,9 +1993,9 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
     00 04 01 * * certbot renew --dry-run 2>&1 | mail -s "Let's Encrypt update information" mubirou.info@gmail.com && systemctl restart httpd
     ```
-    * <b>00 04 01 * *</b>：
+    * <b>00 04 01 * *</b>：毎月1日AM4:00に実行
     * **certbot renew**：更新
-    * **--dry-run**：実験用（本番では外す）
+    * **--dry-run**：実験用（本番では外す⚠）
     * 2>&1 |
     * mail -s "Let's Encrypt update information" mubirou.info@gmail.com
     * **&& systemctl restart httpd**：Apache サーバの再起動
