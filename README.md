@@ -1983,7 +1983,8 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の「[SSLサーバ証明書](https://bit.ly/3Kgsxyy)」の自動更新  
-（[Let’s Encrypt](https://letsencrypt.org/ja/) で発行した証明書は90日間有効／60日間程度での更新を推奨）  
+* [Let’s Encrypt](https://letsencrypt.org/ja/) で発行した証明書は90日間有効
+* 60日間程度での更新を推奨  
 
 1. XXXX
     ```
