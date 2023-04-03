@@ -2005,9 +2005,9 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     The following certificates are not due for renewal yet:
     /etc/letsencrypt/live/xxx.com/fullchain.pem expires on 2023-06-28 (skipped)
 
-    以下の証明書は、まだ更新期限を迎えていません：
+    （翻訳：以下の証明書は、まだ更新期限を迎えていません：
     /etc/letsencrypt/live/xxx.com/fullchain.pem の有効期限は 2023-06-28 (スキップ)。
-    更新は試みられていない。
+    更新は試みられていない。）
     ```
 1. cron ファイルの作成＆記述（記述方法は [Vim](#202302130554) と同様）
     ```
