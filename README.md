@@ -1993,16 +1993,12 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
     00 04 01 * * certbot renew --dry-run 2>&1 | mail -s "Let's Encrypt update information" mubirou.info@gmail.com && systemctl restart httpd
     ```
-    * 00 04 01 * *
-    * certbot renew
-    * --dry-run
+    * <b>00 04 01 * *</b>：
+    * **certbot renew**：更新
+    * **--dry-run**：実験用（本番では外す）
     * 2>&1 |
     * mail -s "Let's Encrypt update information" mubirou.info@gmail.com
-    * &&
-    * Apache の再起動  
-        ```
-        systemctl restart httpd
-        ```
+    * **&& systemctl restart httpd**：Apache サーバの再起動
 
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
