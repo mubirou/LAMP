@@ -1991,7 +1991,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 * 60日間程度での更新を推奨  
 * [参考サイト](https://weblabo.oscasierra.net/letsencrypt-renew-cron/)
 
-1. 更新テスト（**--dry-run**付）
+1. 更新テスト（**--dry-run**を付ける）
     ```
     # certbot renew --dry-run
     ……
