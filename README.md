@@ -2000,7 +2000,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
 1. 更新を試みる
     ```
-    # certbot renew
+    # certbot renew ←「--dry-run」なし
     ……
     The following certificates are not due for renewal yet:
     /etc/letsencrypt/live/xxx.com/fullchain.pem expires on 2023-06-28 (skipped)
