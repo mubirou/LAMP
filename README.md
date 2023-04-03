@@ -1990,25 +1990,40 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 * 60日間程度での更新を推奨  
 * [参考サイト](https://weblabo.oscasierra.net/letsencrypt-renew-cron/)
 
-1. 先ずは更新の実験
+1. 更新テスト（**--dry-run**付）
     ```
     # certbot renew --dry-run
     ……
     Congratulations, all simulated renewals succeeded: ←成功！
     ……
     ```
+1. 更新してみる
+    ```
+    # certbot renew
+    ……
+    The following certificates are not due for renewal yet:
+    /etc/letsencrypt/live/xxx.com/fullchain.pem expires on 2023-06-28 (skipped)
+
+    以下の証明書は、まだ更新期限を迎えていません：
+    /etc/letsencrypt/live/xxx.com/fullchain.pem の有効期限は 2023-06-28 (スキップ)。
+    更新は試みられていない。
+    ```
 1. cron ファイルの作成＆記述（記述方法は [Vim](#202302130554) と同様）
     ```
     # crontab -u root -e
     00 04 01 * * certbot renew --dry-run 2>&1 | mail -s "Let's Encrypt update information" mubirou.info@gmail.com && systemctl restart httpd  ←「毎月1日AM4:00に更新」の場合
     ```
-* cron の表示 
+    * cron の表示 
+        ```
+        # crontab -l
+        ```
+    * cron の削除  
+        ```
+        # crontab -r
+        ```
+1. Apache の再起動
     ```
-    # crontab -l
-    ```
-* cron の削除  
-    ```
-    # crontab -r
+    # systemctl restart httpd
     ```
 
 ***
