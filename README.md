@@ -1998,7 +1998,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     Congratulations, all simulated renewals succeeded: ←成功！
     ……
     ```
-1. 更新を試みる
+1. 実際に更新を試みる
     ```
     # certbot renew ←「--dry-run」なし
     ……
