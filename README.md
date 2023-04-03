@@ -1985,7 +1985,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 …で 🔒https://www.mubirou.com が開けば大成功！
 
 ***
-👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の「[SSLサーバ証明書](https://bit.ly/3Kgsxyy)」の自動更新  
+👉 **[Let’s Encrypt](https://letsencrypt.org/ja/) の「[SSLサーバ証明書](https://bit.ly/3Kgsxyy)」の自動更新**  
 * [Let’s Encrypt](https://letsencrypt.org/ja/) で発行した証明書は90日間有効
 * 60日間程度での更新を推奨  
 * [参考サイト](https://weblabo.oscasierra.net/letsencrypt-renew-cron/)
@@ -2003,13 +2003,13 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     00 04 01 * * certbot renew --dry-run 2>&1 | mail -s "Let's Encrypt update information" mubirou.info@gmail.com && systemctl restart httpd  ←「毎月1日AM4:00に更新」の場合
     ```
 * cron の表示 
-    ``
+    ```
     # crontab -l
-    ``
+    ```
 * cron の削除  
-    ``
+    ```
     # crontab -r
-    ``
+    ```
 
 ***
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
