@@ -1836,6 +1836,8 @@ function onclick_btn1(_id) {
 
 [Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)を利用する方法（**無料**）  
 
+<a id="202303262032-A"></a>
+
 > 【[Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)】  
 2014年設立。2016年4月に正式に開始。商用利用可能の証明書[認証局](https://bit.ly/40IzWgc)（無料で発行）
 
@@ -1846,8 +1848,6 @@ function onclick_btn1(_id) {
 services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがあるか？
 ……
 ```
-
-<a id="202303262032-A"></a>
 
 👉 [Apache](#202302120812) で [HTTPS](https://ja.wikipedia.org/wiki/HTTPS) 化（常時 [SSL](https://bit.ly/3JRqfVu) 化）するのに必要なソフトウェアの準備
 
