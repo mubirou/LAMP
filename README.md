@@ -2022,7 +2022,8 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     Congratulations, all simulated renewals succeeded: ←成功！
     ……
     ```
-1. 実際に更新を試みる
+1. 実際に更新を試みる  
+（"あと30日未満"にならないと更新できない）  
     ```
     # certbot renew
     ……
