@@ -2023,7 +2023,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ……
     ```
 1. 実際に更新を試みる  
-（"あと30日未満"にならないと更新できない）  
+（設定済の場合"あと30日未満"にならないと更新できない）  
     ```
     # certbot renew
     ……
@@ -2033,6 +2033,13 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     （翻訳：以下の証明書は、まだ更新期限を迎えていません：
     /etc/letsencrypt/live/xxx.com/fullchain.pem の有効期限は 2023-06-28 (スキップ)。
     更新は試みられていない。）
+    ```
+
+1. 有効期限を調べる（参考）
+    ```
+    # certbot certificates
+    ……
+    Expiry Date: 2023-06-28 ... (VALID: 80 days) ←有効期限（あと何日）
     ```
 1. cron ファイルの作成＆記述（記述方法は [Vim](#202302130554) と同様）  
 （毎月1、7、13、19、25日AM4:00に更新の場合）  
