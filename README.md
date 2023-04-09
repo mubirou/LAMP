@@ -2023,7 +2023,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ……
     ```
 1. 実際に更新を試みる  
-（設定済の場合"あと30日未満"にならないと更新できない）  
+（設定済の場合"30日未満"にならないと更新不可）  
     ```
     # certbot renew
     ……
