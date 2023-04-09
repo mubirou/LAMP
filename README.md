@@ -1838,10 +1838,10 @@ function onclick_btn1(_id) {
 
 [Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)を利用する方法（**無料**）  
 
-<a id="202303262032-A"></a>
-
 > 【[Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)】  
 2014年設立。2016年4月に正式に開始。商用利用可能の証明書[認証局](https://bit.ly/40IzWgc)（無料で発行）
+
+<a id="202303262032-A"></a>
 
 👉 [ファイアウォール](https://bit.ly/2LzW3iT)の設定確認  
 ```
