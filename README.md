@@ -1830,6 +1830,10 @@ function onclick_btn1(_id) {
 <a id="202303262032"></a>
 # <b>HTTPS</b>
 
+1. [準備](#202303262032-A)
+1. [電子証明書の自動更新](#202303262032-B)
+1. [電子証明書の再発行](#202303262032-C)
+
 [Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)を利用する方法（**無料**）  
 
 > 【[Let’s Encrypt（レッツインクリプト）](https://letsencrypt.org/ja/)】  
@@ -1842,6 +1846,8 @@ function onclick_btn1(_id) {
 services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがあるか？
 ……
 ```
+
+<a id="202303262032-A"></a>
 
 👉 [Apache](#202302120812) で [HTTPS](https://ja.wikipedia.org/wiki/HTTPS) 化（常時 [SSL](https://bit.ly/3JRqfVu) 化）するのに必要なソフトウェアの準備
 
@@ -1984,7 +1990,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 
 ***
 
-### 以下の項目は書きかけです
+<a id="202303262032-B"></a>
 
 👉 **[Let’s Encrypt](https://letsencrypt.org/ja/) の「[SSLサーバ証明書](https://bit.ly/3Kgsxyy)」の自動更新**  
 * [Let’s Encrypt](https://letsencrypt.org/ja/) で発行した証明書は90日間有効
@@ -2028,6 +2034,9 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     ```
 
 ***
+
+<a id="202303262032-C"></a>
+
 👉 [Let’s Encrypt](https://letsencrypt.org/ja/) の証明書の再発行（参考）  
 
 1. [SSLサーバ証明書](https://bit.ly/3Kgsxyy)の削除
@@ -2053,7 +2062,7 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 参考：[無料のSSL証明書を作成する方法](https://webree.jp/article/letsencrypt-install)  
 作成者：夢寐郎  
 作成日：2023年4月1日  
-更新日：2023年4月X日 証明書の自動更新の追加  
+更新日：2023年4月9日 証明書の自動更新の追加  
 [[TOP]](#TOP)  
 
 
