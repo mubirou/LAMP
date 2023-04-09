@@ -2033,10 +2033,11 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
     /etc/letsencrypt/live/xxx.com/fullchain.pem の有効期限は 2023-06-28 (スキップ)。
     更新は試みられていない。）
     ```
-1. cron ファイルの作成＆記述（記述方法は [Vim](#202302130554) と同様）
+1. cron ファイルの作成＆記述（記述方法は [Vim](#202302130554) と同様）  
+（毎月1、7、13、19、25日AM4:00に更新の場合）  
     ```
     # crontab -u root -e
-    00 04 01 * * certbot renew --dry-run 2>&1 | mail -s "Let's Encrypt update information" mubirou.info@gmail.com && systemctl restart httpd  ←「毎月1日AM4:00に更新」の場合
+    00 04 1,7,13,19,25 * * certbot renew --dry-run 2>&1 | mail -s "Let's Encrypt update information" mubirou.info@gmail.com && systemctl restart httpd
     ```
     * cron の表示 
         ```
