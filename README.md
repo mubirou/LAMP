@@ -1704,6 +1704,7 @@ function onclick_btn1(_id) {
     ※ 設定終了後「reboot now」で OS を再起動  
 
 👉 **ルータ（光BBユニット）のポート開放**  
+（参考：https://www.softbank.jp/support/faq/view/19680）
 
 1. Web ブラウザで 172.16.255.254（192.168.X.1）を開く  
     * ユーザー名：user
@@ -1713,6 +1714,17 @@ function onclick_btn1(_id) {
     * 2 / 有効 / TCP/UDP / **22-22** / 22-22 / 192.168.X.XX ←[SSH](#202302111947)
     * 3 / 有効 / TCP / **80-80** / 80-80 / 192.168.X.XX ←[HTTP](#202302120812)
     * 4 / 有効 / TCP / **443-443** / 443-443 /  192.168.X.XX ←[後述](#202303262032)
+    * UPnPで使用中のポートを表示する：⦿表示する
+1. [設定を保存する] を選択、ルーターの再起動
+
+👉 **ルータ（光BBユニット）のIPアドレスの固定割当**
+（参考：https://www.softbank.jp/support/faq/view/19680）
+
+1. 上記と同じくルータの設定画面を開く（172.16.255.254／192.168.X.1） 
+1. [ルーター機能の設定]-[IPアドレス/DHCPサーバの設定] で以下の通り設定
+    * 固定割当：No.1：  
+        割当IP：192.168.X.XX
+        MACアドレス：XX:XX:XX:XX:XX:XX
 1. [設定を保存する] を選択、ルーターの再起動
 
 👉 **ポート開放の確認**  
@@ -1752,7 +1764,7 @@ function onclick_btn1(_id) {
 実行環境：[PR-S300SE/GV-ONU](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf)、[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、CentOS Stream 8  
 作成者：夢寐郎  
 作成日：2023年3月26日  
-更新日：2023年4月01日 443番を追加  
+更新日：2023年4月12日 IPアドレスの固定割当を追加
 [[TOP]](#TOP)  
 
 
