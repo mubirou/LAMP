@@ -1767,7 +1767,7 @@ function onclick_btn1(_id) {
 実行環境：[PR-S300SE/GV-ONU](http://nttwest.ssdl1.smartstream.ne.jp/nttwest/flets/kiki/flets/prs300se/PRS300SE_man1409.pdf)、[SoftBank E-WMTA2.3](https://torisetsu.biz/products/0000199609/)、CentOS Stream 8  
 作成者：夢寐郎  
 作成日：2023年3月26日  
-更新日：2023年4月12日 IPアドレスの固定割当を追加
+更新日：2023年4月12日 IPアドレスの固定割当を追加  
 [[TOP]](#TOP)  
 
 
