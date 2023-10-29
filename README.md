@@ -1840,7 +1840,11 @@ function onclick_btn1(_id) {
 
 ＜**Android･Questの場合**＞  
 
-1. XXXX
+1. PC上のhosts設定を行う（上記）
+1. PCの[モバイルスポット](https://e-words.jp/w/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%9B%E3%83%83%E3%83%88%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88.html)をオンにする
+    1. Windows - [設定]-[ネットワーク]-[**モバイルスポット**]-[オン]
+1. XXX
+
 
 
 
