@@ -1815,6 +1815,8 @@ function onclick_btn1(_id) {
 ＜**Windowsの場合**＞   
 （Windowsパソコン毎に設定する必要あり）  
 
+<a id="202303262200-win"></a>
+
 1. [hostsファイル](https://glodia.jp/blog/10365/)の編集  
     1. [Windows]-[**メモ帳**]-[右クリック]-[**管理者として実行**]
     1. [ファイル]-[開く]-[C:\Windows\System32\drivers\etc\hosts] を開く
@@ -1840,7 +1842,7 @@ function onclick_btn1(_id) {
 
 ＜**Android（Quest）の場合**＞  
 
-1. Windowsのhosts設定を行う（上記）
+1. Windowsの[hosts設定](#202303262200-win)を行う（上記）
 1. Windowsの[モバイルスポット](https://e-words.jp/w/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%9B%E3%83%83%E3%83%88%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88.html)をオンにする
     1. [設定]-[ネットワーク]-[**モバイルスポット**]-[オン]
     1. 引続き [**>**] を選択し各種設定  
@@ -1856,7 +1858,6 @@ function onclick_btn1(_id) {
 作成日：2023年03月28日  
 更新日：2023年10月30日 Anroidからのアクセスを追加  
 [[TOP]](#TOP)  
-
 
 
 <a id="202303262032"></a>
