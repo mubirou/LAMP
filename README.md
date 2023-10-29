@@ -1812,7 +1812,8 @@ function onclick_btn1(_id) {
 ***
 👉 **ルーター内からドメイン名でアクセスする方法**   
 
-＜Windows版（Windowsパソコン毎に設定する必要あり）＞   
+＜**Windowsの場合**＞   
+（Windowsパソコン毎に設定する必要あり）  
 
 1. [hostsファイル](https://glodia.jp/blog/10365/)の編集  
     1. [Windows]-[**メモ帳**]-[右クリック]-[**管理者として実行**]
@@ -1837,7 +1838,7 @@ function onclick_btn1(_id) {
     …
     ```
 
-＜Android版＞  
+＜**Android･Questの場合**＞  
 
 1. XXXX
 
