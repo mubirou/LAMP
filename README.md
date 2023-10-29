@@ -1840,7 +1840,7 @@ function onclick_btn1(_id) {
     …
     ```
 
-#### **Android（Quest）の場合** 
+#### **＜Android（Quest）の場合＞** 
 （注意：開発者設定の開発者モードをオフにする）
 
 1. Windowsの[hosts設定](#202303262200-win)を行う（上記）
