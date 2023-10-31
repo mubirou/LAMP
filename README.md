@@ -584,6 +584,9 @@ CentOS Stream をインストールするための「ブートUSB」を作成し
     ```
     # systemctl restart httpd ←再起動
     ```
+
+<a id="202302121037-htaccess2"></a>
+
 1. 以下の内容の [.htaccess](https://ja.wikipedia.org/wiki/.htaccess) ファイルを作成
     ```
     Options -Indexes
