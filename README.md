@@ -3,6 +3,8 @@
 Linuxのインストール～HTTPSサイト公開まで  
 （[Red Hat系](https://bit.ly/40TvlHI)、[CUI](https://e-words.jp/w/CUI.html)、[firewall](https://eng-entrance.com/linux-centos-firewall)・[SELinux](https://red.ht/3zkzRmK) 有効）  
 
+💡今後 [Ubuntu Sever](https://ubuntu.com/download/server) または [Rocky Linux](https://rockylinux.org/ja-JP/download) に移行を検討
+
 ### **Index**
 
 | [LAMPについて](#202301281000) | [ブートUSBの作成](#202301281748) | [ブートUSBの起動](#202302092321) | [CentOSインストール](#202302101739) | [Linuxコマンド](#202302121019) | [SSH](#202302111947) | [Apache](#202302120812) | [FTP](#202302121037) | [Vim](#202302130554) | [ユーザー管理](#202302130631) | [PHP](#202302142236) | [MariaDB](#202302162306) | [PHP+MariaDB](#202302170022) | [WordPress](#202302170208) | [Samba](#202302191517) | [SQLite](#202302232039) | [PHP+SQLite](#202302232127) | [Python](#202302232147) | [Python on Apache](#202302251334) | [Python+SQLite](#202302282229) | [Python+MariaDB](#202302282308) | [サンプル](#202303022135) | [ポート開放](#202303151240) | [ドメイン名取得](#202303262200) | [HTTPS](#202303262032) |
