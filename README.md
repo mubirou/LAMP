@@ -2134,4 +2134,4 @@ services: cockpit dhcpv6-client ftp http https mysql samba ssh ←httpsがある
 [[TOP]](#TOP)  
 
 
-© 2023 夢寐郎  
+© 2023-PRESENT 夢寐郎
