@@ -3,7 +3,7 @@
 Linuxのインストール～HTTPSサイト公開まで  
 （[Red Hat系](https://bit.ly/40TvlHI)、[CUI](https://e-words.jp/w/CUI.html)、[firewall](https://eng-entrance.com/linux-centos-firewall)・[SELinux](https://red.ht/3zkzRmK) 有効）  
 
-💡今後 [Ubuntu Sever](https://ubuntu.com/download/server) または [Rocky Linux](https://rockylinux.org/ja-JP/download) に移行を検討
+💡今後 [Ubuntu Sever 26.04 LTS](https://ubuntu.com/download/server) または [Rocky Linux 10](https://rockylinux.org/ja-JP/download) に移行を検討
 
 ### **Index**
 
